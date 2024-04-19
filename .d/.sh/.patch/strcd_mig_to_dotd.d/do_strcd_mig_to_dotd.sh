@@ -35,7 +35,14 @@ rm -r ${HOME}/.d/.rc.d/.st.rc.d
 cp -r ${HOME}/.st.rc.d/. ${HOME}/.d/.rc.d/.st.rc.d
 #! rm -r ${HOME}/~.st.rc.d~
 #! mv ${HOME}/.st.rc.d ${HOME}/~.st.rc.d~
+
+#! zip flow
+
+_s2ad "\.st\.rc\.d\.zip" ".st.rXc.d.zip" ${HOME}/.d/.rc.d/.st.rc.d
+
 _s2ad "/\.st\.rc\.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.d/.rc.d/.st.rc.d
+
+_s2ad "\.st\.rXc\.d\.zip" ".st.rc.d.zip" ${HOME}/.d/.rc.d/.st.rc.d
 
 # _s2ad "/\.d/\.rc\.d/\.st\.rc\.d\.zip" "/.st.rc.d.zip" ${HOME}/.d/.rc.d/.st.rc.d
 
@@ -44,7 +51,7 @@ _s2ad "/\.st\.rc\.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.d/.rc.d/.st.rc.d
 echo -e "${HLIGHT}--- exec: cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst ---${NORMAL}" #start files
 cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 echo
-
+read -p "see that CAT"
 #* do .bashrc----------------
 #! rm ${HOME}/~.bashrc~
 #! cp ${HOME}/.bashrc ${HOME}/~.bashrc~
