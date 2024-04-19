@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# for prod
+
 read -p "DO? strcd_mig_to_dotd"
 
 rm -r ${HOME}/.d/
@@ -34,6 +36,9 @@ cp -r ${HOME}/.st.rc.d/. ${HOME}/.d/.rc.d/.st.rc.d
 #! rm -r ${HOME}/~.st.rc.d~
 #! mv ${HOME}/.st.rc.d ${HOME}/~.st.rc.d~
 _s2ad "/\.st\.rc\.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.d/.rc.d/.st.rc.d
+
+# _s2ad "/\.d/\.rc\.d/\.st\.rc\.d\.zip" "/.st.rc.d.zip" ${HOME}/.d/.rc.d/.st.rc.d
+
 #*-----------------
 
 echo -e "${HLIGHT}--- exec: cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst ---${NORMAL}" #start files
