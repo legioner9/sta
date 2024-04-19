@@ -53,12 +53,9 @@ cp ${HOME}/.st_rc_d.rc ${HOME}/.d/.rc.d
 #*-----------------
 
 #* do .st.lst
-_s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st_rc_d.rc/.st.lst
-_s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st_rc_d.rc/.st.lst
+_s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
+_s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 #*-----------------
-
-cp ${HOME}/.mane.path ${HOME}/.d/.rc.d/.path.d/.mane.path
-cp ${HOME}/.st_rc_d.path ${HOME}/.d/.rc.d/.path.d/.st_rc_d.path
 
 if ! _is_rr; then
     hint="\$1: \$2: "
