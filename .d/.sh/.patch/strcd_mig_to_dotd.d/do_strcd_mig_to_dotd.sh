@@ -2,6 +2,8 @@
 
 read -p "DO? strcd_mig_to_dotd"
 
+rm -r ${HOME}/.d/
+
 if ! [[ -d ${HOME}/.d/.rc.d ]]; then
     mkdir -p ${HOME}/.d/.rc.d
 fi
@@ -10,8 +12,8 @@ if ! [[ -d ${HOME}/.d/.path.d ]]; then
     mkdir -p ${HOME}/.d/.path.d
 fi
 
-cp ${HOME}/.mane.path ${HOME}/.d/.rc.d/.path.d/.mane.path
-cp ${HOME}/.st_rc_d.path ${HOME}/.d/.rc.d/.path.d/.st_rc_d.path
+cp ${HOME}/.mane.path ${HOME}/.d/.path.d/.mane.path
+cp ${HOME}/.st_rc_d.path ${HOME}/.d/.path.d/.st_rc_d.path
 
 #* tst st.sh.d.res
 

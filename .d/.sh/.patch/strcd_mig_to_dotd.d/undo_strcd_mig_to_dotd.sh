@@ -64,3 +64,9 @@ if [[ -f ${HOME}/~.st_rc_d.rc~ ]]; then
 else
     echo "NOT_FILE ${HOME}/~.st_rc_d.rc~ "
 fi
+
+if ! _is_rr; then
+    hint="\$1: \$2: "
+    _st_exit "in fs= file://${HOME}/REPOBARE/_repo/sta/.d/.sh/.patch/strcd_mig_to_dotd.d/strcd_mig_to_dotd.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_is_rr' : ${hint} : return 1"
+    return 1
+fi
