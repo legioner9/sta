@@ -27,7 +27,7 @@ fi
 if [[ -d ${HOME}/~.st.rc.d~ ]]; then
     rm -r ${HOME}/.st.rc.d
     mkdir ${HOME}/.st.rc.d
-    cp -r ${HOME}/~.st.rc.d~ ${HOME}/.st.rc.d
+    cp -r ${HOME}/~.st.rc.d~/. ${HOME}/.st.rc.d
 else
     echo "NOT_DIR ${HOME}/~.st.rc.d~"
 fi

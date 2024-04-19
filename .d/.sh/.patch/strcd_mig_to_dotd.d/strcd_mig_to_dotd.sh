@@ -10,6 +10,9 @@ if ! [[ -d ${HOME}/.d/.path.d ]]; then
     mkdir -p ${HOME}/.d/.path.d
 fi
 
+cp ${HOME}/.mane.path ${HOME}/.d/.rc.d/.path.d/.mane.path
+cp ${HOME}/.st_rc_d.path ${HOME}/.d/.rc.d/.path.d/.st_rc_d.path
+
 #* tst st.sh.d.res
 
 # cd ${HOME}/REPOBARE/_repo/mane/.d/.sh/.patch/strcd_mig_to_dotd.d/tst.dir || {
@@ -53,6 +56,9 @@ cp ${HOME}/.st_rc_d.rc ${HOME}/.d/.rc.d
 _s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st_rc_d.rc/.st.lst
 _s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st_rc_d.rc/.st.lst
 #*-----------------
+
+cp ${HOME}/.mane.path ${HOME}/.d/.rc.d/.path.d/.mane.path
+cp ${HOME}/.st_rc_d.path ${HOME}/.d/.rc.d/.path.d/.st_rc_d.path
 
 if ! _is_rr; then
     hint="\$1: \$2: "
