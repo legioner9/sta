@@ -33,8 +33,10 @@ cp ${HOME}/.st_rc_d.path ${HOME}/.d/.path.d/.st_rc_d.path
 #* do /.st.rc.d------------
 rm -r ${HOME}/.d/.rc.d/.st.rc.d
 cp -r ${HOME}/.st.rc.d/. ${HOME}/.d/.rc.d/.st.rc.d
-#! rm -r ${HOME}/~.st.rc.d~
-#! mv ${HOME}/.st.rc.d ${HOME}/~.st.rc.d~
+#! 
+rm -r ${HOME}/~.st.rc.d~
+#! 
+mv ${HOME}/.st.rc.d ${HOME}/~.st.rc.d~
 
 #! zip flow
 
@@ -53,21 +55,26 @@ cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 echo
 read -p "see that CAT"
 #* do .bashrc----------------
-#! rm ${HOME}/~.bashrc~
-#! cp ${HOME}/.bashrc ${HOME}/~.bashrc~
-#! _s2f "/.st.rc.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.bashrc
+#! 
+rm ${HOME}/~.bashrc~
+#! 
+cp ${HOME}/.bashrc ${HOME}/~.bashrc~
+#!
+_s2f "/.st.rc.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.bashrc
 #*-----------------
 
 #* do .mane.rc-----------------
 rm ${HOME}/.d/.rc.d/.mane.rc
 cp ${HOME}/.mane.rc ${HOME}/.d/.rc.d
-#! mv ${HOME}/.mane.rc ${HOME}/~.mane.rc~
+#! 
+mv ${HOME}/.mane.rc ${HOME}/~.mane.rc~
 #*-----------------
 
 #* do .st_rc_d.rc----------------
 rm ${HOME}/.d/.rc.d/.st_rc_d.rc
 cp ${HOME}/.st_rc_d.rc ${HOME}/.d/.rc.d
-#! mv ${HOME}/.st_rc_d.rc ${HOME}/~.st_rc_d.rc~
+#! 
+mv ${HOME}/.st_rc_d.rc ${HOME}/~.st_rc_d.rc~
 #*-----------------
 
 #* do .st.lst
