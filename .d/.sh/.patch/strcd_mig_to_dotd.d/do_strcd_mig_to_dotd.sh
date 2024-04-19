@@ -53,10 +53,14 @@ cp ${HOME}/.st_rc_d.rc ${HOME}/.d/.rc.d
 #*-----------------
 
 #* do .st.lst
+read -p "DO? : _s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst"
 _s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
+
+read -p "DO? : _s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst"
 _s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 #*-----------------
 
+read -p "DO? : _is_rr"
 if ! _is_rr; then
     hint="\$1: \$2: "
     _st_exit "in fs= file://${HOME}/REPOBARE/_repo/sta/.d/.sh/.patch/strcd_mig_to_dotd.d/strcd_mig_to_dotd.sh , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_is_rr' : ${hint} : return 1"
