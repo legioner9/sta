@@ -31,8 +31,12 @@ rm -r ${HOME}/.d/.rc.d/.st.rc.d
 cp -r ${HOME}/.st.rc.d/. ${HOME}/.d/.rc.d/.st.rc.d
 #! rm -r ${HOME}/~.st.rc.d~
 #! mv ${HOME}/.st.rc.d ${HOME}/~.st.rc.d~
-_s2ad "/.st.rc.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.d/.rc.d/.st.rc.d
+_s2ad "/\.st\.rc\.d" "/.d/.rc.d/.st.rc.d" ${HOME}/.d/.rc.d/.st.rc.d
 #*-----------------
+
+echo -e "${HLIGHT}--- exec: cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst ---${NORMAL}" #start files
+cat ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
+echo
 
 #* do .bashrc----------------
 #! rm ${HOME}/~.bashrc~
@@ -54,10 +58,10 @@ cp ${HOME}/.st_rc_d.rc ${HOME}/.d/.rc.d
 
 #* do .st.lst
 read -p "DO? : _s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst"
-_s2f /.mane.rc /.d/.rc.d/.mane.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
+_s2f "/\.mane\.rc" "/.d/.rc.d/.mane.rc" ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 
 read -p "DO? : _s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst"
-_s2f /.st_rc_d.rc /.d/.rc.d/.st_rc_d.rc ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
+_s2f "/\.st_rc_d\.rc" "/.d/.rc.d/.st_rc_d.rc" ${HOME}/.d/.rc.d/.st.rc.d/.st.lst
 #*-----------------
 
 read -p "DO? : _is_rr"
