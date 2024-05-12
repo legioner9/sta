@@ -1,0 +1,2 @@
+## main dir _XXX_stl0.ram
+    - other -s link to that
