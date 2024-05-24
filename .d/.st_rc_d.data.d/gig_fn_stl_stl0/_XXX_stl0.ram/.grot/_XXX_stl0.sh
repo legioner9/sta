@@ -15,6 +15,8 @@ _XXX_stl0() {
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
+    local hint=
+    local estat=
 
     #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
 
@@ -61,7 +63,8 @@ ${NORMAL}"
     #     return 1
     # fi
 
-    #RRR
+    cd ${PPWD}
+    return 0
 
 }
 
