@@ -11,9 +11,10 @@ echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"           #print variable
 
 [ ${ARGS[1]} == "-h" ] && {
     echo -e "${CYAN} ${FNN}() help: 
-MAIN: ${FNN} :: unite file from tml, value, proc
-TAGS:
-ARGS: 
+MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
+TAGS: @sh @fn @file @rnd
+ARGS: \$1=1
+EXAM: ufl_stl0 1 file.sh
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 [ ,\$2 num_menu ]
 CNTL: 
@@ -21,7 +22,6 @@ CNTL:
     _tst :  . ${d_name}/_tst/exec.tst
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
-EXAM:
     ${FNN} 
 ${NORMAL}"
 
@@ -40,7 +40,8 @@ echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
 
 local file_res=$PPWD/${ARGS[1]}
 
-[ -f ${file_res} ] && {
+if [ -f ${file_res} ]; then
+
     hint="that result file : conlict rerecording"
     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
     if _is_yes rerecording that file://${file_res}?; then
@@ -51,8 +52,17 @@ local file_res=$PPWD/${ARGS[1]}
         _st_info "exit with return 0"
         return 0
     fi
-}
+else
+    cp ${dir_tml}/1.tml ${file_res}
+fi
 
 _s2f "{{rnd_val}}" $rnd_val ${file_res}
+
+local file_name=${ARGS[1]}
+local fn_name=$(_prs_f -n ${ARGS[1]})
+
+_s2f "{{fn_name}}" $fn_name ${file_res}
+_s2f "{{file_name}}" $file_name ${file_res}
+_s2f "{{PPWD}}" $PPWD ${file_res}
 
 cat ${file_res}

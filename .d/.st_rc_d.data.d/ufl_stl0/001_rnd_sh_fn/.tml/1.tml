@@ -1,6 +1,9 @@
 #!/bin/bash
 
-{{f_name}}{{rnd_val}}(){
+{{fn_name}}_{{rnd_val}}(){
+    local path_file="{{PPWD}}/{{file_name}}"
 
 
 }
+
+{{fn_name}}_{{rnd_val}} $@
