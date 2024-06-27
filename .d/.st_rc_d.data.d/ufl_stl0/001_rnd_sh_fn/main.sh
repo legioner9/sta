@@ -2,12 +2,13 @@
 
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
-echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"     #print variable
-echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"     #print variable
-echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"     #print variable
-echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"     #print variable
-echo -e "${GREEN}\$file_mane = file://$file_mane${NORMAL}" #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"           #print variable
+echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
+echo -e "${GREEN}\$file_mane = file://$file_mane${NORMAL}"   #print variable
+echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
 [ ${ARGS[1]} == "-h" ] && {
     echo -e "${CYAN} ${FNN}() help: 
@@ -15,6 +16,7 @@ MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
 TAGS: @sh @fn @file @rnd
 ARGS: \$1=1
 EXAM: ufl_stl0 1 file.sh
+EXEC: . REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_tst.sh.v2
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 [ ,\$2 num_menu ]
 CNTL: 
@@ -35,6 +37,11 @@ echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
 [ -z ${ARGS[1]} ] && {
     hint="\$1: name result file "
     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+    return 1
+}
+
+_is_yes "cr $2 file in $PPWD" || {
+    _st_info "that not 'y' return 1"
     return 1
 }
 
@@ -64,5 +71,9 @@ local fn_name=$(_prs_f -n ${ARGS[1]})
 _s2f "{{fn_name}}" $fn_name ${file_res}
 _s2f "{{file_name}}" $file_name ${file_res}
 _s2f "{{PPWD}}" $PPWD ${file_res}
+_s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
 
-cat ${file_res}
+path2nom_stl0 ${file_res}
+arb2f_ ${file_res} 0
+
+_edit ${file_res}
