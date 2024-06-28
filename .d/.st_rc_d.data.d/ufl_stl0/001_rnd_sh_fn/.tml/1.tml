@@ -1,8 +1,10 @@
 #!/bin/bash
 
+echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{PPWD}}/{{file_name}}---${NORMAL}" #started functions
+
 {{fn_name}}_{{rnd_val}}() {
 
-    # gig from {{fn_sh_file}}
+    # gig from file://{{fn_sh_file}}
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
@@ -10,6 +12,8 @@
     local PPWD=$PWD
     local path_file="{{PPWD}}/{{file_name}}"
     local path_dir="$(dirname "$path_file")"
+
+    echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
     cd ${path_dir} || {
         # hint="\$1: \$2: "
