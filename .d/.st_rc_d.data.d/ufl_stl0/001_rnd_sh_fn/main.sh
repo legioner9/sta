@@ -2,13 +2,26 @@
 
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
+echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
-echo -e "${GREEN}\$file_mane = file://$file_mane${NORMAL}"   #print variable
+echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
+echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
+echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
 echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+
+echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
+
+hint="\$1: num menu \$2: name_fn_with_rnd_postfix.ext "
+if _isn_from ${NARGS} 2 2 "in fs= file://$file_main , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    return 1
+fi
 
 [ ${ARGS[1]} == "-h" ] && {
     echo -e "${CYAN} ${FNN}() help: 
