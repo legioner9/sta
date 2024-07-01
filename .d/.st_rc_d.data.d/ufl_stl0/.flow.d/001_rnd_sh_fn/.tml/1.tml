@@ -13,7 +13,7 @@ echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{PPWD}}/{{file_name}
     local path_file="{{PPWD}}/{{file_name}}"
     local path_dir="$(dirname "$path_file")"
 
-    echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
+    # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
     cd ${path_dir} || {
         # hint="\$1: \$2: "
@@ -42,13 +42,15 @@ ${NORMAL}"
     fi
 
     # hint="\$1: \$2: "
-    if _isn_from ${NARGS} less more "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-        return 1
-    fi
+    # if _isn_from ${NARGS} less more "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    #     return 1
+    # fi
 
     #{{ptr_path}}
 
     #! START BODY FN ---------------------------------------
+
+    echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
 
