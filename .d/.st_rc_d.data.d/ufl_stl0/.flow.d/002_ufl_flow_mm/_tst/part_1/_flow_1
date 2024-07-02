@@ -58,7 +58,7 @@ ${NORMAL}"
 
     #! START BODY FN ---------------------------------------
 
-    echo "START BODY FN : ${FNN}() $*"
+    echo "START BODY FN : ${FNN}() $*" 
 
     #{{body_fn}}
 
