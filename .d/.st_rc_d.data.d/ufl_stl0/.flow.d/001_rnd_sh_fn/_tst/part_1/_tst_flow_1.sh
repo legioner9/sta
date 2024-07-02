@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _flow_1_rnd7_d280e8a() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_flow_1---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_flow_1_rnd7_4e6ff55() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_flow_1.sh---${NORMAL}" #started functions
 
-_flow_1_rnd7_d280e8a() {
+_tst_flow_1_rnd7_4e6ff55() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _flow_1_rnd7_d280e8a() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_flow_1"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_flow_1.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -51,14 +51,15 @@ ${NORMAL}"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
-    cd _dir_tst || {
-        _st_exit "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${path_dir}/_dir_tst' : ${hint} : return 1"
-        return 1
-    }
-
     #! START BODY FN ---------------------------------------
 
-    echo "START BODY FN : ${FNN}() $*" 
+    echo "START BODY FN : ${FNN}() $*"
+
+    # _lnv2e /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.lst/cntx_name_value.lst
+
+    cd /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1
+
+    ufl_stl0 1 _tst_file.sh
 
     #{{body_fn}}
 
@@ -66,4 +67,4 @@ ${NORMAL}"
 
 }
 
-_flow_1_rnd7_d280e8a $@
+_tst_flow_1_rnd7_4e6ff55 $@

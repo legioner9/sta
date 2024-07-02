@@ -2,31 +2,35 @@
 
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
-echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
-echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
-echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
-echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+# echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
+# echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
+# echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
+# echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
+# echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
+# echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
-echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
+# echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
-hint="\$1: num menu \$2: name_fn_with_rnd_postfix.ext "
-if _isn_from ${NARGS} 2 2 "in fs= file://$file_main , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    return 1
-fi
+#[[file_main]] = {{file_main}}
+
+_lnv2e ${fn_lst_cntx_file}
+
+# hint="\$1: \$2: "
+# if _isn_from ${NARGS} less more "in fs= file:// , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+#     return 1
+# fi
 
 [ ${ARGS[1]} == "-h" ] && {
     echo -e "${CYAN} ${FNN}() help: 
-MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
-TAGS: @sh @fn @file @rnd
+MAIN: 
+TAGS: @
 ARGS: \$1=1
 EXAM: 
 EXEC: 
@@ -42,6 +46,10 @@ ${NORMAL}"
 
 }
 
+[ ${ARGS[1]} == "_tst_1" ] && {
+    :
+    # . REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh
+}
 
 # [ -z ${ARGS[1]} ] && {
 #     hint="\$1: name result file "
@@ -71,5 +79,3 @@ ${NORMAL}"
 # else
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
-
-

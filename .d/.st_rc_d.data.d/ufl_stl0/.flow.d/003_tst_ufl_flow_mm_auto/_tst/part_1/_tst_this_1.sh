@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _flow_1_rnd7_e9af8a6() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_flow_1---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_f9f2aeb() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
 
-_flow_1_rnd7_e9af8a6() {
+_tst_this_1_rnd7_f9f2aeb() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _flow_1_rnd7_e9af8a6() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_flow_1"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -46,19 +46,19 @@ ${NORMAL}"
     #     return 1
     # fi
 
-    #! ptr_path
-    # local ptr_path="$1"
-    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+#! ptr_path
+# local ptr_path="$1"
+# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
 
-    #{{body_fn}}
+    #that inserter [[body_fn]]
 
     #! END BODY FN ---------------------------------------
 
 }
 
-_flow_1_rnd7_e9af8a6 $@
+_tst_this_1_rnd7_f9f2aeb $@

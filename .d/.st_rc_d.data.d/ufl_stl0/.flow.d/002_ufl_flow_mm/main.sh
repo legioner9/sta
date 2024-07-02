@@ -2,21 +2,23 @@
 
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
-echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
-echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
-echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
-echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+# echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
+# echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
+# echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
+# echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
+# echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"                  #print variable
+# echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
-echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
-echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
+# echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"        #print variable
+# echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}" #print variable
+
+_lnv2e ${fn_lst_cntx_file}
 
 hint="\$1: num menu \$2: name_fn_with_rnd_postfix.ext "
 if _isn_from ${NARGS} 2 2 "in fs= file://$file_main , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
@@ -42,51 +44,60 @@ ${NORMAL}"
 
 }
 
-local rnd_val=$(_rnd2e)
-rnd_val=rnd7_${rnd_val:0:7}
-
-echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
-
 [ -z ${ARGS[1]} ] && {
     hint="\$1: name result file "
     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
     return 1
 }
 
-_is_yes "cr $2 file in $PPWD" || {
+_is_yes "cr ${ARGS[1]} dir in $PPWD like ufl_stl0 flow" || {
     _st_info "that not 'y' return 1"
     return 1
 }
 
-local file_res=$PPWD/${ARGS[1]}
+local dir_res=$PPWD/${ARGS[1]}
 
-if [ -f ${file_res} ]; then
+if [ -d ${dir_res} ]; then
 
     hint="that result file : conlict rerecording"
-    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
-    if _is_yes rerecording that file://${file_res}?; then
-
-        rm ${file_res}
-        cp ${dir_tml}/1.tml ${file_res}
+    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${dir_res}' : ${hint} : _is_yes rerecording that file?"
+    if _is_yes rerecording that file://${dir_res}?; then
+        rm -r ${dir_res}
     else
         _st_info "exit with return 0"
         return 0
     fi
-else
-    cp ${dir_tml}/1.tml ${file_res}
 fi
 
-_s2f "{{rnd_val}}" $rnd_val ${file_res}
+mkdir ${dir_res}
 
-local file_name=${ARGS[1]}
-local fn_name=$(_prs_f -n ${ARGS[1]})
+cp -r $dir_tml/.d/. ${dir_res}
 
-_s2f "{{fn_name}}" $fn_name ${file_res}
-_s2f "{{file_name}}" $file_name ${file_res}
-_s2f "{{PPWD}}" $PPWD ${file_res}
-_s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
+mkdir ${dir_res}/_tst/part_1
+cp ${dir_res}/_tst/part__/. ${dir_res}/_tst/part_1
 
-path2nom_stl0 ${file_res}
-arb2f_ ${file_res} 0
+cd ${dir_res}/_tst/part_1 || {
+    _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_res}/_tst/part_1' : ${hint} : return 1"
+    return 1
+}
 
-_edit ${file_res}
+ufl_stl0 1 _tst_this_1.sh
+
+_s2f "{{body_fn}}" "that inserter [[body_fn]]" _tst_this_1.sh
+
+_lnv2d ${fn_lst_cntx_file} ${dir_res}
+
+# _s2f "{{rnd_val}}" $rnd_val ${file_res}
+
+# local file_name=${ARGS[1]}
+# local fn_name=$(_prs_f -n ${ARGS[1]})
+
+# _s2f "{{fn_name}}" $fn_name ${file_res}
+# _s2f "{{file_name}}" $file_name ${file_res}
+# _s2f "{{PPWD}}" $PPWD ${file_res}
+# _s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
+
+# path2nom_stl0 ${file_res}
+# arb2f_ ${file_res} 0
+
+# _edit ${file_res}
