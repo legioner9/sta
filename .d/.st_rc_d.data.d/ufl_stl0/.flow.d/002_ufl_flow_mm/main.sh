@@ -85,6 +85,8 @@ ufl_stl0 1 _tst_this_1.sh
 
 _s2f "{{body_fn}}" "that inserter [[body_fn]]" _tst_this_1.sh
 
+_s2d "{{dir_res}}" $dir_res ${dir_res}
+
 _lnv2d ${fn_lst_cntx_file} ${dir_res}
 
 # _s2f "{{rnd_val}}" $rnd_val ${file_res}

@@ -18,7 +18,13 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
+#[[dir_set]] = {{dir_set}}
 #[[file_main]] = {{file_main}}
+#[[NARGS]] = {{NARGS}}
+#[[PPWD]] = {{PPWD}}
+#[[res_ptv]] = {{res_ptv}}
+#[[dir_ptv]] = {{dir_ptv}}
+#[[dir_res]] = {{dir_res}}
 
 _lnv2e ${fn_lst_cntx_file}
 
@@ -27,8 +33,10 @@ _lnv2e ${fn_lst_cntx_file}
 #     return 1
 # fi
 
-[ ${ARGS[1]} == "-h" ] && {
-    echo -e "${CYAN} ${FNN}() help: 
+[ -n "${ARGS[1]}" ] && {
+
+    [ ${ARGS[1]} == "-h" ] && {
+        echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 TAGS: @
 ARGS: \$1=1
@@ -44,11 +52,12 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
-}
+    }
 
-[ ${ARGS[1]} == "_tst_1" ] && {
-    :
-    # . REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh
+    [ ${ARGS[1]} == "_tst_1" ] && {
+        # :
+        . {{dir_res}}/_tst/part_1/_tst_this_1.sh
+    }
 }
 
 # [ -z ${ARGS[1]} ] && {
@@ -79,3 +88,5 @@ ${NORMAL}"
 # else
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
+
+return 0

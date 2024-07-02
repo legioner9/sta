@@ -18,17 +18,25 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
+#[[dir_set]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn
 #[[file_main]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/main.sh
+#[[NARGS]] = 2
+#[[PPWD]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1
+#[[res_ptv]] = 002_ufl_flow_mm
+#[[dir_ptv]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
+#[[dir_res]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto
 
 _lnv2e ${fn_lst_cntx_file}
 
-hint="\$1: num menu \$2: name_fn_with_rnd_postfix.ext "
-if _isn_from ${NARGS} 2 2 "in fs= file://$file_main , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
-    return 1
-fi
+# hint="\$1: \$2: "
+# if _isn_from ${NARGS} less more "in fs= file:// , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+#     return 1
+# fi
 
-[ ${ARGS[1]} == "-h" ] && {
-    echo -e "${CYAN} ${FNN}() help: 
+[ -n "${ARGS[1]}" ] && {
+
+    [ ${ARGS[1]} == "-h" ] && {
+        echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 TAGS: @
 ARGS: \$1=1
@@ -44,8 +52,13 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
-}
+    }
 
+    [ ${ARGS[1]} == "_tst_1" ] && {
+        # :
+        . /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh
+    }
+}
 
 # [ -z ${ARGS[1]} ] && {
 #     hint="\$1: name result file "
@@ -76,4 +89,4 @@ ${NORMAL}"
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
-
+return 0
