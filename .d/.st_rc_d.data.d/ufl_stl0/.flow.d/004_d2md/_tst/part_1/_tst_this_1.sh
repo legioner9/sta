@@ -46,9 +46,9 @@ ${NORMAL}"
     #     return 1
     # fi
 
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
     #! START BODY FN ---------------------------------------

@@ -37,9 +37,9 @@ _lnv2e ${fn_lst_cntx_file}
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: \$2 udir, \$3 ufile.md
 TAGS: @
-ARGS: \$1=1
+ARGS: \$1=4
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
