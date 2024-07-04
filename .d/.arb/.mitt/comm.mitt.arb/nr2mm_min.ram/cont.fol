@@ -1,0 +1,37 @@
+#* --- START nr2mm_min ---
+
+    local _arr_name=()
+    local _arr_result=()
+    local _result=
+    local item=
+
+    #IFS=$'\\n'
+    _arr_name=($(GEN_NAME))
+    
+    #for item in ${_arr_name[@]}; do
+    #    _arr_result+=("$(GEN_NAME_TO_RESULT)")
+    #done
+
+    #_arr_name+=("_edit DDD")
+    #_arr_result+=("_edit DDD")
+
+    IFS=$'\\n'
+    _arr_result=($(GEN_RESULT))
+
+        echo -e "
+${RED}--- parr2mm_ message :${BLUE}
+GENERATOR_INFO :
+name   from :: \\$(GEN_NAME)
+result from :: \\$(GEN_RESULT)
+${RED}---${NORMAL}"
+
+    #if [[ ${_result} == "_edit DDD" ]]; then
+    #    ${_result}
+    #    return 0
+    #fi
+
+    _nr2mm _arr_name _arr_result _result
+
+    echo -e "${GREEN}\\$_result = $_result${NORMAL}" #print variable
+
+#* --- END nr2mm_min ---

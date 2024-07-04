@@ -1,0 +1,11 @@
+
+#! ptr_path_1
+#local ptr_path_1="$1"
+
+#if ! _abs_path "${PPWD}" ptr_path_1  ; then
+#    echo "in fs= file://${HOME} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '_abs_path ${PPWD} ptr_path_1' : ${hint} : return 1" >&2
+#    cd $PPWD
+#    return 1
+#fi
+
+#ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
