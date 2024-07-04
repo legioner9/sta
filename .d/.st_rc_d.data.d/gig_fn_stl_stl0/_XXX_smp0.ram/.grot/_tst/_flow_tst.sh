@@ -3,7 +3,7 @@
 ___XXX_smp0_FLOW() {
 
     if ! command -v _XXX_smp0 >/dev/null; then
-        echo "TYPE_ERROR : _XXX_stl0" >&2
+        echo "TYPE_ERROR : _XXX_smp0" >&2
         return 1
     fi
 
