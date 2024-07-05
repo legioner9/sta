@@ -57,10 +57,10 @@ echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
     return 1
 }
 
-_is_yes "cr $2 file in $PPWD" || {
-    _st_info "that not 'y' return 1"
-    return 1
-}
+# _is_yes "cr $2 file in $PPWD" || {
+#     _st_info "that not 'y' return 1"
+#     return 1
+# }
 
 local file_res=$PPWD/${ARGS[1]}
 
@@ -91,6 +91,6 @@ _s2f "{{PPWD}}" $PPWD ${file_res}
 _s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
 
 path2nom_stl0 ${file_res}
-arb2f_ ${file_res} 0
+arb2f_stl0 ${file_res} 0
 
 _edit ${file_res}

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_this_1_rnd7_b595316() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_4159f1e() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
 
-_tst_this_1_rnd7_b595316() {
+_tst_this_1_rnd7_4159f1e() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -46,11 +46,10 @@ ${NORMAL}"
     #     return 1
     # fi
 
+    #[[ptr_path]]
 #! ptr_path
 # local ptr_path="$1"
 # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
-    #[[ptr_path]]
-
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
@@ -59,6 +58,8 @@ ${NORMAL}"
 
     #! END BODY FN ---------------------------------------
 
+    return 0
+
 }
 
-_tst_this_1_rnd7_b595316 $@
+_tst_this_1_rnd7_4159f1e $@

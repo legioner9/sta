@@ -42,14 +42,18 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
-        [ ${ARGS[1]} == "_tst_1" ] && {
-            # :
-            . /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh
+    }
+
+    [ "${ARGS[1]}" == "_tst_1" ] && {
+
+        _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh" && {
+            echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh ---${NORMAL}" #start files
+            . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh
         }
 
     }
 
-    [ -z ${ARGS[1]} ] && {
+    [ -z "${ARGS[1]}" ] && {
         hint="\$1: name result file "
         _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
         return 1
@@ -60,8 +64,11 @@ ${NORMAL}"
         return 1
     }
 
-    local dir_res=$PPWD/${ARGS[1]}
+    
 }
+
+local dir_res=$PPWD/${ARGS[1]}
+
 if [ -d ${dir_res} ]; then
 
     hint="that result file : conlict rerecording"
@@ -105,6 +112,6 @@ _lnv2d ${fn_lst_cntx_file} ${dir_res}
 # _s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
 
 path2nom2d_stl0 ${dir_res}
-arb2f_stl0 "${file_res}"
+arb2f2d_stl0 "${dir_res}"
 
 # _edit ${file_res}
