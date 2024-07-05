@@ -18,13 +18,13 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
-#[[dir_set]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn
-#[[file_main]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/main.sh
+#[[dir_set]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn
+#[[file_main]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/main.sh
 #[[NARGS]] = 2
-#[[PPWD]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md/_tst/part_1
+#[[PPWD]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md/_tst/part_1
 #[[res_ptv]] = 002_ufl_flow_mm
-#[[dir_ptv]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
-#[[dir_res]] = /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md
+#[[dir_ptv]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
+#[[dir_res]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md
 
 _lnv2e ${fn_lst_cntx_file}
 
@@ -56,7 +56,7 @@ ${NORMAL}"
 
     [ ${ARGS[1]} == "_tst_1" ] && {
         # :
-        . /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md/_tst/part_1/_tst_this_1.sh
+        . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2md/_tst/part_1/_tst_this_1.sh
     }
 }
 
@@ -66,10 +66,16 @@ ${NORMAL}"
 #     return 1
 # }
 
-# _is_yes "cr $2 file in $PPWD" || {
-#     _st_info "that not 'y' return 1"
-#     return 1
-# }
+#[[ptr_path]]
+# ! ptr_path_1
+local ptr_path_1="${ARGS[1]}" 
+ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+
+_is_yes "cr $1 file in $PPWD" || {
+    _st_info "that not 'y' return 1"
+    return 1
+}
 
 # local file_res=$PPWD/${ARGS[1]}
 

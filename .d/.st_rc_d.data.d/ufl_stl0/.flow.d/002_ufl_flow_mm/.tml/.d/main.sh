@@ -66,10 +66,15 @@ ${NORMAL}"
 #     return 1
 # }
 
-# _is_yes "cr $2 file in $PPWD" || {
+# _is_yes "cr ${ARGS[1]} file in $PPWD" || {
 #     _st_info "that not 'y' return 1"
 #     return 1
 # }
+
+#[[ptr_path]]
+# ! ptr_path_1
+# local ptr_path_1="${ARGS[1]}" 
+# ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
 # local file_res=$PPWD/${ARGS[1]}
 

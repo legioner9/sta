@@ -24,12 +24,12 @@ hint="\$1: num menu \$2: name_fn_with_rnd_postfix.ext "
 if _isn_from ${NARGS} 2 2 "in fs= file://$file_main , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     return 1
 fi
-
-[ ${ARGS[1]} == "-h" ] && {
-    echo -e "${CYAN} ${FNN}() help: 
+[ -n "${ARGS[1]}" ] && {
+    [ ${ARGS[1]} == "-h" ] && {
+        echo -e "${CYAN} ${FNN}() help: 
 MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
 TAGS: @sh @fn @file @rnd
-ARGS: \$1=1
+ARGS: \$1=2
 EXAM: ufl_stl0 1 file.sh
 EXEC: . REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_tst.sh.v2
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
@@ -42,21 +42,26 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
+        [ ${ARGS[1]} == "_tst_1" ] && {
+            # :
+            . /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh
+        }
+
+    }
+
+    [ -z ${ARGS[1]} ] && {
+        hint="\$1: name result file "
+        _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+        return 1
+    }
+
+    _is_yes "cr ${ARGS[1]} dir in $PPWD like ufl_stl0 flow" || {
+        _st_info "that not 'y' return 1"
+        return 1
+    }
+
+    local dir_res=$PPWD/${ARGS[1]}
 }
-
-[ -z ${ARGS[1]} ] && {
-    hint="\$1: name result file "
-    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
-    return 1
-}
-
-_is_yes "cr ${ARGS[1]} dir in $PPWD like ufl_stl0 flow" || {
-    _st_info "that not 'y' return 1"
-    return 1
-}
-
-local dir_res=$PPWD/${ARGS[1]}
-
 if [ -d ${dir_res} ]; then
 
     hint="that result file : conlict rerecording"
@@ -99,7 +104,7 @@ _lnv2d ${fn_lst_cntx_file} ${dir_res}
 # _s2f "{{PPWD}}" $PPWD ${file_res}
 # _s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
 
-# path2nom_stl0 ${file_res}
-# arb2f_ ${file_res} 0
+path2nom2d_stl0 ${dir_res}
+arb2f_stl0 "${file_res}"
 
 # _edit ${file_res}
