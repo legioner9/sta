@@ -47,12 +47,17 @@ ${NORMAL}"
     # fi
 
     #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
+    # echo ${ARGS[0]}
+    # echo ${ARGS[1]}
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+    
 
     #that inserter [[body_fn]]
 
@@ -62,4 +67,4 @@ ${NORMAL}"
 
 }
 
-_tst_this_1_rnd7_45444cb $@
+_tst_this_1_rnd7_45444cb "$@"

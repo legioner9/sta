@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+_parr3e _ARGS_
+# echo -e "${GREEN}\$0 = $0${NORMAL}" #print variable
 # echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
@@ -12,7 +13,7 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-# echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
 # echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
@@ -65,11 +66,11 @@ ${NORMAL}"
 
     }
 
-    # [ -z ${ARGS[1]} ] && {
-    #     hint="\$1: name result file "
-    #     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
-    #     return 1
-    # }
+    [ -z ${ARGS[1]} ] && {
+        hint="\$1: name result file "
+        _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+        return 1
+    }
 
     # _is_yes "cr ${ARGS[1]} file in $PPWD" || {
     #     _st_info "that not 'y' return 1"
@@ -77,6 +78,8 @@ ${NORMAL}"
     # }
 
 }
+
+# echo "\${ARGS[@]:1} :" "${ARGS[@]:1}"
 
 #[[ptr_path]]
 # ! ptr_path_1

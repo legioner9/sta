@@ -8,7 +8,8 @@ dir_lst2
 dir_rpn       
 file_main   
 fn_sh_file 
-NARGS       
+#NARGS
+#_NARGS_
 PPWD             
 res_ptv     
 dir_ptv       

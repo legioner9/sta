@@ -2,6 +2,8 @@
 
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
+_parr3e _ARGS_
+
 # echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
@@ -12,19 +14,19 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-# echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"           #print variable
-# echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
-#[[dir_set]] = {{dir_set}}
-#[[file_main]] = {{file_main}}
+#[[dir_set]] = file://{{dir_set}}
+#[[file_main]] = file://{{file_main}}
 #[[NARGS]] = {{NARGS}}
 #[[PPWD]] = {{PPWD}}
-#[[res_ptv]] = {{res_ptv}}
-#[[dir_ptv]] = {{dir_ptv}}
-#[[dir_res]] = {{dir_res}}
+#[[res_ptv]] = file://{{res_ptv}}
+#[[dir_ptv]] = file://{{dir_ptv}}
+#[[dir_res]] = file://{{dir_res}}
 
 _lnv2e ${fn_lst_cntx_file}
 

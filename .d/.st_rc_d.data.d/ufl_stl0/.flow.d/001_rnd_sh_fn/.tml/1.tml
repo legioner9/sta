@@ -46,6 +46,9 @@ ${NORMAL}"
     #     return 1
     # fi
 
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+
     #{{ptr_path}}
 
     #! START BODY FN ---------------------------------------
@@ -60,4 +63,4 @@ ${NORMAL}"
 
 }
 
-{{fn_name}}_{{rnd_val}} $@
+{{fn_name}}_{{rnd_val}} "$@"
