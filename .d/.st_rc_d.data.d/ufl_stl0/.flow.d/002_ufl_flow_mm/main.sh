@@ -64,7 +64,6 @@ ${NORMAL}"
         return 1
     }
 
-    
 }
 
 local dir_res=$PPWD/${ARGS[1]}
@@ -86,7 +85,7 @@ mkdir ${dir_res}
 cp -r $dir_tml/.d/. ${dir_res}
 
 mkdir ${dir_res}/_tst/part_1
-cp ${dir_res}/_tst/part__/. ${dir_res}/_tst/part_1
+cp -r ${dir_res}/_tst/part__/. ${dir_res}/_tst/part_1
 
 cd ${dir_res}/_tst/part_1 || {
     _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_res}/_tst/part_1' : ${hint} : return 1"
@@ -95,7 +94,9 @@ cd ${dir_res}/_tst/part_1 || {
 
 ufl_stl0 1 _tst_this_1.sh
 
-_s2f "{{body_fn}}" "that inserter [[body_fn]]" _tst_this_1.sh
+local file_body_rnd_ins=$dir_ins/rnd_in_tst.ins
+
+_f2f $file_body_rnd_ins "{{body_fn}}" _tst_this_1.sh
 
 _s2d "{{dir_res}}" $dir_res ${dir_res}
 

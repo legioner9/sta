@@ -12,6 +12,7 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$dir_lst = file://$dir_lst${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_lst2 = file://$dir_lst2${NORMAL}"     #print variable
 # echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
+# echo -e "${GREEN}\$dir_cntx = file://$dir_cntx${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
 echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
@@ -29,6 +30,7 @@ echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 #[[dir_res]] = file://{{dir_res}}
 
 _lnv2e ${fn_lst_cntx_file}
+_lnv2e ${dir_cntx}/main.cntx
 
 # hint="\$1: \$2: "
 # if _isn_from ${NARGS} less more "in fs= file:// , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
@@ -80,6 +82,8 @@ ${NORMAL}"
 
 }
 
+local main_cntx_0=0
+
 #[[ptr_path]]
 # ! ptr_path_1
 # local ptr_path_1="${ARGS[1]}"
@@ -102,5 +106,7 @@ ${NORMAL}"
 # else
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
+
+_lnv2e ${dir_cntx}/main.cntx
 
 return 0

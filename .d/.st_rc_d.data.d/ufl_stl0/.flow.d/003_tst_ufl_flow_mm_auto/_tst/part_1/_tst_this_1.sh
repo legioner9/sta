@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_this_1_rnd7_4159f1e() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_173757d() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
 
-_tst_this_1_rnd7_4159f1e() {
+_tst_this_1_rnd7_173757d() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -46,15 +46,25 @@ ${NORMAL}"
     #     return 1
     # fi
 
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+
     #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
 
-    #that inserter [[body_fn]]
+    #{{body_fn}}
+
+    # insert from {{dir_ins}}/rnd_in_tst.ins
+    # echo ${ARGS[0]}
+    # echo ${ARGS[1]}
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+    # _lnv2e ${dir_cntx}/main.cntx
 
     #! END BODY FN ---------------------------------------
 
@@ -62,4 +72,4 @@ ${NORMAL}"
 
 }
 
-_tst_this_1_rnd7_4159f1e $@
+_tst_this_1_rnd7_173757d "$@"

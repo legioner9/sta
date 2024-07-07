@@ -56,8 +56,10 @@ ${NORMAL}"
     # echo ${ARGS[0]}
     # echo ${ARGS[1]}
     # local _ARGS_=("$@")
-    # _parr3e _ARGS_
+    _parr3e _ARGS_
+    # _lnv2e ${dir_cntx}/main.cntx
     
+     
 
     #that inserter [[body_fn]]
 

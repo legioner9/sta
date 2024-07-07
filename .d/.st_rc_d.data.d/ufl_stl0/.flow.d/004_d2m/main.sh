@@ -28,6 +28,7 @@ echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
 #[[dir_res]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
 _lnv2e ${fn_lst_cntx_file}
+_lnv2e ${dir_cntx}/main.cntx
 
 # hint="\$1: \$2: "
 # if _isn_from ${NARGS} less more "in fs= file:// , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
@@ -40,7 +41,7 @@ _lnv2e ${fn_lst_cntx_file}
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 TAGS: @
-ARGS: \$1=1
+ARGS: \$1=4
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
@@ -78,6 +79,8 @@ ${NORMAL}"
     # }
 
 }
+local main_cntx_0=0
+
 
 # echo "\${ARGS[@]:1} :" "${ARGS[@]:1}"
 
@@ -103,5 +106,7 @@ ${NORMAL}"
 # else
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
+
+_lnv2e ${dir_cntx}/main.cntx
 
 return 0
