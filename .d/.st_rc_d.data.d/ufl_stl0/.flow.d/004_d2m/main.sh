@@ -111,11 +111,26 @@ if [ -f ${file_md} ]; then
     rm ${file_md}
 fi
 
-local item=
+local _item_=
+local ext=
+local ext2=
 
-for item in $(_dfr2e ${dir_with_cntt_files}); do
+[ -d ${dir_prc}/nod2md.d ] || {
+    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/nod2md.d' : ${hint} : return 1"
+    return 1
+}
 
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+[ -f ${dir_cntx}/nod2md.d.cntx ] || {
+    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_cntx}/nod2md.d.cntx' : ${hint} : return 1"
+    return 1
+}
+
+for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
+
+    ext=$(_prs_f -e ${_item_})
+    ext2=$(_prs_f -e2 ${_item_})
+
+    _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 done
 
