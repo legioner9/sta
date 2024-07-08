@@ -85,8 +85,39 @@ local main_cntx_0=0
 
 #[[ptr_path]]
 # ! ptr_path_1
-# local ptr_path_1="${ARGS[1]}"
-# ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+local ptr_path_1="${ARGS[1]}"
+ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+local dir_with_cntt_files=${ptr_path_1}
+
+local ptr_path_2="${ARGS[2]}"
+ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+local file_md=${ptr_path_2}
+
+local hint="dir_with_cntt_files \$2 insert to file_md \$3"
+
+[ -d ${dir_with_cntt_files} ] || {
+    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_cntt_files}' : ${hint} : return 1"
+    return 1
+}
+
+if [ -f ${file_md} ]; then
+    _st_info "${file_md} IS_FILE"
+    _is_yes "rewright file://${file_md} : ${hint} : ?" || {
+        _st_info "reject rewright file://${file_md} : return 0"
+        return 0
+    }
+    rm ${file_md}
+fi
+
+local item=
+
+for item in $(_dfr2e ${dir_with_cntt_files}); do
+
+    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+
+done
 
 # local file_res=$PPWD/${ARGS[1]}
 
