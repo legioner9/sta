@@ -53,13 +53,16 @@ ${NORMAL}"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
+    #{{body_fn}}
+
+    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
     # echo ${ARGS[0]}
     # echo ${ARGS[1]}
     # local _ARGS_=("$@")
     _parr3e _ARGS_
-    # _lnv2e ${dir_cntx}/main.cntx
-    
-     
+    _lnv2e ${dir_cntx}/main.cntx
+
+    ufl_stl0 4 ins.tst1.d result.man
 
     #that inserter [[body_fn]]
 

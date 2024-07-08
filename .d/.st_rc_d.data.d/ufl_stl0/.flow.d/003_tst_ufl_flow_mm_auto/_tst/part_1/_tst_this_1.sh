@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_this_1_rnd7_c714017() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_d6fdab4() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto/_tst/part_1/_tst_this_1.sh---${NORMAL}" #started functions
 
-_tst_this_1_rnd7_c714017() {
+_tst_this_1_rnd7_d6fdab4() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -59,7 +59,7 @@ ${NORMAL}"
 
     #{{body_fn}}
 
-    # insert from {{dir_ins}}/rnd_in_tst.ins
+    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
     # echo ${ARGS[0]}
     # echo ${ARGS[1]}
     # local _ARGS_=("$@")
@@ -72,4 +72,4 @@ ${NORMAL}"
 
 }
 
-_tst_this_1_rnd7_c714017 "$@"
+_tst_this_1_rnd7_d6fdab4 "$@"

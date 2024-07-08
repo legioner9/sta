@@ -39,7 +39,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: dir_with_cntt_files \$2 insert to file_md \$3
 TAGS: @
 ARGS: \$1=4
 EXAM: 
@@ -80,7 +80,6 @@ ${NORMAL}"
 
 }
 local main_cntx_0=0
-
 
 # echo "\${ARGS[@]:1} :" "${ARGS[@]:1}"
 
