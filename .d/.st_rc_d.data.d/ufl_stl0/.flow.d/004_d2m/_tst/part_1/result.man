@@ -1,4 +1,13 @@
 
+CMND: ufl_stl0 4 ins.tst1.d result.man
+
+PPWD: ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1
+
+FLOW: ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
+
+DATE: 09072024185440
+
+
 file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md
 
 [001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md)
@@ -247,3 +256,6 @@ unset filename
 
 
 ```
+
+
+

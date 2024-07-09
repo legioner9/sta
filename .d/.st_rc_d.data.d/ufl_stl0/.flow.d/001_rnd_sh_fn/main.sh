@@ -62,6 +62,10 @@ echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
 #     return 1
 # }
 
+#! ptr_path
+# local ptr_path="${ARGS[1]}"
+# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+
 local file_res=$PPWD/${ARGS[1]}
 
 if [ -f ${file_res} ]; then

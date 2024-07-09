@@ -14,7 +14,7 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
 echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
-# echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
@@ -39,7 +39,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir_with_cntt_files \$2 insert to file_md \$3
+MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. ) \$2 insert to file_md \$3
 TAGS: @
 ARGS: \$1=4
 EXAM: 
@@ -120,6 +120,23 @@ local ext2=
     return 1
 }
 
+[ -d ${dir_prc}/treat_md.d ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/treat_md.d' : ${hint} : return 1"
+    return 1
+}
+
+local first_post=${dir_prc}/treat_md.d/first_post.prc
+
+if [ -f ${first_post} ]; then
+    . ${first_post} || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${first_post}' : ${hint} : return 1"
+        return 1
+    }
+else
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${first_post}' : ${hint} : return 1"
+    return 1
+fi
+
 [ -f ${dir_cntx}/nod2md.d.cntx ] || {
     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_cntx}/nod2md.d.cntx' : ${hint} : return 1"
     return 1
@@ -145,6 +162,16 @@ for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
     }
 
 done
+
+if [ -f ${dir_prc}/treat_md.d/last_post.prc ]; then
+    . ${dir_prc}/treat_md.d/last_post.prc || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/treat_md.d/last_post.prc' : ${hint} : return 1"
+        return 1
+    }
+else
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/treat_md.d/last_post.prc' : ${hint} : return 1"
+    return 1
+fi
 _edit ${file_md}
 # local file_res=$PPWD/${ARGS[1]}
 
