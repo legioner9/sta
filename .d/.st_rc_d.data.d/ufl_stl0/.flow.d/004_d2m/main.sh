@@ -69,7 +69,7 @@ ${NORMAL}"
 
     [ -z ${ARGS[1]} ] && {
         hint="\$1: name result file "
-        _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
         return 1
     }
 
@@ -98,7 +98,7 @@ local file_md=${ptr_path_2}
 local hint="dir_with_cntt_files \$2 insert to file_md \$3"
 
 [ -d ${dir_with_cntt_files} ] || {
-    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_cntt_files}' : ${hint} : return 1"
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_cntt_files}' : ${hint} : return 1"
     return 1
 }
 
@@ -111,26 +111,38 @@ if [ -f ${file_md} ]; then
     rm ${file_md}
 fi
 
-local _item_=
+local item=
 local ext=
 local ext2=
 
 [ -d ${dir_prc}/nod2md.d ] || {
-    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/nod2md.d' : ${hint} : return 1"
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/nod2md.d' : ${hint} : return 1"
     return 1
 }
 
 [ -f ${dir_cntx}/nod2md.d.cntx ] || {
-    _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_cntx}/nod2md.d.cntx' : ${hint} : return 1"
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_cntx}/nod2md.d.cntx' : ${hint} : return 1"
     return 1
 }
 
 for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
 
+    name_ext=$(_prs_f -ne ${_item_})
     ext=$(_prs_f -e ${_item_})
     ext2=$(_prs_f -e2 ${_item_})
 
-    _lnv2e ${dir_cntx}/nod2md.d.cntx
+    # _lnv2e ${dir_cntx}/nod2md.d.cntx
+
+    [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
+        _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+        return 1
+    }
+
+    . ${dir_prc}/nod2md.d/${ext2}.prc || {
+        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+        return 1
+    }
 
 done
 
@@ -139,7 +151,7 @@ done
 # if [ -f ${file_res} ]; then
 
 #     hint="that result file : conlict rerecording"
-#     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
+#     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
 #     if _is_yes rerecording that file://${file_res}?; then
 
 #         rm ${file_res}
