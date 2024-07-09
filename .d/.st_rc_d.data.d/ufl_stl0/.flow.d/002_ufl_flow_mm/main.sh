@@ -27,7 +27,7 @@ fi
 [ -n "${ARGS[1]}" ] && {
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
+MAIN: cr name_ufl_flow=\$2 in root_dir
 TAGS: @sh @fn @file @rnd
 ARGS: \$1=2
 EXAM: ufl_stl0 1 file.sh
@@ -54,7 +54,7 @@ ${NORMAL}"
     }
 
     [ -z "${ARGS[1]}" ] && {
-        hint="\$1: name result file "
+        hint="cr name_ufl_flow=\$2 in root_dir"
         _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
         return 1
     }
