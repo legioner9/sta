@@ -17,7 +17,7 @@ echo -e "
 
 _f2f ${_item_} "{{code}}" ${file_md}
 
-_s2f "{{code}}" [[code]] ${file_md}
+_s2f "{{code}}" @ ${file_md}
 
 echo -e "
 \`\`\`" >> ${file_md}

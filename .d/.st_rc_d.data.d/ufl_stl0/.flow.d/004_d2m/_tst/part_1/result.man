@@ -1,11 +1,26 @@
 
+
+## this intro file 
+
+ccasdcvf gvfwsergwe rtgetgertgertg
+### grtgertg rthgertghr
+
+hrehrher
+
+END intro file 
+
+file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/002_add.pic.jpg
+
+![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/002_add.pic.jpg)
+
+
 file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/003_s_grupp.code.sdbl
 
 [003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/003_s_grupp.code.sdbl)
 
 
 ```sdbl
-[[code]]
+
 ВЫБРАТЬ
 	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт КАК РекЗапрГрупПродукт,
 	СУММА(ДокПотребТабчДокПотреб.РекТабчДокПотребКоличество) КАК РекЗапрГрупКоличество
@@ -23,7 +38,7 @@ file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_
 
 
 ```bsl
-[[code]]
+
 
 Процедура ОбработкаПроведения(Отказ, Режим)
 	
@@ -99,13 +114,18 @@ file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_
 
 ```
 
+file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/005_1Cv8_prob_kopeek.file.cf
+
+[005_1Cv8_prob_kopeek.file.cf](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/005_1Cv8_prob_kopeek.file.cf)
+
+
 file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/006_pdf2jpg.code.sh
 
 [006_pdf2jpg.code.sh](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/006_pdf2jpg.code.sh)
 
 
 ```sh
-[[code]]
+
 #!/bin/bash
 
 #. "${HOME}/.bashrc"
