@@ -145,7 +145,7 @@ for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
     }
 
 done
-
+_edit ${file_md}
 # local file_res=$PPWD/${ARGS[1]}
 
 # if [ -f ${file_res} ]; then

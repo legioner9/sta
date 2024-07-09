@@ -57,7 +57,7 @@ ${NORMAL}"
 
     local file_path="${HOME}/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0"
 
-    _s2se "/" "\\\/" "/REPOBARE/_repo/"
+    echo $(_s2se ${HOME} @ ${file_path})
 
     #{{body_fn}}
 
