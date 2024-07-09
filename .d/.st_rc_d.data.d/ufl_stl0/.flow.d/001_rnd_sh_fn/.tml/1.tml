@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{PPWD}}/{{file_name}}---${NORMAL}" #started functions
+echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{file_name}}---${NORMAL}" #started functions
 
 {{fn_name}}_{{rnd_val}}() {
 
@@ -10,7 +10,7 @@ echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{PPWD}}/{{file_name}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="{{PPWD}}/{{file_name}}"
+    local path_file="{{file_name}}"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions

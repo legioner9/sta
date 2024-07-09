@@ -71,7 +71,7 @@ ${NORMAL}"
 
     # [ -z ${ARGS[1]} ] && {
     #     hint="\$1: name result file "
-    #     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+    #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
     #     return 1
     # }
 
@@ -94,7 +94,7 @@ local main_cntx_0=0
 # if [ -f ${file_res} ]; then
 
 #     hint="that result file : conlict rerecording"
-#     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
+#     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
 #     if _is_yes rerecording that file://${file_res}?; then
 
 #         rm ${file_res}

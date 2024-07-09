@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_file_rnd7_fd2a359() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_file.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- result_rnd7_8638ef3() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/result.man_ufl4---${NORMAL}" #started functions
 
-_tst_file_rnd7_fd2a359() {
+result_rnd7_8638ef3() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _tst_file_rnd7_fd2a359() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_file.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/result.man_ufl4"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -57,10 +57,14 @@ ${NORMAL}"
 
     #{{body_fn}}
 
+cd ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1
+ufl_stl0 4 ins.tst1.d result.man
+
+
     #! END BODY FN ---------------------------------------
 
     return 0
 
 }
 
-_tst_file_rnd7_fd2a359 "$@"
+result_rnd7_8638ef3 "$@"

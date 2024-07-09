@@ -63,10 +63,11 @@ echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
 # }
 
 #! ptr_path
-# local ptr_path="${ARGS[1]}"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+local ptr_path="${ARGS[1]}"
+ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
-local file_res=$PPWD/${ARGS[1]}
+local file_res=${ptr_path}
+# local file_res=$PPWD/${ARGS[1]}
 
 if [ -f ${file_res} ]; then
 
@@ -86,7 +87,11 @@ fi
 
 _s2f "{{rnd_val}}" $rnd_val ${file_res}
 
-local file_name=${ARGS[1]}
+#! ptr_path
+local ptr_path="${ARGS[1]}"
+ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+
+local file_name=${ptr_path}
 local fn_name=$(_prs_f -n ${ARGS[1]})
 
 _s2f "{{fn_name}}" $fn_name ${file_res}
