@@ -13,8 +13,8 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$dir_rpn = file://$dir_rpn${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"      #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
@@ -150,10 +150,16 @@ for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
+    # [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
+    #     _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
+    #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+    #     return 1
+    # }
+
     [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
         _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
-        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
-        return 1
+        # _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+        # return 1
     }
 
     . ${dir_prc}/nod2md.d/${ext2}.prc || {
