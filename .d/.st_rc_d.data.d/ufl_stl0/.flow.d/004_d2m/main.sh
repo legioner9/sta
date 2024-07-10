@@ -156,16 +156,17 @@ for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
     #     return 1
     # }
 
-    [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
+    if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
         _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
         # _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
         # return 1
-    }
 
-    . ${dir_prc}/nod2md.d/${ext2}.prc || {
-        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
-        return 1
-    }
+    else
+        . ${dir_prc}/nod2md.d/${ext2}.prc || {
+            _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+            return 1
+        }
+    fi
 
 done
 
