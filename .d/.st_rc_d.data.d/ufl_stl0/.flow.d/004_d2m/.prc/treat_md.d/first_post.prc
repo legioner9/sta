@@ -3,6 +3,7 @@ echo "in first_post.prc"
 _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 echo -e "
+<!--
 CMND: ufl_stl0 4 ${_ARGS_[1]} ${_ARGS_[2]}
 
 PPWD: ${PPWD}
@@ -12,6 +13,7 @@ FLOW: ${dir_set}
 DATE: $(_date)
 
 DATX: $(date +%s)
+-->
 " >> ${file_md}
 
 
