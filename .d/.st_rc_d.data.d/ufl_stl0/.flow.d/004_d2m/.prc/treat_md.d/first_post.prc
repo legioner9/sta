@@ -3,6 +3,10 @@ echo "in first_post.prc"
 _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 echo -e "
+[[_TOC_]]
+
+End Contents
+
 <!--
 CMND: ufl_stl0 4 ${_ARGS_[1]} ${_ARGS_[2]}
 
