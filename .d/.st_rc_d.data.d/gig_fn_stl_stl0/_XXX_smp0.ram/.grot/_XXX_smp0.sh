@@ -33,8 +33,9 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTL: 
-    _go  : _edit ${d_name}/${FNN}.sh
-    _tst :  . ${d_name}/_tst/exec.tst
+    _go     : _edit ${d_name}/${FNN}.sh
+    _tst    : . ${d_name}/_tst/exec.tst
+    _flow_1 : . ${d_name}/_tst/_flow_tst.sh.v1
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
 EXAM:
@@ -58,10 +59,25 @@ ${NORMAL}"
         fi
     fi
 
+    if [[ "_flow_1" == "$1" ]]; then
+        if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
+            . ${d_name}/_tst/_flow_tst.sh.v1
+            return 0
+        else
+            echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
+            return 1
+        fi
+    fi
+
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     return 1
     # fi
+
+    #[[ptr_path]]
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
     cd ${PPWD}
     return 0
