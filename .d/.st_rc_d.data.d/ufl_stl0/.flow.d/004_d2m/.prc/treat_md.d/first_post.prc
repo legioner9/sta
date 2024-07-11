@@ -5,7 +5,7 @@ _lnv2e ${dir_cntx}/nod2md.d.cntx
 echo -e "
 [[_TOC_]]
 
-End Contents
+End Contents Menu
 
 <!--
 CMND: ufl_stl0 4 ${_ARGS_[1]} ${_ARGS_[2]}
