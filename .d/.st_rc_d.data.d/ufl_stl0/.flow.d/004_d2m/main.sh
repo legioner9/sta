@@ -142,6 +142,11 @@ fi
     return 1
 }
 
+local _item_=
+local name_ext=
+local ext=
+local ext2=
+
 for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
     echo -e "${GREEN}\$_item_ = $_item_${NORMAL}" #print variable
     name_ext=$(_prs_f -ne ${_item_})
