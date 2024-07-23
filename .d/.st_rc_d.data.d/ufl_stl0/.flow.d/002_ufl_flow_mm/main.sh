@@ -30,7 +30,7 @@ fi
 MAIN: cr name_ufl_flow=\$2 in root_dir
 TAGS: @sh @fn @file @rnd
 ARGS: \$1=2
-EXAM: ufl_stl0 1 file.sh
+EXAM: ufl_stl0 2 NNN_name_flow
 EXEC: . REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_tst.sh.v2
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 [ ,\$2 num_menu ]
