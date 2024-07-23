@@ -1,14 +1,36 @@
 
+[[_TOC_]]
+
+End Contents Menu
+
+<!--
 CMND: ufl_stl0 4 ins.tst1.d result.man
 
 PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 09072024200416
+DATE: 23072024155820
+
+DATX: 1721725100
+-->
 
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/000.lcu.f -->
+
+[000.lcu.f](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/000.lcu.f)
+
+
+
+RNDX: c1c064f806d84cec9be223877329ce3b
+
+MAIN: 
+
+TAGS: 
+
+
+
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md -->
 
 [001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md)
 
@@ -23,14 +45,14 @@ hrehrher
 
 END intro file 
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg -->
 
 [002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg)
 
 ![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg)
 
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/003_s_grupp.code.sdbl
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/003_s_grupp.code.sdbl -->
 
 [003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/003_s_grupp.code.sdbl)
 
@@ -48,7 +70,7 @@ file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_
 
 ```
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/004_work.code.bsl
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/004_work.code.bsl -->
 
 [004_work.code.bsl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/004_work.code.bsl)
 
@@ -130,12 +152,12 @@ file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_
 
 ```
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf -->
 
 [005_1Cv8_prob_kopeek.file.cf](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf)
 
 
-file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/006_pdf2jpg.code.sh
+<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/006_pdf2jpg.code.sh -->
 
 [006_pdf2jpg.code.sh](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/006_pdf2jpg.code.sh)
 
