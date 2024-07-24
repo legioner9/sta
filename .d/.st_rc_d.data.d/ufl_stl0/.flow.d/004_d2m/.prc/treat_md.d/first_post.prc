@@ -5,6 +5,9 @@ _lnv2e ${dir_cntx}/nod2md.d.cntx
 echo -e "
 [[__TOC_]]
 
+<a name="top"></a>
+<a class="top-link hide" href="#top">↑</a>
+
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 <!-- /TOC -->
