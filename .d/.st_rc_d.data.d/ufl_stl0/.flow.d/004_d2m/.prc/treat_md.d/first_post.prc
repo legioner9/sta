@@ -3,7 +3,11 @@ echo "in first_post.prc"
 _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 echo -e "
-[[_TOC_]]
+[[__TOC_]]
+
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+<!-- /TOC -->
 
 End Contents Menu
 
