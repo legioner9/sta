@@ -8,7 +8,7 @@ echo -e "
 <a name="top"></a>
 <a class="top-link hide" href="#top">↑</a>
 
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+<!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
 <!-- /TOC -->
 
