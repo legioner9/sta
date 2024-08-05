@@ -80,6 +80,7 @@ ${NORMAL}"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
     # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
+    # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
 
     cd ${PPWD}
     return 0
