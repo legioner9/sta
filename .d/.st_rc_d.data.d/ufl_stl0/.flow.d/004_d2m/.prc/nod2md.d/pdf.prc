@@ -4,11 +4,18 @@ _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 local short_item=$(_s2se ${HOME} @ ${_item_})
 
-echo -e "
-<!-- file://${_item_} -->
+local dir_item=$(_prs_f -d ${_item_})
+local name2=$(_prs_f -n2 ${_item_})
 
-[${name_ext}](${short_item})
+pdftoppm -jpeg "${_item_}" ${dir_item}/res.pdftoppm
+local res_jpg=${dir_item}/${name2}.pic.jpg
+mv ${dir_item}/res.pdftoppm-1.jpg ${res_jpg}
 
-<object data=\"${_item_}\" type=\"application/pdf\">
-</object>
-" >> ${file_md}
+
+# echo -e "
+# <!-- file://${res_jpg} -->
+
+# [${name2}.pic.jpg](${short_item})
+
+# ![${name2}.pic.jpg](${short_item})
+# " >> ${file_md}
