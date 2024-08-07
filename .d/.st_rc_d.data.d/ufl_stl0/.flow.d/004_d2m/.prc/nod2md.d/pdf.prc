@@ -10,6 +10,7 @@ local name2=$(_prs_f -n2 ${_item_})
 pdftoppm -jpeg "${_item_}" ${dir_item}/res.pdftoppm
 local res_jpg=${dir_item}/${name2}.pic.jpg
 mv ${dir_item}/res.pdftoppm-1.jpg ${res_jpg}
+rm ${_item_}
 
 
 # echo -e "
