@@ -15,8 +15,8 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$dir_cntx = file://$dir_cntx${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"      #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
