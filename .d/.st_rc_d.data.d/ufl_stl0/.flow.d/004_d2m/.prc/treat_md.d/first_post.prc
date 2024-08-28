@@ -3,10 +3,12 @@ echo "in first_post.prc"
 _lnv2e ${dir_cntx}/nod2md.d.cntx
 
 echo -e "
-[[__TOC_]]
+<!-- [[__TOC_]] -->
 
 <a name="top"></a>
 <a class="top-link hide" href="#top">↑</a>
+
+Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
