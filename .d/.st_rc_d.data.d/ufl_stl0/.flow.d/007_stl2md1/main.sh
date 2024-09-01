@@ -110,4 +110,9 @@ local main_cntx_0=0
 
 _lnv2e ${dir_cntx}/main.cntx
 
+local zip_file=${ST_RC_D_PATH}/.d/.zip/.d.zip
+local dot_d_dir=${dir_set}/_arh/
+ 
+cp ${ST_RC_D_PATH}/.d/.zip/.d.zip  ${dir_set}/_arh
+
 return 0

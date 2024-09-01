@@ -50,9 +50,9 @@ ${NORMAL}"
     # _parr3e _ARGS_
 
     #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
@@ -65,7 +65,7 @@ ${NORMAL}"
     # local _ARGS_=("$@")
     # _parr3e _ARGS_
     # _lnv2e ${dir_cntx}/main.cntx
-    # cd _dir_tst || _st_err "_dir_tst not dir"
+    cd _dir_tst || _st_err "_dir_tst not dir"
 
     #! END BODY FN ---------------------------------------
 
