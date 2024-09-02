@@ -111,8 +111,20 @@ local main_cntx_0=0
 _lnv2e ${dir_cntx}/main.cntx
 
 local zip_file=${ST_RC_D_PATH}/.d/.zip/.d.zip
-local dot_d_dir=${dir_set}/_arh/
+local dot_d_dir=${dir_set}/_arh
+
+[ -d ${dot_d_dir}/.d ] && {
+    rm -r ${dot_d_dir}/.d
+}
  
-cp ${ST_RC_D_PATH}/.d/.zip/.d.zip  ${dir_set}/_arh
+[ -f ${dot_d_dir}/.d.zip ] && {
+    rm ${dot_d_dir}/.d.zip
+}
+ 
+cp ${zip_file}  ${dot_d_dir}
+
+cd ${dot_d_dir}
+
+unzip ${dot_d_dir}/.d
 
 return 0
