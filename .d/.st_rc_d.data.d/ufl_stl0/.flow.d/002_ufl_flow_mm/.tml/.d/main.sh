@@ -15,8 +15,8 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$dir_cntx = file://$dir_cntx${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"      #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
@@ -46,15 +46,18 @@ TAGS: @
 ARGS: \$1=1
 EXAM: 
 EXEC: 
-\$1 0 or num_menu dir_ptv from ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
+\$1 0 or num_menu dir_ptv from ../{{dir_res}}
 [ ,\$2 num_menu ]
 CNTL: 
-    _go  : _edit ${d_name}/${FNN}.sh
-    _tst :  . ${d_name}/_tst/exec.tst
+    _go             : _edit file://{{dir_res}}/main.sh
+    _go_dir_flow    : _edit file://..{{dir_res}}
+    _tst_1          : . file://{{dir_res}}/_tst/part_1/_tst_this_1.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
+
+        return 0
 
     }
 
@@ -64,6 +67,22 @@ ${NORMAL}"
             echo -e "${HLIGHT}--- . file://{{dir_res}}/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
             . {{dir_res}}/_tst/part_1/_tst_this_1.sh
         }
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_go" ] && {
+
+        _edit {{dir_res}}/main.sh
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_go_dir_flow" ] && {
+
+        _edit ../{{dir_res}}
 
         return 0
 

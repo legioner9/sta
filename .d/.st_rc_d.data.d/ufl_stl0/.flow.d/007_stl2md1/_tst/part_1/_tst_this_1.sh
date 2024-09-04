@@ -67,6 +67,12 @@ ${NORMAL}"
     # _lnv2e ${dir_cntx}/main.cntx
     cd _dir_tst || _st_err "_dir_tst not dir"
 
+    : > res.man
+
+    ufl_stl0 7 1 res.man # 0 NOT RECOMMEND
+
+    _edit res.man
+
     #! END BODY FN ---------------------------------------
 
     return 0

@@ -15,8 +15,8 @@ _parr3e _ARGS_
 # echo -e "${GREEN}\$dir_cntx = file://$dir_cntx${NORMAL}"       #print variable
 # echo -e "${GREEN}\$file_main = file://$file_main${NORMAL}"   #print variable
 # echo -e "${GREEN}\$fn_sh_file = file://$fn_sh_file${NORMAL}" #print variable
-echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}" #print variable
-echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}"             #print variable
+echo -e "${GREEN}\$NARGS = $NARGS${NORMAL}"      #print variable
+echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
@@ -41,21 +41,25 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: flow 1, info stl lib to .md 
+MAIN: flow 1, info stl lib to .md (MAIN, TAGS ...)
 TAGS: @
 ARGS: \$1=7
-\$2 .md file 
+\$2 = num treater file from \$dir_prc = file://$dir_prc
+\$3 .md file 
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
 [ ,\$2 num_menu ]
 CNTL: 
-    _go  : _edit ${d_name}/${FNN}.sh
-    _tst :  . ${d_name}/_tst/exec.tst
+    _go             : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/007_stl2md1/main.sh
+    _go_dir_flow    : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
+    _tst_1          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/007_stl2md1/_tst/part_1/_tst_this_1.sh 
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
+
+        return 0
 
     }
 
@@ -65,6 +69,22 @@ ${NORMAL}"
             echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/007_stl2md1/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
             . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/007_stl2md1/_tst/part_1/_tst_this_1.sh
         }
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_go" ] && {
+
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/007_stl2md1/main.sh
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_go_dir_flow" ] && {
+
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
 
         return 0
 
@@ -87,8 +107,13 @@ local main_cntx_0=0
 
 #[[ptr_path]]
 # ! ptr_path_1
-# local ptr_path_1="${ARGS[1]}"
-# ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+local ptr_path_2="${ARGS[2]}"
+ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+[ -f ${ptr_path_2} ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${ptr_path_2}' : ${hint} : return 1"
+    return 1
+}
 
 # local file_res=$PPWD/${ARGS[1]}
 
@@ -111,20 +136,66 @@ local main_cntx_0=0
 _lnv2e ${dir_cntx}/main.cntx
 
 local zip_file=${ST_RC_D_PATH}/.d/.zip/.d.zip
-local dot_d_dir=${dir_set}/_arh
+local dot_d_dir=${ST_RC_D_PATH}/.d/.unzip
 
 [ -d ${dot_d_dir}/.d ] && {
     rm -r ${dot_d_dir}/.d
 }
- 
+
 [ -f ${dot_d_dir}/.d.zip ] && {
     rm ${dot_d_dir}/.d.zip
 }
- 
-cp ${zip_file}  ${dot_d_dir}
 
-cd ${dot_d_dir}
+cp ${zip_file} ${dot_d_dir}
 
-unzip ${dot_d_dir}/.d
+cd ${dot_d_dir} || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://dot_d_dir' : ${hint} : return 1"
+    return 1
+}
+
+echo -e "${HLIGHT}--- unzip ${dot_d_dir}/.d ---${NORMAL}" #start files
+unzip ${dot_d_dir}/.d >/dev/null
+
+local sh_dir=${dot_d_dir}/.d/.rc.d/.st.rc.d/.st.sh.d
+
+local item=''
+
+local fn_name=''
+local fn_path=''
+local fn_main=''
+local fn_tags=''
+local arr_name_=()
+local result_=
+
+local file_md="${ptr_path_2}"
+
+: >"${file_md}"
+arr_name_=($(_d2e $dir_prc))
+result_=''
+
+_nr2mm arr_name_ arr_name_ result_ "${ARGS[1]}"
+
+echo -e "${GREEN}\$result_ = $result_${NORMAL}" #print variable
+
+for item in $(ls ${sh_dir}); do
+
+    fn_name="$(_prs_f -n $item)"
+
+    fn_path="${sh_dir}/${item}"
+
+    fn_main="$($fn_name -h | grep 'MAIN')"
+    fn_main="${fn_main:6}"
+
+    fn_tags="$($fn_name -h | grep 'TAGS')"
+    fn_tags="${fn_tags:6}"
+
+    arr_=("${fn_name}" "${fn_path}" "${fn_main}" "${fn_tags}")
+    # parr3e_ arr_
+
+    echo -e "${HLIGHT}--- . $dir_prc/${result_} ---${NORMAL}" #start files
+
+    . $dir_prc/${result_}
+
+done
 
 return 0
