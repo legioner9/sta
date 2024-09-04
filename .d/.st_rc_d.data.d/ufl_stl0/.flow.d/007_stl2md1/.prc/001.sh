@@ -6,8 +6,6 @@
 local short_item=$(_s2se ${HOME} @ ${fn_path})
 
 echo -e "
-<!-- file://${short_item} -->
-
 [${fn_name}](${short_item})
 " >>${file_md}
 
