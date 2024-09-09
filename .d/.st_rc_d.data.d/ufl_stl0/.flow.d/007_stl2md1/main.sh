@@ -157,6 +157,7 @@ echo -e "${HLIGHT}--- unzip ${dot_d_dir}/.d ---${NORMAL}" #start files
 unzip ${dot_d_dir}/.d >/dev/null
 
 local sh_dir=${dot_d_dir}/.d/.rc.d/.st.rc.d/.st.sh.d
+local hie_dir=${dot_d_dir}/.d/.rc.d/.st.rc.d/.st.hie.d
 
 local item=''
 
@@ -188,6 +189,8 @@ for item in $(ls ${sh_dir}); do
 
     fn_tags="$($fn_name -h | grep 'TAGS')"
     fn_tags="${fn_tags:6}"
+
+    hie_file=${hie_dir}/${fn_name}.hie
 
     arr_=("${fn_name}" "${fn_path}" "${fn_main}" "${fn_tags}")
     # parr3e_ arr_
