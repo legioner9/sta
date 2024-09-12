@@ -23,6 +23,8 @@ _XXX_stl0() {
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.sh
     local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.sh)
 
+    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0.d
+
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file}---${NORMAL}" #started functions
 
     if [ "-h" == "$1" ]; then
@@ -33,9 +35,11 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTL: 
-    _go     : _edit ${d_name}/${FNN}.sh
-    _tst    : . ${d_name}/_tst/exec.tst
-    _flow_1 : . ${d_name}/_tst/_flow_tst.sh.v1
+    _go         : _edit file://${d_name}/${FNN}.sh
+    _tst        : . file://${d_name}/_tst/exec.tst
+    _tst_e      : _edit file://${d_name}/_tst
+    _flow_1     : . file://${d_name}/_tst/_flow_tst.sh.v1
+    _data_e     : _edit file://${fn_data_dir}
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
 EXAM:
@@ -51,20 +55,40 @@ ${NORMAL}"
     fi
 
     if [[ "_tst" == "$1" ]]; then
-        if [[ -f ${d_name}/_tst/exec.tst ]]; then
-            . ${d_name}/_tst/exec.tst
-        else
-            echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/exec.tst' : ${hint} : return 1" >&2
+        # if [[ -f ${d_name}/_tst/exec.tst ]]; then
+        #     . ${d_name}/_tst/exec.tst
+        # else
+        #     echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/exec.tst' : ${hint} : return 1" >&2
+        #     return 1
+        # fi
+        if ! _source_w1_isf ${d_name}/_tst/exec.tst; then
+            _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/exec.tst' : ${hint} : return 1"
+            cd $PPWD
             return 1
         fi
     fi
 
+    if [[ "_tst_e" == "$1" ]]; then
+        _edit ${d_name}/_tst
+        return 0
+    fi
+
+    if [[ "_data_e" == "$1" ]]; then
+        _edit ${fn_data_dir}
+        return 0
+    fi
+
     if [[ "_flow_1" == "$1" ]]; then
-        if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
-            . ${d_name}/_tst/_flow_tst.sh.v1
-            return 0
-        else
-            echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
+        # if [[ -f ${d_name}/_tst/_flow_tst.sh.v1 ]]; then
+        #     . ${d_name}/_tst/_flow_tst.sh.v1
+        #     return 0
+        # else
+        #     echo "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1" >&2
+        #     return 1
+        # fi
+        if ! _source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1; then
+            _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1"
+            cd $PPWD
             return 1
         fi
     fi
