@@ -2,8 +2,8 @@
 
 ___XXX_stl0_TST() {
 
-    if ! command -v _XXX >/dev/null; then
-        echo "TYPE_ERROR : _XXX" >&2
+    if ! command -v _XXX_stl0 >/dev/null; then
+        echo "TYPE_ERROR : _XXX_stl0" >&2
         return 1
     fi
 
