@@ -103,6 +103,11 @@ ${NORMAL}"
 
 }
 
+_is_yes "REBUILD .D for .md?" || {
+    _st_info "ufl_stl0 7 ${ARGS[1]} ${ARGS[2]} is USER_RFS : return 0"
+    return 0
+}
+
 local main_cntx_0=0
 
 #[[ptr_path]]
