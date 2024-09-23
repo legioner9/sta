@@ -150,6 +150,7 @@ local hint="dir_with_cntt_files \$2 insert to file_md \$3"
 # check ${ARGS[3]}
 
 local max_deep=${ARGS[3]}
+local not_ufn=0
 
 [ -z ${max_deep} ] && {
     max_deep=1

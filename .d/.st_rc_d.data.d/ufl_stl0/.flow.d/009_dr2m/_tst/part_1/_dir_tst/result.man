@@ -19,62 +19,13 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727073017_23092024133017
+DATE: 1727081630_23092024155350
 
-DATX: 1727073017
+DATX: 1727081630
 -->
 
 
 [001.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst)
-
-
-[000.lcu.f](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/000.lcu.f)
-
-
-
-RNDX: c1c064f806d84cec9be223877329ce3b
-
-MAIN: 
-
-TAGS: 
-
-
-
-[001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/001_intro.txt.md)
-
-
-
-## this intro file 
-
-ccasdcvf gvfwsergwe rtgetgertgertg
-### grtgertg rthgertghr
-
-hrehrher
-
-END intro file 
-
-[002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/002_add.pic.jpg)
-
-![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/002_add.pic.jpg)
-
-
-[003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/003_s_grupp.code.sdbl)
-
-
-```sdbl
-
-ВЫБРАТЬ
-	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт КАК РекЗапрГрупПродукт,
-	СУММА(ДокПотребТабчДокПотреб.РекТабчДокПотребКоличество) КАК РекЗапрГрупКоличество
-ИЗ
-	Документ.ДокПотреб.ТабчДокПотреб КАК ДокПотребТабчДокПотреб
-
-СГРУППИРОВАТЬ ПО
-	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт
-
-```
-
-
 
 
 [002.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/002.lnk.lst)
