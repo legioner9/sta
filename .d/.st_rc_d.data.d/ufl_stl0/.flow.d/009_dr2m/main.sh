@@ -128,4 +128,107 @@ local main_cntx_0=0
 
 _lnv2e ${dir_cntx}/main.cntx
 
+#[[ptr_path]]
+# ! ptr_path_1
+local ptr_path_1="${ARGS[1]}"
+ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+local dir_with_cntt_files=${ptr_path_1}
+
+local ptr_path_2="${ARGS[2]}"
+ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+local file_md=${ptr_path_2}
+
+local hint="dir_with_cntt_files \$2 insert to file_md \$3"
+
+[ -d ${dir_with_cntt_files} ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_cntt_files}' : ${hint} : return 1"
+    return 1
+}
+
+if [ -f ${file_md} ]; then
+    _st_info "${file_md} IS_FILE"
+    _is_yes "rewright file://${file_md} : ${hint} : ?" || {
+        _st_info "reject rewright file://${file_md} : return 0"
+        return 0
+    }
+    rm ${file_md}
+fi
+
+local item=
+local ext=
+local ext2=
+
+[ -d ${dir_prc}/nod2md.d ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/nod2md.d' : ${hint} : return 1"
+    return 1
+}
+
+[ -d ${dir_prc}/treat_md.d ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_prc}/treat_md.d' : ${hint} : return 1"
+    return 1
+}
+
+local first_post=${dir_prc}/treat_md.d/first_post.prc
+
+if [ -f ${first_post} ]; then
+    . ${first_post} || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. file://${first_post}' : ${hint} : return 1"
+        return 1
+    }
+else
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${first_post}' : ${hint} : return 1"
+    return 1
+fi
+
+[ -f ${dir_cntx}/nod2md.d.cntx ] || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_cntx}/nod2md.d.cntx' : ${hint} : return 1"
+    return 1
+}
+
+local _item_=
+local name_ext=
+local ext=
+local ext2=
+
+for _item_ in $(_dfr2e ${dir_with_cntt_files}); do
+    echo -e "${GREEN}\$_item_ = $_item_${NORMAL}" #print variable
+    name_ext=$(_prs_f -ne ${_item_})
+    ext=$(_prs_f -e ${_item_})
+    ext2=$(_prs_f -e2 ${_item_})
+
+    # _lnv2e ${dir_cntx}/nod2md.d.cntx
+
+    # [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
+    #     _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
+    #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+    #     return 1
+    # }
+
+    if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
+        _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
+        # _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+        # return 1
+
+    else
+        . ${dir_prc}/nod2md.d/${ext2}.prc || {
+            _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+            return 1
+        }
+    fi
+
+done
+
+if [ -f ${dir_prc}/treat_md.d/last_post.prc ]; then
+    . ${dir_prc}/treat_md.d/last_post.prc || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/treat_md.d/last_post.prc' : ${hint} : return 1"
+        return 1
+    }
+else
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/treat_md.d/last_post.prc' : ${hint} : return 1"
+    return 1
+fi
+_edit ${file_md}
+
 return 0
