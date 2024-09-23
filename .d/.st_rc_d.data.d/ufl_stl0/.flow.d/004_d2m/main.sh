@@ -54,6 +54,8 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
+ return 0
+
     }
 
     [ "${ARGS[1]}" == "_tst_1" ] && {

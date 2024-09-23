@@ -1,29 +1,32 @@
 
-[[__TOC_]]
+<!-- [[__TOC_]] -->
 
 <a name=top></a>
 <a class=top-link hide href=#top>↑</a>
 
+Start Contents Menu
+
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
+
+    - [this intro file](#this-intro-file)
+        - [grtgertg rthgertghr](#grtgertg-rthgertghr)
 
 <!-- /TOC -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 4 ins.tst1.d result.man
+CMND: ufl_stl0 4 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/result.man
 
-PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1
+PPWD: /home/st
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m
 
-DATE: 07082024170739
+DATE: 1727059871_23092024095111
 
-DATX: 1723025259
+DATX: 1727059871
 -->
 
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/000.lcu.f -->
 
 [000.lcu.f](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/000.lcu.f)
 
@@ -36,8 +39,6 @@ MAIN:
 TAGS: 
 
 
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md -->
 
 [001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/001_intro.txt.md)
 
@@ -52,14 +53,10 @@ hrehrher
 
 END intro file 
 
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg -->
-
 [002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg)
 
 ![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/002_add.pic.jpg)
 
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/003_s_grupp.code.sdbl -->
 
 [003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_001/003_s_grupp.code.sdbl)
 
@@ -76,8 +73,6 @@ END intro file
 	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт
 
 ```
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/004_work.code.bsl -->
 
 [004_work.code.bsl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/004_work.code.bsl)
 
@@ -159,12 +154,8 @@ END intro file
 
 ```
 
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf -->
-
 [005_1Cv8_prob_kopeek.file.cf](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf)
 
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/006_pdf2jpg.code.sh -->
 
 [006_pdf2jpg.code.sh](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_002/006_pdf2jpg.code.sh)
 
@@ -285,8 +276,6 @@ unset filename
 
 
 ```
-
-<!-- file:///home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_003/003.requ_1.pic.jpg -->
 
 [003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/004_d2m/_tst/part_1/ins.tst1.d/d_003/003.requ_1.pic.jpg)
 
