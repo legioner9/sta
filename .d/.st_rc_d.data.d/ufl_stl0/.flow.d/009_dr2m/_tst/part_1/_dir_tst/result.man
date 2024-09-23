@@ -22,13 +22,16 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727063945_23092024105905
+DATE: 1727070891_23092024125451
 
-DATX: 1727063945
+DATX: 1727070891
 -->
 
 
-[000.lcu.f](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_001/000.lcu.f)
+[001.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst)
+
+
+[000.lcu.f](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/000.lcu.f)
 
 
 
@@ -40,7 +43,7 @@ TAGS:
 
 
 
-[001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_001/001_intro.txt.md)
+[001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/001_intro.txt.md)
 
 
 
@@ -53,12 +56,12 @@ hrehrher
 
 END intro file 
 
-[002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_001/002_add.pic.jpg)
+[002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/002_add.pic.jpg)
 
-![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_001/002_add.pic.jpg)
+![002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/002_add.pic.jpg)
 
 
-[003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_001/003_s_grupp.code.sdbl)
+[003_s_grupp.code.sdbl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/003_s_grupp.code.sdbl)
 
 
 ```sdbl
@@ -74,7 +77,13 @@ END intro file
 
 ```
 
-[004_work.code.bsl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_002/004_work.code.bsl)
+
+
+
+[002.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/002.lnk.lst)
+
+
+[004_work.code.bsl](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_002.d/004_work.code.bsl)
 
 
 ```bsl
@@ -154,10 +163,10 @@ END intro file
 
 ```
 
-[005_1Cv8_prob_kopeek.file.cf](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_002/005_1Cv8_prob_kopeek.file.cf)
+[005_1Cv8_prob_kopeek.file.cf](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_002.d/005_1Cv8_prob_kopeek.file.cf)
 
 
-[006_pdf2jpg.code.sh](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_002/006_pdf2jpg.code.sh)
+[006_pdf2jpg.code.sh](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_002.d/006_pdf2jpg.code.sh)
 
 
 ```sh
@@ -277,9 +286,18 @@ unset filename
 
 ```
 
-[003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_003/003.requ_1.pic.jpg)
 
-![003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/d_003/003.requ_1.pic.jpg)
+
+
+[003.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/003.lnk.lst)
+
+
+[003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_003.d/003.requ_1.pic.jpg)
+
+![003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_003.d/003.requ_1.pic.jpg)
+
+
+
 
 
 
