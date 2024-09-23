@@ -41,7 +41,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. ) \$2 recusive insert to file_md \$3, [\$4 {num = 1 without recurse} depth of recurse]
+MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. ) \$2 recusive insert to file_md \$3, [\$4 {num = 1 or not define: without recurse} depth of recurse]
 TAGS: @
 ARGS: \$1=9
 EXAM: 
@@ -209,18 +209,27 @@ fi
     return 1
 }
 
-ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files
+ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files $2=max_deep_
+    local FNN=${FUNCNAME[0]}
+    echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}" #started functions
 
     # max_deep=$((max_deep - 1))
 
-    # [ ${max_deep} -gt 0 ] || {
+    local max_deep_=$2
 
-    #     _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ufl_stl0_9_infn_1 $* : : NOT_IN_CONDITION : '[ ${max_deep} -gt 0 ]' : ${hint} : return 1"
-    #     cd $PPWD
-    #     return 1
-    # }
+    [ -n "${max_deep_}" ] || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ufl_stl0_9_infn_1 $* : NOT_DEFINE (max_deep_) : '\$2' : ${hint} : return 1"
+        cd $PPWD
+        return 1
+    }
 
-    echo -e "${GREEN}\$max_deep = $max_deep${NORMAL}" #print variable
+    [ ${max_deep_} -gt 0 ] || {
+        _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ufl_stl0_9_infn_1 $* : : NOT_IN_CONDITION (\${max_deep_}) : '[ ${max_deep_} -gt 0 ]' : ${hint} : return 1"
+        cd $PPWD
+        return 1
+    }
+
+    echo -e "${GREEN}\$max_deep_ = $max_deep_${NORMAL}" #print variable
 
     local _item_=
     local name_ext=
@@ -269,7 +278,7 @@ ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files
     fi
 }
 
-ufl_stl0_9_infn_1 ${dir_with_cntt_files}
+ufl_stl0_9_infn_1 ${dir_with_cntt_files} ${max_deep}
 
 _edit ${file_md}
 
