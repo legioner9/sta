@@ -41,7 +41,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. , .anc. ) \$2 recusive insert to file_md \$3, [\$4 {num = 1 or not define: without recurse} depth of recurse]
+MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. ) \$2 recusive insert to file_md \$3, [\$4 {num = 1 or not define: without recurse} depth of recurse]
 TAGS: @
 ARGS: \$1=9
 EXAM: 
@@ -210,27 +210,6 @@ fi
     return 1
 }
 
-ufl_stl0_9_do_item() { # $1=path_item_file
-    echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}"
-    local item_=$1
-    name_ext=
-    name_ext=$(_prs_f -ne ${item_})
-    ext=
-    ext=$(_prs_f -e ${item_})
-    ext2=
-    ext2=$(_prs_f -e2 ${item_})
-
-    if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
-        _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
-    else
-        . ${dir_prc}/nod2md.d/${ext2}.prc || {
-            _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
-            cd $PPWD
-            return 1
-        }
-    fi
-}
-
 ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files $2=max_deep_
     local FNN=${FUNCNAME[0]}
     echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}" #started functions
@@ -260,24 +239,30 @@ ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files $2=max_deep_
 
     for _item_ in $(_dfr2e ${1}); do
         echo -e "${GREEN}\$_item_ = $_item_${NORMAL}" #print variable
-        # name_ext=
-        # name_ext=$(_prs_f -ne ${_item_})
-        # ext=
-        # ext=$(_prs_f -e ${_item_})
-        # ext2=
-        # ext2=$(_prs_f -e2 ${_item_})
+        name_ext=$(_prs_f -ne ${_item_})
+        ext=$(_prs_f -e ${_item_})
+        ext2=$(_prs_f -e2 ${_item_})
 
-        # if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
+        # _lnv2e ${dir_cntx}/nod2md.d.cntx
+
+        # [ -f ${dir_prc}/nod2md.d/${ext2}.prc ] || {
         #     _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
-        # else
-        #     . ${dir_prc}/nod2md.d/${ext2}.prc || {
-        #         _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
-        #         cd $PPWD
-        #         return 1
-        #     }
-        # fi
+        #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+        #     return 1
+        # }
 
-        ufl_stl0_9_do_item $_item_
+        if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
+            _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
+            # _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+            # return 1
+
+        else
+            . ${dir_prc}/nod2md.d/${ext2}.prc || {
+                _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
+                cd $PPWD
+                return 1
+            }
+        fi
 
     done
 
