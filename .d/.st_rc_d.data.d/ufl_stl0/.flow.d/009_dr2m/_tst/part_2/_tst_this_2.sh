@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- result_rnd7_323429f() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/result.man_ufl9---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_a99e32c() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh ---${NORMAL}" #started functions
 
-result_rnd7_323429f() {
+_tst_this_1_rnd7_a99e32cv() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,10 +10,10 @@ result_rnd7_323429f() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/result.man_ufl9"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh"
     local path_dir="$(dirname "$path_file")"
 
-    # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
+    echo -e "${CYAN}--- $FNN() $* in file://${path_file} ---${NORMAL}" #started functions
 
     cd ${path_dir} || {
         # hint="\$1: \$2: "
@@ -49,16 +49,26 @@ ${NORMAL}"
     # local _ARGS_=("$@")
     # _parr3e _ARGS_
 
-    #{{ptr_path}}
-
+    #[[ptr_path]]
+#! ptr_path
+# local ptr_path="$1"
+# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
 
-ufl_stl0 9 ins.tst1.d result.man 2
+    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
+    # echo ${ARGS[0]}
+    # echo ${ARGS[1]}
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+    # _lnv2e ${dir_cntx}/main.cntx
+    cd _dir_tst || _st_err "_dir_tst not dir"
 
+    # ufl_stl0 9 ins.tst1.d result.man
+    ufl_stl0 9 ins.tst1.d result.man 2
 
     #! END BODY FN ---------------------------------------
 
@@ -66,4 +76,4 @@ ufl_stl0 9 ins.tst1.d result.man 2
 
 }
 
-result_rnd7_323429f "$@"
+_tst_this_1_rnd7_a99e32cv "$@"

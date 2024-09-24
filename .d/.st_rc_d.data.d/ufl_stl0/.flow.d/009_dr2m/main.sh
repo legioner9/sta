@@ -52,6 +52,7 @@ CNTL:
     _go             : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/main.sh
     _go_dir_flow    : _edit file://..${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
     _tst_1          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_tst_this_1.sh
+    _tst_2          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
@@ -66,6 +67,17 @@ ${NORMAL}"
         _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_tst_this_1.sh" && {
             echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
             . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_tst_this_1.sh
+        }
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_tst_2" ] && {
+
+        _is_yes "ufl_stl0 ${ARGS[0]} _tst_2 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh" && {
+            echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh ---${NORMAL}" #start files
+            . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh
         }
 
         return 0
@@ -211,7 +223,8 @@ fi
 }
 
 ufl_stl0_9_do_item() { # $1=path_item_file
-    echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}"
+    local FNN=${FUNCNAME[0]}
+    echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}" #started functions
     local item_=$1
     name_ext=
     name_ext=$(_prs_f -ne ${item_})
@@ -260,24 +273,12 @@ ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files $2=max_deep_
 
     for _item_ in $(_dfr2e ${1}); do
         echo -e "${GREEN}\$_item_ = $_item_${NORMAL}" #print variable
-        # name_ext=
-        # name_ext=$(_prs_f -ne ${_item_})
-        # ext=
-        # ext=$(_prs_f -e ${_item_})
-        # ext2=
-        # ext2=$(_prs_f -e2 ${_item_})
 
-        # if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
-        #     _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
-        # else
-        #     . ${dir_prc}/nod2md.d/${ext2}.prc || {
-        #         _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
-        #         cd $PPWD
-        #         return 1
-        #     }
-        # fi
-
-        ufl_stl0_9_do_item $_item_
+        ufl_stl0_9_do_item $_item_ || {
+            _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ufl_stl0_9_infn_1 $* : : EXEC_FAIL : 'ufl_stl0_9_do_item $_item_' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+        }
 
     done
 
@@ -294,7 +295,11 @@ ufl_stl0_9_infn_1() { # $1=dir_with_cntt_files $2=max_deep_
     fi
 }
 
-ufl_stl0_9_infn_1 ${dir_with_cntt_files} ${max_deep}
+ufl_stl0_9_infn_1 ${dir_with_cntt_files} ${max_deep} || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'ufl_stl0_9_infn_1 ${dir_with_cntt_files} ${max_deep}' : ${hint} : return 1"
+    cd $PPWD
+    return 1
+}
 
 _edit ${file_md}
 
