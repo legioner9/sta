@@ -44,6 +44,8 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
+return 0
+
 }
 
 local rnd_val=$(_rnd2e)

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- txt_rnd7_e8dfe70() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc ---${NORMAL}" #started functions
+echo -e "${CYAN}--- anc_rnd7_bea27d5() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/anc.prc ---${NORMAL}" #started functions
 
-txt_rnd7_e8dfe70() {
+anc_rnd7_bea27d5() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ txt_rnd7_e8dfe70() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/anc.prc"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -55,30 +55,48 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    echo "in txt.prc"
+    #{{body_fn}}
+
+    echo "in anc.prc"
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
-    local short_item=$(_s2se ${HOME} @ ${_item_}) 
+    local short_item=$(_s2se ${HOME} @ ${_item_})
 
     echo -e "
 [${name_ext}](${short_item})
 " >>${file_md}
 
-    echo -e "
-{{txt}}
-" >>${file_md}
+    local item2=
 
-    _f2f ${_item_} "{{txt}}" ${file_md}
+    item2=$(_f2e ${_item_})
 
-    _s2f "{{txt}}" @ ${file_md}
+    # echo ${lnk_dir} >> ${file_md}
+    # REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lnk.prc
+    echo -e "${GREEN}\$item2 = file://$item2${NORMAL}" #print variable
+    not_ufn_item=0
+    [ -f ${item2} ] || {
 
-    #{{body_fn}}
+        echo -e "${RED}--- start cat file://${_item_} ---${NORMAL}" #start files
+        cat ${_item_}
+        echo -e "${RED}--- end cat file://${_item_} ---${NORMAL}" #start files
+        _edit ${_item_}
+        _st_pause "in fs= file://${dir_prc}/nod2md.d/anc.prc , line=${LINENO}, EXEC: in anc.prc : NOT_FILE (\${item2}) : 'file://${item2}' : ${hint}"
+        not_ufn_item=1
+    }
 
-    #! END BODY FN ---------------------------------------
+    [ ${not_ufn_item} -eq 0 ] && {
+        ufl_stl0_9_do_item $item2 || {
+            _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: in anc.prc : : EXEC_FAIL : 'ufl_stl0_9_do_item $item2' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+        }
+    }
 
     return 0
 
+    #! END BODY FN ---------------------------------------
+
 }
 
-txt_rnd7_e8dfe70 "$@"
+anc_rnd7_bea27d5 "$@"
