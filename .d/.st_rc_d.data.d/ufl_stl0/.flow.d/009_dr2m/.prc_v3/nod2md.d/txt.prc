@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- result_rnd7_1933a78() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/result.man_ufl9 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- txt_rnd7_e8dfe70() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc ---${NORMAL}" #started functions
 
-result_rnd7_1933a78() {
+txt_rnd7_e8dfe70() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,8 +10,11 @@ result_rnd7_1933a78() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/result.man_ufl9"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc"
     local path_dir="$(dirname "$path_file")"
+
+    local _item_=${ARGS[0]}
+    local max_deep_=${ARGS[1]}
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
@@ -55,10 +58,25 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    echo "in txt.prc"
+
+    # _lnv2e ${dir_cntx}/nod2md.d.cntx
+
+    local short_item=$(_s2se ${HOME} @ ${_item_}) 
+
+    echo -e "
+[${name_ext}](${short_item})
+" >>${file_md}
+
+    echo -e "
+{{txt}}
+" >>${file_md}
+
+    _f2f ${_item_} "{{txt}}" ${file_md}
+
+    _s2f "{{txt}}" @ ${file_md}
+
     #{{body_fn}}
-
-ufl_stl0 9 ins.tst1.d result.man 2
-
 
     #! END BODY FN ---------------------------------------
 
@@ -66,4 +84,4 @@ ufl_stl0 9 ins.tst1.d result.man 2
 
 }
 
-result_rnd7_1933a78 "$@"
+txt_rnd7_e8dfe70 "$@"

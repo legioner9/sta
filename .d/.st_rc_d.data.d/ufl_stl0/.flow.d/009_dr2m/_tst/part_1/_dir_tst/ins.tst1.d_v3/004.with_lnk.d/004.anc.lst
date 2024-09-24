@@ -1,0 +1,6 @@
+# tst insert any files as list - pic
+${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_003.d/003.requ_1.pic.jpg
+# tst insert any files as list - txt
+${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/001_intro.txt.md
+# tst insert any files as list - txt NOT EXIST FOR ERROR TST
+${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/001_intro.txt.mdx
