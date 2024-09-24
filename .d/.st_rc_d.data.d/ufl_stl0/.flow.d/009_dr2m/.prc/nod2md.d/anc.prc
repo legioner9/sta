@@ -72,30 +72,35 @@ ${NORMAL}"
 
     local item2=
 
-    item2=$(_f2e ${_item_})
+    # item2=$(_f2e ${_item_})
 
-    # echo ${lnk_dir} >> ${file_md}
-    # REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lnk.prc
-    echo -e "${GREEN}\$item2 = file://$item2${NORMAL}" #print variable
-    not_ufn_item=0
-    [ -f ${item2} ] || {
+    for item2 in $(_f2e ${_item_}); do
 
-        echo -e "${RED}--- start cat file://${_item_} ---${NORMAL}" #start files
-        cat ${_item_}
-        echo -e "${RED}--- end cat file://${_item_} ---${NORMAL}" #start files
-        _edit ${_item_}
-        _st_pause "in fs= file://${dir_prc}/nod2md.d/anc.prc , line=${LINENO}, EXEC: in anc.prc : NOT_FILE (\${item2}) : 'file://${item2}' : ${hint}"
-        not_ufn_item=1
-    }
+        # echo ${lnk_dir} >> ${file_md}
+        # REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lnk.prc
+        echo -e "${GREEN}\$item2 = file://$item2${NORMAL}" #print variable
+        not_ufn_item=0
+        [ -f ${item2} ] || {
 
-    [ ${not_ufn_item} -eq 0 ] && {
-        ufl_stl0_9_do_item $item2 || {
-            _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: in anc.prc : : EXEC_FAIL : 'ufl_stl0_9_do_item $item2' : ${hint} : return 1"
-            cd $PPWD
-            return 1
+            echo -e "${RED}--- start cat file://${_item_} ---${NORMAL}" #start files
+            cat ${_item_}
+            echo -e "${RED}--- end cat file://${_item_} ---${NORMAL}" #start files
+            _edit ${_item_}
+            _st_pause "in fs= file://${dir_prc}/nod2md.d/anc.prc , line=${LINENO}, EXEC: in anc.prc : NOT_FILE (\${item2}) : 'file://${item2}' : ${hint}"
+            not_ufn_item=1
         }
-    }
 
+        [ ${not_ufn_item} -eq 0 ] && {
+
+            ufl_stl0_9_do_item $item2 || {
+                _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: in anc.prc : : EXEC_FAIL : 'ufl_stl0_9_do_item $item2' : ${hint} : return 1"
+                cd $PPWD
+                return 1
+            }
+
+        }
+
+    done
     return 0
 
     #! END BODY FN ---------------------------------------

@@ -94,7 +94,11 @@ ${NORMAL}"
 - start link [${name_ext}](${short_item})
 " >>${file_md}
 
-        ufl_stl0_9_infn_1 ${lnk_dir} $((max_deep_ - 1))
+        ufl_stl0_9_infn_1 ${lnk_dir} $((max_deep_ - 1)) || {
+            _st_exit "in fs= file://${dir_prc}/nod2md.d/lnk.prc , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'ufl_stl0_9_infn_1 ${lnk_dir} $((max_deep_ - 1))' : ${hint} : return 1"
+            cd $PPWD
+            return 1
+        }
 
         echo -e "
 - end link [${name_ext}](${short_item})
