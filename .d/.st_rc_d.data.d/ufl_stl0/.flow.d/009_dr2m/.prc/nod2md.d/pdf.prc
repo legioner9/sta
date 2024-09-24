@@ -13,6 +13,8 @@ pdf_rnd7_7c561d8() {
     local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/pdf.prc"
     local path_dir="$(dirname "$path_file")"
 
+    local _item_=${ARGS[0]}
+
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
     cd ${path_dir} || {

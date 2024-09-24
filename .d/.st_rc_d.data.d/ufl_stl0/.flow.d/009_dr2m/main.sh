@@ -236,7 +236,7 @@ ufl_stl0_9_do_item() { # $1=path_item_file
     if ! [ -f ${dir_prc}/nod2md.d/${ext2}.prc ]; then
         _st_info "$ext2 not define in file://${dir_prc}/nod2md.d"
     else
-        . ${dir_prc}/nod2md.d/${ext2}.prc || {
+        . ${dir_prc}/nod2md.d/${ext2}.prc ${item_} || {
             _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : : EXEC_FAIL : '. ${dir_prc}/nod2md.d/${ext2}.prc' : ${hint} : return 1"
             cd $PPWD
             return 1
