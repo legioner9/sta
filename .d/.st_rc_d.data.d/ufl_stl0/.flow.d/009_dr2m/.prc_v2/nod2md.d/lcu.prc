@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_this_1_rnd7_a99e32c() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- lcu_rnd7_ea9b981() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lcu.prc ---${NORMAL}" #started functions
 
-_tst_this_1_rnd7_a99e32cv() {
+lcu_rnd7_ea9b981() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,10 +10,13 @@ _tst_this_1_rnd7_a99e32cv() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_tst_this_2.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lcu.prc"
     local path_dir="$(dirname "$path_file")"
 
-    echo -e "${CYAN}--- $FNN() $* in file://${path_file} ---${NORMAL}" #started functions
+    local _item_=${ARGS[0]}
+    local max_deep_=${ARGS[1]}
+
+    # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
     cd ${path_dir} || {
         # hint="\$1: \$2: "
@@ -49,26 +52,31 @@ ${NORMAL}"
     # local _ARGS_=("$@")
     # _parr3e _ARGS_
 
-    #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #{{ptr_path}}
+
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
 
+    echo "in lcu.prc"
+
+    # _lnv2e ${dir_cntx}/nod2md.d.cntx
+
+    local short_item=$(_s2se ${HOME} @ ${_item_})
+
+    echo -e "
+[${name_ext}](${short_item})
+" >>${file_md}
+
+    echo -e "
+{{lcu}}
+" >>${file_md}
+
+    _f2f ${_item_} "{{lcu}}" ${file_md}
+
+    _s2f "{{lcu}}" @ ${file_md}
+
     #{{body_fn}}
-
-    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
-    # echo ${ARGS[0]}
-    # echo ${ARGS[1]}
-    # local _ARGS_=("$@")
-    # _parr3e _ARGS_
-    # _lnv2e ${dir_cntx}/main.cntx
-    cd _dir_tst || _st_err "_dir_tst not dir"
-
-    # ufl_stl0 9 ins.tst1.d result.man
-    ufl_stl0 9 ins.tst1.d result.man 2
 
     #! END BODY FN ---------------------------------------
 
@@ -76,4 +84,4 @@ ${NORMAL}"
 
 }
 
-_tst_this_1_rnd7_a99e32cv "$@"
+lcu_rnd7_ea9b981 "$@"

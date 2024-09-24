@@ -14,6 +14,7 @@ pdf_rnd7_7c561d8() {
     local path_dir="$(dirname "$path_file")"
 
     local _item_=${ARGS[0]}
+    local max_deep_=${ARGS[1]}
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 

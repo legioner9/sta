@@ -14,6 +14,7 @@ lcu_rnd7_ea9b981() {
     local path_dir="$(dirname "$path_file")"
 
     local _item_=${ARGS[0]}
+    local max_deep_=${ARGS[1]}
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
 
