@@ -8,11 +8,6 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-    - [this intro file](#this-intro-file)
-        - [grtgertg rthgertghr](#grtgertg-rthgertghr)
-    - [this intro file](#this-intro-file)
-        - [grtgertg rthgertghr](#grtgertg-rthgertghr)
-
 <!-- /TOC -->
 
 End Contents Menu

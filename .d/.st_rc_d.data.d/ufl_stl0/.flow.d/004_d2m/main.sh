@@ -186,6 +186,13 @@ else
     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() :  NOT_FILE : 'file://${dir_prc}/treat_md.d/last_post.prc' : ${hint} : return 1"
     return 1
 fi
+
+local file_ufl=$(_prs_f -d ${file_md})/000.$(_prs_f -n ${file_md}).file.man
+
+cp -f ${file_md} ${file_ufl}
+
+sed -i '1,14d' ${file_ufl}
+
 _edit ${file_md}
 # local file_res=$PPWD/${ARGS[1]}
 
