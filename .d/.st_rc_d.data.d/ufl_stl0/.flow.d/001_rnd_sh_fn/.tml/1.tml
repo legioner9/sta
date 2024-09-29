@@ -38,6 +38,8 @@ ${NORMAL}"
 
     if [[ "_go" == "$1" ]]; then
         _edit "${path_file}"
+
+        cd $PPWD
         return 0
     fi
 
@@ -58,7 +60,8 @@ ${NORMAL}"
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
-
+    
+    cd $PPWD
     return 0
 
 }

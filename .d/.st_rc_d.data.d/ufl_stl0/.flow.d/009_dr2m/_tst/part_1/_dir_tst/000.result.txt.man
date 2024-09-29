@@ -1,17 +1,3 @@
-
-<!-- [[__TOC_]] -->
-
-<a name=top></a>
-<a class=top-link hide href=#top>↑</a>
-
-Start Contents Menu
-
-<!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
-
-<!-- /TOC -->
-
-End Contents Menu
-
 <!--
 CMND: ufl_stl0 4 ins.tst1.d result.man
 
@@ -19,9 +5,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727595246_29092024143406
+DATE: 1727603340_29092024164900
 
-DATX: 1727595246
+DATX: 1727603340
 -->
 
 
@@ -71,6 +57,7 @@ END intro file
 
 ```
 
+# LNK /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst
 [001.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst)
 
 
@@ -291,6 +278,7 @@ unset filename
 
 
 
+# ANC /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst
 [004.anc.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst)
 
 

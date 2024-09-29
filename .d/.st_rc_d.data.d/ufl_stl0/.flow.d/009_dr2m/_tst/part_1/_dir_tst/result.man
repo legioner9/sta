@@ -10,8 +10,10 @@ Start Contents Menu
 
     - [this intro file](#this-intro-file)
         - [grtgertg rthgertghr](#grtgertg-rthgertghr)
-    - [this intro file](#this-intro-file)
-        - [grtgertg rthgertghr](#grtgertg-rthgertghr)
+- [LNK /REPOBARE/\_repo/sta/.d/.st\_rc\_d.data.d/ufl\_stl0/.flow.d/009\_dr2m/\_tst/part\_1/\_dir\_tst/ins.tst1.d/004.with\_lnk.d/001.lnk.lst](#lnk-repobare_repostadst_rc_ddatadufl_stl0flowd009_dr2m_tstpart_1_dir_tstinstst1d004with_lnkd001lnklst)
+- [ANC /REPOBARE/\_repo/sta/.d/.st\_rc\_d.data.d/ufl\_stl0/.flow.d/009\_dr2m/\_tst/part\_1/\_dir\_tst/ins.tst1.d/004.with\_lnk.d/004.anc.lst](#anc-repobare_repostadst_rc_ddatadufl_stl0flowd009_dr2m_tstpart_1_dir_tstinstst1d004with_lnkd004anclst)
+  - [this intro file](#this-intro-file-1)
+    - [grtgertg rthgertghr](#grtgertg-rthgertghr-1)
 
 <!-- /TOC -->
 
@@ -24,9 +26,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727595246_29092024143406
+DATE: 1727603340_29092024164900
 
-DATX: 1727595246
+DATX: 1727603340
 -->
 
 
@@ -76,6 +78,7 @@ END intro file
 
 ```
 
+# LNK /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst
 [001.lnk.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/001.lnk.lst)
 
 
@@ -98,7 +101,7 @@ END intro file
 		|	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт КАК РекЗапрГрупПродукт,
 		|	СУММА(ДокПотребТабчДокПотреб.РекТабчДокПотребКоличество) КАК РекЗапрГрупКоличество
 		|ИЗ
-		|	Документ.ДокПотреб.ТабчДокПотреб КАК ДокПотребТабчДокПотреб
+		|	Документ.ДокПотреб.ТабчДо~~~~кПотреб КАК ДокПотребТабчДокПотреб
 		|
 		|СГРУППИРОВАТЬ ПО
 		|	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт";
@@ -296,6 +299,7 @@ unset filename
 
 
 
+# ANC /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst
 [004.anc.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst)
 
 

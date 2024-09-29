@@ -67,6 +67,7 @@ ${NORMAL}"
     local short_item=$(_s2se ${HOME} @ ${_item_})
 
     echo -e "
+# LNK ${short_item}
 [${name_ext}](${short_item})
 " >>${file_md}
 

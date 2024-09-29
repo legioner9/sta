@@ -316,7 +316,7 @@ ufl_stl0_9_infn_1 ${dir_with_cntt_files} ${max_deep} || {
     return 1
 }
 
-local file_ufl=$(_prs_f -d ${file_md})/000.$(_prs_f -n ${file_md}).file.man
+local file_ufl=$(_prs_f -d ${file_md})/000.$(_prs_f -n ${file_md}).txt.man
 
 cp -f ${file_md} ${file_ufl}
 
