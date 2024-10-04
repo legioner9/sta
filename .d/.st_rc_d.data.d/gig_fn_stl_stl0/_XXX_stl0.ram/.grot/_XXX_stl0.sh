@@ -24,7 +24,8 @@ _XXX_stl0() {
     local fn_hie_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.hie
     local d_name=$(dirname ${fn_sh_file})
 
-    local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
+    local usr_fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
+    local opt_fn_data_dir=${d_name}/.opt
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
@@ -40,9 +41,13 @@ CNTL:
     _tst        : . exec.tst        : . file://${d_name}/_tst/exec.tst
     _tst_e      : _edit tst_dir     : _edit file://${d_name}/_tst
     _flow_1     : . _flow_tst.sh.v1 : . file://${d_name}/_tst/_flow_tst.sh.v1
-    _data_e     : _edit fn_data_dir : _edit file://${fn_data_dir}
+
     _hie_m      : more hie_file     : more file://${hie_file} 
     _hie_e      : _edit hie_file    : _edit file://${hie_file} 
+
+    _usr_d_e    : user data : use by ${FNN} : _edit usr_fn_data_dir : _edit file://${usr_fn_data_dir}
+    _opt_d_e    : opt data : use by user : _edit opt_fn_data_dir : _edit file://${opt_fn_data_dir}    
+    
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
 EXAM:
@@ -70,8 +75,13 @@ ${NORMAL}"
         return 0
     fi
 
-    if [[ "_data_e" == "$1" ]]; then
-        _edit ${fn_data_dir}
+    if [[ "_usr_d_e" == "$1" ]]; then
+        _edit ${usr_fn_data_dir}
+        return 0
+    fi
+
+    if [[ "_opt_d_e" == "$1" ]]; then
+        _edit ${opt_fn_data_dir}
         return 0
     fi
 
