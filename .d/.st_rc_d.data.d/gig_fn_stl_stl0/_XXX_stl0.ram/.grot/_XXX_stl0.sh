@@ -21,7 +21,8 @@ _XXX_stl0() {
     #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
 
     local fn_sh_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.sh
-    local d_name=$(dirname ${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.sh)
+    local fn_hie_file=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_XXX_stl0.hie
+    local d_name=$(dirname ${fn_sh_file})
 
     local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
 
@@ -80,6 +81,18 @@ ${NORMAL}"
             cd $PPWD
             return 1
         fi
+    fi
+
+    if [[ "_hie_m" == "$1" ]]; then
+        more ${fn_hie_file}
+        cd $PPWD
+        return 0
+    fi
+
+    if [[ "_hie_e" == "$1" ]]; then
+        _edit ${fn_hie_file}
+        cd $PPWD
+        return 0
     fi
 
     # hint="\$1: \$2: "
