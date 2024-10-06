@@ -49,7 +49,7 @@ CNTL:
     _opt_d_e    : opt data : use by user : _edit opt_fn_data_dir : _edit file://${opt_fn_data_dir}    
     
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
-ERROR: ( return 1 | ... )
+ERROR: ( if ... return 0 | if ... return 1 )
 EXAM:
     ${FNN} 
 ${NORMAL}"
@@ -108,6 +108,18 @@ ${NORMAL}"
     # hint="\$1: \$2: "
     # if _isn_from ${NARGS} LESS MORE "in fs= file://${fn_sh_file}, line=${LINENO}, ${FNN}() : DEMAND 'NNNN' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
     #     return 1
+    # fi
+
+    #* DEBAG CNTL
+    # local di=
+    # if [ -n "$N" ]; then
+    #     if [ "$N" == "_i" ]; then
+    #         di=1
+    #     else
+    #         di=0
+    #     fi
+    # else
+    #     di=0
     # fi
 
     #[[ptr_path]]
