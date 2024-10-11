@@ -59,7 +59,7 @@ ${NORMAL}"
     echo -e "${HLIGHT}--- diff /home/sth/.install.sh/main_install.sh ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh ---${NORMAL}" #start files
     sudo diff /home/sth/.install.sh/main_install.sh ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh
 
-    _is_yes "DO? COPY file:///home/sth/.install.sh/main_install.sh to file://${HOME}/.skel.d/.install.sh/main_install.sh " && {
+    _is_yes "DO? COPY file:///home/sth/.install.sh/main_install.sh to file://${HOME} /.skel.d/.install.sh/main_install.sh " && {
         sudo cat /home/sth/.install.sh/main_install.sh | tee ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh > /dev/null
         nm_opi_ 1 17 3
     }
