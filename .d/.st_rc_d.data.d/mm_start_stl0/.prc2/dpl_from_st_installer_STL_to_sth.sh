@@ -56,10 +56,10 @@ ${NORMAL}"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
-    echo -e "${HLIGHT}--- diff /home/sth/.install.sh/main_install.sh ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- diff  ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh /home/sth/.install.sh/main_install.sh ---${NORMAL}" #start files
     sudo diff ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh /home/sth/.install.sh/main_install.sh
 
-    _is_yes "DO? COPY file:///home/st/.skel.d/.install.sh/main_install.sh  to file:///home/sth/.install.sh/main_install.sh " && {
+    _is_yes "DO? COPY file://${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh  to file:///home/sth/.install.sh/main_install.sh " && {
         cat ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh | sudo tee /home/sth/.install.sh/main_install.sh >/dev/null
         nm_opi_ 1 17 3
     }
