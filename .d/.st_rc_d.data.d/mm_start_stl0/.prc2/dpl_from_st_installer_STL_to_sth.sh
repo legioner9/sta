@@ -65,7 +65,7 @@ ${NORMAL}"
     }
     # /home/st/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh
 
-    #{{body_fn}}
+    #{{body_fn}}fi
 
     #! END BODY FN ---------------------------------------
 

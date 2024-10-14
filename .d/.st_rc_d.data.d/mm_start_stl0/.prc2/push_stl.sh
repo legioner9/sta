@@ -49,7 +49,7 @@ ${NORMAL}"
     # local _ARGS_=("$@")
     # _parr3e _ARGS_
 
-    #{{ptr_path}}
+    #{{ptr_path}} fi
 
     #! START BODY FN ---------------------------------------
 
