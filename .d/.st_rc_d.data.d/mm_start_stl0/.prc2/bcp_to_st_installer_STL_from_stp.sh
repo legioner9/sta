@@ -22,7 +22,7 @@ bcp_install_STL_to_stp_rnd7_48539f7() {
     }
 
     if [ "-h" == "$1" ]; then
-        echo -e "${CYAN} ${FNN}() help: 
+        echo -e "${CYAN} ${FNN}() help:  
 MAIN: 
 TAGS: @
 ARGS: \$1
