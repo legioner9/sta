@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- bcp_install_STL_to_stp_rnd7_48539f7() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/dpl_from_st_installer_STL_to_stp.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- bcp_install_STL_to_stp_rnd7_48539f7() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/bcp_to_st_installer_STL_from_stp.sh ---${NORMAL}" #started functions
 
-bcp_install_STL_to_stp_rnd7_485y9f7() {
+bcp_install_STL_to_stp_rnd7_48539f7() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -56,16 +56,16 @@ ${NORMAL}"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
-    echo -e "${HLIGHT}--- diff  ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh /home/stp/.install.sh/main_install.sh ---${NORMAL}" #start files
-    sudo diff ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh /home/stp/.install.sh/main_install.sh
+    echo -e "${HLIGHT}--- diff /home/stp/.install.sh/main_install.sh ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh ---${NORMAL}" #start files
+    sudo diff /home/stp/.install.sh/main_install.sh ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh
 
-    _is_yes "DO? COPY file://${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh  to file:///home/stp/.install.sh/main_install.sh " && {
-        cat ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh | sudo tee /home/stp/.install.sh/main_install.sh >/dev/null
+    _is_yes "DO? COPY file:///home/stp/.install.sh/main_install.sh to file://${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh " && {
+        sudo cat /home/stp/.install.sh/main_install.sh | tee ${HOME}/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh > /dev/null
         nm_opi_ 1 17 3
     }
-    # /home/st/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh
+# /home/st/REPOBARE/_repo/st_rc_d/.d/.install.ax/main_install_stl.sh
 
-    #{{body_fn}}fi
+    #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
 
@@ -74,4 +74,4 @@ ${NORMAL}"
 
 }
 
-bcp_install_STL_to_stp_rnd7_485y9f7 "$@"
+bcp_install_STL_to_stp_rnd7_48539f7 "$@"

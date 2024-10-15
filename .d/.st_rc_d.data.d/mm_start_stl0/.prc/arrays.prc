@@ -20,6 +20,12 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/bcp_to
 
 _arr_name+=("dpl_from_st_installer_STL_to_sth")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/dpl_from_st_installer_STL_to_sth.sh")
+
+_arr_name+=("bcp_to_st_installer_STL_from_stp")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/bcp_to_st_installer_STL_from_stp.sh")
+
+_arr_name+=("dpl_from_st_installer_STL_to_stp")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/dpl_from_st_installer_STL_to_stp.sh")
 # _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
 # _arr_name+=("nnnnnn")
