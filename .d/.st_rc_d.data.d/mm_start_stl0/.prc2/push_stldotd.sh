@@ -2,7 +2,7 @@
 
 echo -e "${CYAN}--- push_stl_rnd7_3130e64() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/push_stl.sh---${NORMAL}" #started functions
 
-push_stl_rnd7_3130e64() {
+push_stl_rnd7_3r30e64() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -55,7 +55,7 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    nm_opi_ 1 8 3
+    nm_opi_ 1 19 3
     nm_opi_ 1 17 3
 
     #{{body_fn}}
@@ -66,4 +66,4 @@ ${NORMAL}"
 
 }
 
-push_stl_rnd7_3130e64 "$@"
+push_stl_rnd7_3r30e64 "$@"

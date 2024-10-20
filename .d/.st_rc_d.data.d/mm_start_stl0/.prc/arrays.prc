@@ -9,8 +9,11 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/rbl_re
 _arr_name+=("_edit content README.md st_rc_d")
 _arr_res+=("_edit ${REPO_PATH}/st_rc_d/.d/.mul/rbld_readme.mul")
 
-_arr_name+=("push STL")
-_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/push_stl.sh")
+_arr_name+=("push ~/.d")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/push_dotd.sh")
+
+_arr_name+=("push ~/.stl.d")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/push_stldotd.sh")
 
 _arr_name+=("all sys bcp & push")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/all_bcp_push.sh")
