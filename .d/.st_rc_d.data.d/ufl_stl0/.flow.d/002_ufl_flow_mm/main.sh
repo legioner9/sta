@@ -37,10 +37,12 @@ EXEC: . REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_ts
 CNTL: 
     _go  : _edit ${d_name}/${FNN}.sh
     _tst :  . ${d_name}/_tst/exec.tst
+    _tst_1: . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
+        return 0
 
     }
 
@@ -49,8 +51,9 @@ ${NORMAL}"
         _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh" && {
             echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh ---${NORMAL}" #start files
             . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/_tst/part_1/_tst_flow.sh
+            return 0
         }
-
+        return 0
     }
 
     [ -z "${ARGS[1]}" ] && {
@@ -97,7 +100,7 @@ ufl_stl0 1 _tst_this_1.sh
 local file_body_rnd_ins=$dir_ins/rnd_in_tst.ins
 
 _f2f $file_body_rnd_ins "{{body_fn}}" _tst_this_1.sh
- 
+
 _s2d "{{dir_res}}" $dir_res ${dir_res}
 
 echo -e "${HLIGHT}--- _lnv2d ${fn_lst_cntx_file} ${dir_res} ---${NORMAL}" #start files

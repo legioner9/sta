@@ -21,13 +21,13 @@ echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 # echo -e "${GREEN}\$res_ptv = $res_ptv${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_ptv = file://$dir_ptv${NORMAL}"       #print variable
 
-#[[dir_set]] = file://{{dir_set}}
-#[[file_main]] = file://{{file_main}}
+#[[dir_set]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn
+#[[file_main]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/main.sh
 #[[NARGS]] = {{NARGS}}
-#[[PPWD]] = {{PPWD}}
-#[[res_ptv]] = file://{{res_ptv}}
-#[[dir_ptv]] = file://{{dir_ptv}}
-#[[dir_res]] = file://{{dir_res}}
+#[[PPWD]] = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1
+#[[res_ptv]] = file://002_ufl_flow_mm
+#[[dir_ptv]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
+#[[dir_res]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
 
 _lnv2e ${fn_lst_cntx_file}
 _lnv2e ${dir_cntx}/main.cntx
@@ -41,17 +41,17 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: dir_with_cntt_files .puml \$2 insert to file_puml \$3
 TAGS: @
-ARGS: \$1=?
+ARGS: \$1=4
 EXAM: 
 EXEC: 
-\$1 0 or num_menu dir_ptv from ../{{dir_res}}
+\$1 0 or num_menu dir_ptv from ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
 [ ,\$2 num_menu ]
 CNTL: 
-    _go             : _edit file://{{dir_res}}/main.sh
-    _go_dir_flow    : _edit file://{{dir_res}}
-    _tst_1          : . file://{{dir_res}}/_tst/part_1/_tst_this_1.sh
+    _go             : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/main.sh
+    _go_dir_flow    : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
+    _tst_1          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_tst_this_1.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
@@ -63,9 +63,9 @@ ${NORMAL}"
 
     [ "${ARGS[1]}" == "_tst_1" ] && {
 
-        _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://{{dir_res}}/_tst/part_1/_tst_this_1.sh" && {
-            echo -e "${HLIGHT}--- . file://{{dir_res}}/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
-            . {{dir_res}}/_tst/part_1/_tst_this_1.sh
+        _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_tst_this_1.sh" && {
+            echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
+            . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_tst_this_1.sh
         }
 
         return 0
@@ -74,7 +74,7 @@ ${NORMAL}"
 
     [ "${ARGS[1]}" == "_go" ] && {
 
-        _edit {{dir_res}}/main.sh
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/main.sh
 
         return 0
 
@@ -82,7 +82,8 @@ ${NORMAL}"
 
     [ "${ARGS[1]}" == "_go_dir_flow" ] && {
 
-        _edit {{dir_res}}
+        # _edit ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
 
         return 0
 

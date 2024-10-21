@@ -60,6 +60,12 @@ ${NORMAL}"
         return 1
     }
 
+    [ "$(pwd)" = "${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d" ] || {
+        _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : NOT_IN_CONDITION (\$) : '[ $(pwd) = ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d ]' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+    }
+
     ufl_stl0 2 003_tst_ufl_flow_mm_auto
 
     ufl_stl0 3 _tst_1

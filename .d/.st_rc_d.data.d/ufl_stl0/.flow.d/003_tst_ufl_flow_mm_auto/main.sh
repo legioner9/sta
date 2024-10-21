@@ -82,7 +82,7 @@ ${NORMAL}"
 
     [ "${ARGS[1]}" == "_go_dir_flow" ] && {
 
-        _edit ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto
+        _edit ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/003_tst_ufl_flow_mm_auto
 
         return 0
 
