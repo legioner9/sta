@@ -29,10 +29,10 @@ echo -e "${GREEN}\$PPWD = file://$PPWD${NORMAL}" #print variable
 #[[dir_ptv]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d
 #[[dir_res]] = file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
 
-_lnv2e ${fn_lst_cntx_file}
-_lnv2e ${dir_cntx}/main.cntx
+# _lnv2e ${fn_lst_cntx_file}
+# _lnv2e ${dir_cntx}/main.cntx
 
-# hint="\$1: \$2: "
+hint="dir_with_cntt_files .puml in \$2 insert to file_puml \$3"
 # if _isn_from ${NARGS} less more "in fs= file:// , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
 #     return 1
 # fi
@@ -41,9 +41,9 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir_with_cntt_files .puml \$2 insert to file_puml \$3
+MAIN: dir_with_cntt_files .puml in \$2 insert to file_puml \$3
 TAGS: @
-ARGS: \$1=4
+ARGS: \$1=10
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u
@@ -106,8 +106,23 @@ local main_cntx_0=0
 
 #[[ptr_path]]
 # ! ptr_path_1
-# local ptr_path_1="${ARGS[1]}"
-# ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+local ptr_path_1="${ARGS[1]}"
+ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+
+[ -d ${ptr_path_1} ] || {
+    _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : NOT_DIR (\$2) : 'file://${ptr_path_1}' : ${hint} : return 1"
+    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+    return 1
+}
+
+local ptr_path_2="${ARGS[2]}"
+ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
+
+[ -f ${ptr_path_2} ] || {
+    _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : NOT_FILE (\$3) : 'file://${ptr_path_2}' : ${hint} : return 1"
+    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+    return 1
+}
 
 # local file_res=$PPWD/${ARGS[1]}
 
@@ -127,6 +142,6 @@ local main_cntx_0=0
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
-_lnv2e ${dir_cntx}/main.cntx
+# _lnv2e ${dir_cntx}/main.cntx
 
 return 0

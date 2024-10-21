@@ -69,6 +69,8 @@ ${NORMAL}"
     # _lnv2e ${dir_cntx}/main.cntx
     # cd _dir_tst || _st_err "_dir_tst not dir"
 
+    ufl_stl0 10 _dir_tst/tst.cntx.d _dir_tst/tst.res.puml 
+
     #! END BODY FN ---------------------------------------
     
     cd $PPWD
