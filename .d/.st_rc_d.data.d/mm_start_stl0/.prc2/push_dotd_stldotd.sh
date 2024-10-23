@@ -56,6 +56,7 @@ ${NORMAL}"
     echo "START BODY FN : ${FNN}() $*"
 
     nm_opi_ 1 8 3
+    nm_opi_ 1 19 3
     nm_opi_ 1 17 3
 
     #{{body_fn}}

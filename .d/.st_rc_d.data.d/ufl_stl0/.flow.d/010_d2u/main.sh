@@ -144,9 +144,18 @@ for puml_item in $(_dr2ewd ${ptr_path_1} puml); do
     puml_item_arr=(${puml_item//:/ })
     puml_path=${puml_item_arr[0]}
     puml_depth=${puml_item_arr[1]}
+
+    _isn_od "$2" && {
+        _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : NOT_IN_CONDITION (\$2) : 'NOT_NUMBER' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+        return 1
+    }
+    
     puml_tmp=$(_prs_f -d $puml_path)/_$(_prs_f -ne $puml_path)
     echo -e "${GREEN}\$puml_tmp = '$puml_tmp'${NORMAL}" #print variable
     cat ${puml_path} >${puml_tmp}
+
+
 
     # cat ${puml_item} >>_${puml_item}
 done
