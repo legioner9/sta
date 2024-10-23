@@ -41,7 +41,7 @@ hint="dir_with_cntt_files .puml in \$2 insert to file_puml \$3"
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir_with_cntt_files .puml in \$2 insert to file_puml \$3
+MAIN: dir_with_cntt_files .puml in \$2 insert to file_puml \$3 issue dir for insert to dir_with_cntt_files \$4
 TAGS: @
 ARGS: \$1=10
 EXAM: 
@@ -92,6 +92,7 @@ ${NORMAL}"
 
 echo -e "${GREEN}\${ARGS[1]} = '${ARGS[1]}'${NORMAL}" #print variable
 echo -e "${GREEN}\${ARGS[2]} = '${ARGS[2]}'${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[3]} = '${ARGS[3]}'${NORMAL}" #print variable
 
 [ -n "${ARGS[1]}" ] || {
     # hint="\$1: name result file "
@@ -132,14 +133,33 @@ ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
     return 1
 }
 
+local ptr_path_3="${ARGS[3]}"
+ptr_path_3="$(_abs_path "${PPWD}" "ptr_path_3")"
+
+[ -d ${ptr_path_3} ] || {
+    _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : NOT_DIR (\$4) : 'file://${ptr_path_3}' : ${hint} : return 1"
+    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+    return 1
+}
+
 local dir_cntx=${ptr_path_1}
 local file_puml=${ptr_path_2}
+local dir_cntx=${ptr_path_3}
 
 echo @startmindmap >${file_puml}
 
+_ptr_path_1=$(_prs_f -d ${ptr_path_1})/_$(_prs_f -n ${ptr_path_1})
+
+rm -r ${_ptr_path_1}
+mkdir ${_ptr_path_1}
+
+cp -r ${ptr_path_1}/. ${_ptr_path_1}
+
+_d4d ${ptr_path_3} @ ${_ptr_path_1}
+
 local puml_item=
 
-for puml_item in $(_dr2ewd ${ptr_path_1} puml); do
+for puml_item in $(_dr2ewd ${_ptr_path_1} puml); do
 
     puml_item_arr=(${puml_item//:/ })
     puml_path=${puml_item_arr[0]}
@@ -184,7 +204,7 @@ echo @endmindmap >>${file_puml}
 ufl_stl0 1 ${file_puml}_ufl10
 
 echo -e "
-ufl_stl0 10 ${ptr_path_1} ${ptr_path_2}
+ufl_stl0 10 ${ptr_path_1} ${ptr_path_2} ${ptr_path_3}
 " >${file_puml}_ufl10.tmp
 
 _f2f "${file_puml}"_ufl10.tmp "{{body_fn}}" ${file_puml}_ufl10

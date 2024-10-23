@@ -5,11 +5,13 @@
 000: define fn() {}
 000: fn 
 000: source \~/path_s
+
 ;
 
 **:define: fn() {
     any_act
 }
+
 ;
 
 **:exec: fn
