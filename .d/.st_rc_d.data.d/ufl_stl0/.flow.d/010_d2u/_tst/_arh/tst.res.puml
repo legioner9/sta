@@ -1,0 +1,130 @@
+@startmindmap
+'/home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_dir_tst/tst.cntx.d/_001.puml
+
+
+*: file:\~/path
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+**:define: fn() {
+    any_act
+}
+;
+
+**:exec: fn
+;
+
+***:any_act
+;
+
+**:source: \~/path_s
+;
+
+***:
+file:\~/path_s
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+'/home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_dir_tst/tst.cntx.d/002.d/001.d/_001.puml
+
+
+***: file:\~/path
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+****:define: fn() {
+    any_act
+}
+;
+
+****:exec: fn
+;
+
+*****:any_act
+;
+
+****:source: \~/path_s
+;
+
+*****:
+file:\~/path_s
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+'/home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_dir_tst/tst.cntx.d/002.d/_002.puml
+
+
+**: file:\~/path
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+***:define: fn() {
+    any_act
+}
+;
+
+***:exec: fn
+;
+
+****:any_act
+;
+
+***:source: \~/path_s
+;
+
+****:
+file:\~/path_s
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+'/home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/010_d2u/_tst/part_1/_dir_tst/tst.cntx.d/_003.puml
+
+
+*: file:\~/path
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+**:define: fn() {
+    any_act
+}
+;
+
+**:exec: fn
+;
+
+***:any_act
+;
+
+**:source: \~/path_s
+;
+
+***:
+file:\~/path_s
+
+000: define fn() {}
+000: fn 
+000: source \~/path_s
+;
+
+@endmindmap
