@@ -88,19 +88,27 @@ ${NORMAL}"
         return 0
 
     }
-
-    # [ -z ${ARGS[1]} ] && {
-    #     hint="\$1: name result file "
-    #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
-    #     return 1
-    # }
-
-    # _is_yes "cr ${ARGS[1]} file in $PPWD" || {
-    #     _st_info "that not 'y' return 1"
-    #     return 1
-    # }
-
 }
+
+echo -e "${GREEN}\${ARGS[1]} = '${ARGS[1]}'${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[2]} = '${ARGS[2]}'${NORMAL}" #print variable
+
+[ -n "${ARGS[1]}" ] || {
+    # hint="\$1: name result file "
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+    return 1
+}
+
+[ -z "${ARGS[2]}" ] && {
+    # hint="\$1: name result file "
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[2]}' : ${hint} : return 1"
+    return 1
+}
+
+# _is_yes "cr ${ARGS[1]} file in $PPWD" || {
+#     _st_info "that not 'y' return 1"
+#     return 1
+# }
 
 local main_cntx_0=0
 
@@ -123,6 +131,25 @@ ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
     cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
     return 1
 }
+
+local dir_cntx=${ptr_path_1}
+local file_puml=${ptr_path_2}
+
+: >${file_puml}
+
+local puml_item=
+
+for puml_item in $(_dr2ewd ${ptr_path_1} puml); do
+
+    puml_item_arr=(${puml_item//:/ })
+    puml_path=${puml_item_arr[0]}
+    puml_depth=${puml_item_arr[1]}
+    puml_tmp=$(_prs_f -d $puml_path)/_$(_prs_f -ne $puml_path)
+    echo -e "${GREEN}\$puml_tmp = '$puml_tmp'${NORMAL}" #print variable
+    cat ${puml_path} >${puml_tmp}
+
+    # cat ${puml_item} >>_${puml_item}
+done
 
 # local file_res=$PPWD/${ARGS[1]}
 

@@ -102,7 +102,7 @@ local hint="dir_with_cntt_files \$2 insert to file_md \$3"
 [ -d ${dir_with_cntt_files} ] || {
     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DIR : 'file://${dir_with_cntt_files}' : ${hint} : return 1"
     return 1
-}
+} 
 
 if [ -f ${file_md} ]; then
     _st_info "${file_md} IS_FILE"

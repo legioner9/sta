@@ -87,19 +87,18 @@ ${NORMAL}"
         return 0
 
     }
-
-    # [ -z ${ARGS[1]} ] && {
-    #     hint="\$1: name result file "
-    #     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
-    #     return 1
-    # }
-
-    # _is_yes "cr ${ARGS[1]} file in $PPWD" || {
-    #     _st_info "that not 'y' return 1"
-    #     return 1
-    # }
-
 }
+
+# [ -z ${ARGS[1]} ] && {
+#     hint="\$1: name result file "
+#     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+#     return 1
+# }
+
+# _is_yes "cr ${ARGS[1]} file in $PPWD" || {
+#     _st_info "that not 'y' return 1"
+#     return 1
+# }
 
 local main_cntx_0=0
 
