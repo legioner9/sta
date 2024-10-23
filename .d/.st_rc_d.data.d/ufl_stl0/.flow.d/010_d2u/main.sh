@@ -151,7 +151,7 @@ for puml_item in $(_dr2ewd ${ptr_path_1} puml); do
         return 1
     }
 
-    puml_tmp=$(_prs_f -d $puml_path)/_$(_prs_f -ne $puml_path)
+    puml_tmp=$(_prs_f -d $puml_path)/__$(_prs_f -ne $puml_path)
     echo -e "${GREEN}\$puml_tmp = '$puml_tmp'${NORMAL}" #print variable
     cat ${puml_path} >${puml_tmp}
 
@@ -185,13 +185,23 @@ ufl_stl0 1 ${file_puml}_ufl10
 
 echo -e "
 ufl_stl0 10 ${ptr_path_1} ${ptr_path_2}
-" > ${file_puml}_ufl10.tmp
+" >${file_puml}_ufl10.tmp
 
 _f2f "${file_puml}"_ufl10.tmp "{{body_fn}}" ${file_puml}_ufl10
 
 rm ${file_puml}_ufl10.tmp
 
 path2nom_stl0 ${file_puml}_ufl10
+# _s2f "^\' .*" @ ${file_puml}
+eval "sed -i 's|^'\'' .*||g' ${file_puml}"
+# eval "sed -i 's|\n||g' ${file_puml}"
+_puml ${file_puml} || {
+    _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_puml ${file_puml}' : ${hint} : return 1"
+    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+    return 1
+}
+
+drawing ${file_puml}.png.d/$(_prs_f -n ${file_puml}).png &
 
 # local file_res=$PPWD/${ARGS[1]}
 
