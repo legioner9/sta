@@ -1,27 +1,27 @@
-@startmindmap
 
-+: file:\~/path
+
+**: file:\~/path
 
 000: define fn() {}
 000: fn 
 000: source \~/path_s
 ;
 
-+*:define: fn() {
+***:define: fn() {
     any_act
 }
 ;
 
-+*:exec: fn
+***:exec: fn
 ;
 
-+**:any_act
+****:any_act
 ;
 
-+*:source: \~/path_s
+***:source: \~/path_s
 ;
 
-+**:
+****:
 file:\~/path_s
 
 000: define fn() {}
@@ -29,4 +29,3 @@ file:\~/path_s
 000: source \~/path_s
 ;
 
-@endmindmap

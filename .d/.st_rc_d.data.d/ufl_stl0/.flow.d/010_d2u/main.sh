@@ -135,7 +135,7 @@ ptr_path_2="$(_abs_path "${PPWD}" "ptr_path_2")"
 local dir_cntx=${ptr_path_1}
 local file_puml=${ptr_path_2}
 
-: >${file_puml}
+echo @startmindmap >${file_puml}
 
 local puml_item=
 
@@ -145,20 +145,53 @@ for puml_item in $(_dr2ewd ${ptr_path_1} puml); do
     puml_path=${puml_item_arr[0]}
     puml_depth=${puml_item_arr[1]}
 
-    _isn_od "$2" && {
-        _st_exit "in fs= file://${sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : NOT_IN_CONDITION (\$2) : 'NOT_NUMBER' : ${hint} : return 1"
+    _isn_od "${puml_depth}" && {
+        _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : : NOT_IN_CONDITION (\$2) : 'NOT_NUMBER' : ${hint} : return 1"
         cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
         return 1
     }
-    
+
     puml_tmp=$(_prs_f -d $puml_path)/_$(_prs_f -ne $puml_path)
     echo -e "${GREEN}\$puml_tmp = '$puml_tmp'${NORMAL}" #print variable
     cat ${puml_path} >${puml_tmp}
 
+    echo -e "${GREEN}\$puml_depth = '$puml_depth'${NORMAL}" #print variable
 
+    local add_str=$(_sn2e "*" ${puml_depth})
 
+    echo -e "${GREEN}\$add_str = '$add_str'${NORMAL}" #print variable
+
+    _s2f "@startmindmap" @ ${puml_tmp}
+    _s2f "@endmindmap" @ ${puml_tmp}
+
+    [ -n "${add_str}" ] && {
+
+        _s2f "^*" "*${add_str}" ${puml_tmp} || {
+            _st_exit "in fs= file://${file_main} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_s2f ^* ${add_str} ${puml_tmp}' : ${hint} : return 1"
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+            return 1
+        }
+
+    }
+
+    echo "'${puml_tmp}" >>${file_puml}
+    cat ${puml_tmp} >>${file_puml}
     # cat ${puml_item} >>_${puml_item}
 done
+
+echo @endmindmap >>${file_puml}
+
+ufl_stl0 1 ${file_puml}_ufl10
+
+echo -e "
+ufl_stl0 10 ${ptr_path_1} ${ptr_path_2}
+" > ${file_puml}_ufl10.tmp
+
+_f2f "${file_puml}"_ufl10.tmp "{{body_fn}}" ${file_puml}_ufl10
+
+rm ${file_puml}_ufl10.tmp
+
+path2nom_stl0 ${file_puml}_ufl10
 
 # local file_res=$PPWD/${ARGS[1]}
 
