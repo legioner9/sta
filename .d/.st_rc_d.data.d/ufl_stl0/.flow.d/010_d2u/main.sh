@@ -148,7 +148,7 @@ local dir_cntx=${ptr_path_3}
 
 echo @startmindmap >${file_puml}
 
-_ptr_path_1=$(_prs_f -d ${ptr_path_1})/_$(_prs_f -n ${ptr_path_1})
+_ptr_path_1=$(_prs_f -d ${ptr_path_1})/_$(_prs_f -ne ${ptr_path_1})
 
 rm -r ${_ptr_path_1}
 mkdir ${_ptr_path_1}
