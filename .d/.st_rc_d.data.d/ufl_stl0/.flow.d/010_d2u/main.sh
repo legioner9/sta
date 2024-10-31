@@ -155,7 +155,8 @@ mkdir ${_ptr_path_1}
 
 cp -r ${ptr_path_1}/. ${_ptr_path_1}
 
-_d4d ${ptr_path_3} @ ${_ptr_path_1}
+# _d4d ${ptr_path_3} @ ${_ptr_path_1}
+_d5d ${ptr_path_3} "@" "&" ${ptr_path_1}
 
 local puml_item=
 

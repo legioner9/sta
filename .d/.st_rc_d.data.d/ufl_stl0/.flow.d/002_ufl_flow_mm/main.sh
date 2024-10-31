@@ -87,6 +87,7 @@ mkdir ${dir_res}
 
 cp -r $dir_tml/.d/. ${dir_res}
 
+#! создаем ${dir_res}/_tst/part_1 
 mkdir ${dir_res}/_tst/part_1
 cp -r ${dir_res}/_tst/part__/. ${dir_res}/_tst/part_1
 
