@@ -38,9 +38,11 @@
 ## DOGMA:
 РЕШЕНИЕ задачи:
 1. Делаем копию `cp -r [cnx_dr] _[cnx_dr].[ptx_fn]` где `ptx_fn=_ufl_st0_10` - в оригинал вносим изменения - копия для истории изменений - скрываем ее под _ 
-2. Создаем директорию служебных файлов utl_dr=$(_prs_f -d "${res_fl}")/_$(_prs_f -n "${rcv_dr}").${ptx_fn}.d
-3. Создаем source файл со строкой команды `ufl_stl0 10 args` sorce_fl=${utl_dr}/restart.sh
-4. Ридми файл read_fl=${utl_dr}/readme.stnd.md
+2. -
+3. Привязываем служебную дир к ${res_fl}  - utl2dfn_stl0 ${res_fl} ufl_stl0_10
+4. Создаем директорию служебных файлов utl_dr=$(_prs_f -d "${res_fl}")/_$(_prs_f -n "${rcv_dr}").${ptx_fn}.d
+5. Создаем source файл со строкой команды `ufl_stl0 10 args` sorce_fl=${utl_dr}/restart.sh
+6. Ридми файл read_fl=${utl_dr}/readme.stnd.md
 
 
 ### TST
