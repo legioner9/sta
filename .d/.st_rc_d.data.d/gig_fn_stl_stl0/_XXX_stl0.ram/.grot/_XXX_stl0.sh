@@ -15,7 +15,6 @@ _XXX_stl0() {
     local ARGS=("$@")
     local NARGS=$#
     local verbose=0
-    local hint=
     local estat=
 
     #* local fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
@@ -29,6 +28,7 @@ _XXX_stl0() {
 
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
+    local hint="hint -> "
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: ${FNN} :: 
@@ -87,7 +87,7 @@ ${NORMAL}"
 
     if [[ "_flow_1" == "$1" ]]; then
         if ! _source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1; then
-            _st_exit "in fs= file:// , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1"
+            _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/_flow_tst.sh.v1' : ${hint} : return 1"
             cd $PPWD
             return 1
         fi
@@ -127,11 +127,43 @@ ${NORMAL}"
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
+    #* [ $di -eq 1 ] && echo "info"
+
+    #* standart echo fl
+    # _st_exit "in fs= file://${} , line=${LINENO}, EXEC: ${FNN} $* : 'SIGN_STR' (\$N) : 'file://${}' : ${hint} : return 1"
+    # cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+    # return 1
+
+    #* greeting
+    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
+
+    #* errno
+    # cmd arg
+    # errno=$?
+    # return ${errno}
+
+    #* rename args
+
+    #* check cntl
+
+    #* inname cntl
+
+    _XXX_before_return() {
+        :
+    }
+
     # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
     # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
 
+    _XXX_before_return
     cd ${PPWD}
     return 0
+
+    #? ----- START _XXX body_flow -----
+
+    #* {{fn_sh_body}}
+
+    #? ----- END _XXX body -----
 
 }
 
