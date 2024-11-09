@@ -34,7 +34,7 @@ DATX: $(date +%s)
 ufl_stl0 1 ${file_md}_ufl9
 
 echo -e "
-ufl_stl0 9 ${_ARGS_[1]} ${_ARGS_[2]} ${_ARGS_[3]}
+ufl_stl0 9 ${dir_with_cntt_files} ${file_md} ${max_deep}
 " > ${file_md}_ufl9.tmp
 
 echo -e "${HLIGHT}--- _f2f file://${file_md}_ufl9.tmp {{body_fn}} file://${file_md}_ufl9 ---${NORMAL}" #start files
