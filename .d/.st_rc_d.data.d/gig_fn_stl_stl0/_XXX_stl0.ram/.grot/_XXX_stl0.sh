@@ -97,6 +97,14 @@ ${NORMAL}"
         fi
     fi
 
+    # if [[ "_flow_2" == "$1" ]]; then
+    #     if ! _source_w1_isf ${d_name}/_tst/_flow_tst.sh.v2; then
+    #         _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf ${d_name}/_tst/_flow_tst.sh.v2' : ${hint} : return 1"
+    #         cd $PPWD
+    #         return 1
+    #     fi
+    # fi
+
     if [[ "_hie_m" == "$1" ]]; then
         more ${fn_hie_file}
         cd $PPWD
@@ -139,7 +147,7 @@ ${NORMAL}"
     # return 1
 
     #* greeting
-    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${sh_file} ---${NORMAL}" #started functions
+    # [ $di -eq 1 ] && echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
     #* errno
     # cmd arg
@@ -152,7 +160,7 @@ ${NORMAL}"
 
     #* inname cntl
 
-    _XXX_before_return() {
+    _XXX_stl0_before_return() {
         :
     }
 
@@ -164,7 +172,7 @@ ${NORMAL}"
 
     #? ----- END _XXX body -----
 
-    _XXX_before_return
+    _XXX_stl0_before_return
     cd ${PPWD}
     return 0
 }
