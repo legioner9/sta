@@ -26,6 +26,9 @@ _XXX_stl0() {
     local usr_fn_data_dir=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
     local opt_fn_data_dir=${d_name}/.opt
 
+    # echo -e "${GREEN}\$usr_fn_data_dir = '$usr_fn_data_dir'${NORMAL}"
+    # echo -e "${GREEN}\$opt_fn_data_dir = '$opt_fn_data_dir'${NORMAL}"
+
     #* echo -e "${CYAN}--- $FNN() $* in file://${fn_sh_file} ---${NORMAL}" #started functions
 
     local hint="hint -> "
@@ -35,7 +38,8 @@ MAIN: ${FNN} ::
 TAGS:
 ARGS: 
 \$1
-[ ,\$2 num_menu ]
+[, \$N  _i]
+    
 CNTL: 
     _go         : _edit body        : _edit file://${d_name}/${FNN}.sh
     _tst        : . exec.tst        : . file://${d_name}/_tst/exec.tst
@@ -110,17 +114,17 @@ ${NORMAL}"
     #     return 1
     # fi
 
-    #* DEBAG CNTL
-    # local di=
-    # if [ -n "$N" ]; then
-    #     if [ "$N" == "_i" ]; then
-    #         di=1
-    #     else
-    #         di=0
-    #     fi
-    # else
-    #     di=0
-    # fi
+    #* DEBAG CNTL MAST DEFFINE $N -> ... e.c. [$2]
+    local di=
+    if [ -n "$N" ]; then
+        if [ "$N" == "_i" ]; then
+            di=1
+        else
+            di=0
+        fi
+    else
+        di=0
+    fi
 
     #[[ptr_path]]
     #! ptr_path
@@ -152,12 +156,7 @@ ${NORMAL}"
         :
     }
 
-    # local dir_fn_data=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/_XXX_stl0
-    # echo -e "${GREEN}\$dir_fn_data = file://$dir_fn_data${NORMAL}"
-
-    _XXX_before_return
-    cd ${PPWD}
-    return 0
+    #* define local variables
 
     #? ----- START _XXX body_flow -----
 
@@ -165,6 +164,9 @@ ${NORMAL}"
 
     #? ----- END _XXX body -----
 
+    _XXX_before_return
+    cd ${PPWD}
+    return 0
 }
 
 cd "${idir}"
