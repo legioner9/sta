@@ -125,6 +125,52 @@ local main_cntx_0=0
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
-_lnv2e ${dir_cntx}/main.cntx
+_is_yes "create fs for 'ufl_stl0 9' in file://$PPWD" || {
+    _st_info "in fs= file://$file_main , line=${LINENO}, ${FNN}() :REJECT_OPERATION : return 0"
+    return 0
+}
+
+echo -e "${GREEN}\$dir_tml = '$dir_tml'${NORMAL}"
+
+_is_yes "DO?: DAGER_OPERATION : rm -r file://$PPWD /* ? " && {
+    rm -r "{$PPWD:?}"/*
+}
+
+cp -r $dir_tml/. "$PPWD"
+
+ufl_stl0 1 $PPWD/rbld_res_md.sh
+
+echo -e "
+    #! rebuild all in dir
+    local dot_ins_d=\${path_dir}/.ins_dr
+    for sd in $(_dd2e \${dot_ins_d}); do
+        if [ -f "\${dot_ins_d}/\${sd}/res.md_ufl9" ]; then
+            _source_w1_isf "\${dot_ins_d}/\${sd}/res.md_ufl9"
+        else
+            ufl_stl0 9 \${dot_ins_d}/\${sd}/cnx.d \${dot_ins_d}/\${sd}/res.md 2
+        fi
+    done
+
+    if [ -f \$path_dir/cntx.res.md_ufl9 ]; then
+        _source_w1_isf \$path_dir/cntx.res.md_ufl9
+    else
+        ufl_stl0 9 \$path_dir/cntx.ins.d \$path_dir/cntx.res.md 2
+    fi
+
+    _edit \$path_dir/cntx.res.md
+
+" >$PPWD/rbld_res_md.sh.tmp
+
+echo -e "${HLIGHT}--- _f2f file://$PPWD/rbld_res_md.sh.tmp {{body_fn}} file://$PPWD/rbld_res_md.sh ---${NORMAL}" #start files
+_f2f $PPWD/rbld_res_md.sh.tmp {{body_fn}} $PPWD/rbld_res_md.sh
+
+rm $PPWD/rbld_res_md.sh.tmp
+
+path2nom_stl0 $PPWD/rbld_res_md.sh
+
+# _lnv2e ${dir_cntx}/main.cntx
+_st_pause "_s2d file://$PPWD '{{PPWD}}' file://$PPWD/cntx.ins.d"
+_s2d "$PPWD" '{{PPWD}}' $PPWD/cntx.ins.d
+_s2d "$HOME" '/' $PPWD/cntx.ins.d
 
 return 0
