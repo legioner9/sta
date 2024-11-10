@@ -7,7 +7,7 @@ ___XXX_stl0_TST() {
         return 1
     fi
 
-    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_tst/exec._tst
+    local filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/_XXX_stl0.ram/.grot/_tst/exec.tst
 
     local idir=$(pwd)
 

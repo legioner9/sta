@@ -36,6 +36,11 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/dpl_fr
 _arr_name+=("start show_main_hints")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/show_main_hints.sh")
 
+#! ADD only after that
+
+_arr_name+=("push lib : st_rc_d + stl0")
+_arr_res+=("nm_opi_ 1 8 3; nm_opi_ 1 17 3 ")
+
 # _arr_res+=("rrrrr")
 # _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
