@@ -142,8 +142,9 @@ ufl_stl0 1 $PPWD/rbld_res_md.sh
 
 echo -e "
     #! rebuild all in dir
+    local sd=
     local dot_ins_d=\${path_dir}/.ins_dr
-    for sd in $(_dd2e \${dot_ins_d}); do
+    for sd in \$(_dd2e \${dot_ins_d}); do
         if [ -f "\${dot_ins_d}/\${sd}/res.md_ufl9" ]; then
             _source_w1_isf "\${dot_ins_d}/\${sd}/res.md_ufl9"
         else
