@@ -8,6 +8,12 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
+- [Рекомендации RCM](#рекомендации-rcm)
+  - [RCM\_1 (изменения в оригинал)](#rcm_1-изменения-в-оригинал)
+  - [RCM\_2 (служебные файлы)](#rcm_2-служебные-файлы)
+  - [RCM\_3 (cокращения)](#rcm_3-cокращения)
+  - [RCM\_4 (notmast\_butlast)](#rcm_4-notmast_butlast)
+
 <!-- /TOC -->
 
 End Contents Menu

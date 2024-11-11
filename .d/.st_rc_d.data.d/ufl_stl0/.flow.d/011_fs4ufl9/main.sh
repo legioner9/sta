@@ -169,8 +169,8 @@ rm $PPWD/rbld_res_md.sh.tmp
 path2nom_stl0 $PPWD/rbld_res_md.sh
 
 # _lnv2e ${dir_cntx}/main.cntx
-_st_pause "_s2d file://$PPWD '{{PPWD}}' file://$PPWD/cntx.ins.d"
-_s2d "$PPWD" '{{PPWD}}' $PPWD/cntx.ins.d
-_s2d "$HOME" '/' $PPWD/cntx.ins.d
+# _st_pause "_s2d '{{PPWD}}' file://$PPWD  file://$PPWD/cntx.ins.d"
+_s2d '{{PPWD}}' "$PPWD"  $PPWD
+_s2d  "$HOME/" '/' $PPWD
 
 return 0
