@@ -188,11 +188,11 @@ _isn_od ${max_deep} && {
 
 if [ -f ${file_md} ]; then
     _st_info "${file_md} IS_FILE"
-    _is_yes "rewright file://${file_md} : ${hint} : ?" || {
-        _st_info "reject rewright file://${file_md} : return 0"
-        cd $PPWD
-        return 0
-    }
+    # _is_yes "rewright file://${file_md} : ${hint} : ?" || {
+    #     _st_info "reject rewright file://${file_md} : return 0"
+    #     cd $PPWD
+    #     return 0
+    # }
     rm ${file_md}
 fi
 
