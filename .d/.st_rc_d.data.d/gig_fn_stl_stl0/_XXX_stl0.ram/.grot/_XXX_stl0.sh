@@ -139,6 +139,14 @@ ${NORMAL}"
     # local ptr_path="$1"
     # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
+    # _f2d :: insert $1 file after str $2 in ALL (without prevent) file from dir $3
+    # _s2d :: into str $1 insert $2 str in (with prevent) file from dir $3
+    # _s2f :: reciver_string: $1 inserter_string: $2 in reciver_result_file: $3
+    # tml {{PPWD}} 
+    # path2nom2d_stl0 :: path2nom_stl0 for all files (with prev) in dir $1
+    # path2nom_stl0 :: _s2f ${PATH} '${REPO_PATH}' $1 : ST_RC_D_PATH, ST_RC_D_DATA_PATH, ST_RC_DATA_PATH, REPO_PATH, HOME
+    # _s2d "$HOME/"" '/' $dir - that only for .md path (before normalize path)
+
     #* [ $di -eq 1 ] && echo "info"
 
     #* standart echo fl
