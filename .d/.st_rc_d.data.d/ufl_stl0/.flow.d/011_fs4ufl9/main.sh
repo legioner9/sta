@@ -138,24 +138,20 @@ _is_yes "DO?: DAGER_OPERATION : rm -r file://$PPWD /* ? " && {
 
 cp -r $dir_tml/. "$PPWD"
 
-ufl_stl0 1 $PPWD/rbld_res_md.sh
+echo | ufl_stl0 1 $PPWD/rbld_res_md.sh
 
 echo -e "
     #! rebuild all in dir
     local sd=
-    local dot_ins_d=\${path_dir}/.ins_dr
-    for sd in \$(_dd2e \${dot_ins_d}); do
-        if [ -f "\${dot_ins_d}/\${sd}/res.md_ufl9" ]; then
-            _source_w1_isf "\${dot_ins_d}/\${sd}/res.md_ufl9"
-        else
-            ufl_stl0 9 \${dot_ins_d}/\${sd}/cnx.d \${dot_ins_d}/\${sd}/res.md 2
+    local dot_ins_d=${path_dir}/.ins_dr
+    for sd in $(_dd2e ${dot_ins_d}); do
+        if [ -d ${dot_ins_d}/${sd}/cnx.d ] && [ -f ${dot_ins_d}/${sd}/res.md ]; then
+            echo | ufl_stl0 9 ${dot_ins_d}/${sd}/cnx.d ${dot_ins_d}/${sd}/res.md 2
         fi
     done
 
-    if [ -f \$path_dir/cntx.res.md_ufl9 ]; then
-        _source_w1_isf \$path_dir/cntx.res.md_ufl9
-    else
-        ufl_stl0 9 \$path_dir/cntx.ins.d \$path_dir/cntx.res.md 2
+    if [ -d $path_dir/cntx.ins.d ] && [ -f $path_dir/cntx.res.md ]; then
+        echo | ufl_stl0 9 $path_dir/cntx.ins.d $path_dir/cntx.res.md 2
     fi
 
     _edit \$path_dir/cntx.res.md

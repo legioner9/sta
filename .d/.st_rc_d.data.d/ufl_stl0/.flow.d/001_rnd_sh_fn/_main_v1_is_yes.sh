@@ -44,7 +44,7 @@ ERROR: ( return 1 | ... )
     ${FNN} 
 ${NORMAL}"
 
-    return 0
+return 0
 
 }
 
@@ -75,10 +75,14 @@ if [ -f ${file_res} ]; then
 
     hint="that result file : conlict rerecording"
     _st_exit "in fs= file://$file_mane , line=${LINENO}, ${FNN}() :  EXIST_FILE : 'file://${file_res}' : ${hint} : _is_yes rerecording that file?"
+    if _is_yes rerecording that file://${file_res}?; then
 
-    rm ${file_res}
-    cp ${dir_tml}/1.tml ${file_res}
-
+        rm ${file_res}
+        cp ${dir_tml}/1.tml ${file_res}
+    else
+        _st_info "exit with return 0"
+        return 0
+    fi
 else
     cp ${dir_tml}/1.tml ${file_res}
 fi

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_readme_rnd7_3d6253b() $* in file://${ST_RC_D_PATH}/.d/.mul/rbld_readme.mul/.prc/rbld_readme.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- res_rnd7_a681b72() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md_ufl9 ---${NORMAL}" #started functions
 
-rbld_readme_rnd7_3d6253b() {
+res_rnd7_a681b72() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ rbld_readme_rnd7_3d6253b() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${REPO_PATH}/NBash/.arb/util/sed.ram/.grot/_d2f_v1/rbld_readme.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md_ufl9"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -38,6 +38,8 @@ ${NORMAL}"
 
     if [[ "_go" == "$1" ]]; then
         _edit "${path_file}"
+
+        cd $PPWD
         return 0
     fi
 
@@ -53,32 +55,18 @@ ${NORMAL}"
 
     #! START BODY FN ---------------------------------------
 
-    #! rebuild all in dir
-    local dot_ins_d=${path_dir}/.ins_dr
-    for sd in $(_dd2e ${dot_ins_d}); do
-        if [ -f "${dot_ins_d}/${sd}/res.md_ufl9" ]; then
-            _source_w1_isf "${dot_ins_d}/${sd}/res.md_ufl9"
-        else
-            ufl_stl0 9 ${dot_ins_d}/${sd}/cnx.d ${dot_ins_d}/${sd}/res.md 2
-        fi
-    done
-
     echo "START BODY FN : ${FNN}() $*"
-
-    if [ -f $path_dir/cntx.res.md_ufl9 ]; then
-        _source_w1_isf $path_dir/cntx.res.md_ufl9
-    else
-        ufl_stl0 9 $path_dir/cntx.ins.d $path_dir/cntx.res.md 2
-    fi
-
-    _edit $path_dir/cntx.res.md
 
     #{{body_fn}}
 
-    #! END BODY FN ---------------------------------------
+echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/cnx.d ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md 2
 
+
+    #! END BODY FN ---------------------------------------
+    
+    cd $PPWD
     return 0
 
 }
 
-rbld_readme_rnd7_3d6253b "$@"
+res_rnd7_a681b72 "$@"

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_res_md_rnd7_2c9e0f2() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- rbld_res_md_rnd7_3fb1d41() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
 
-rbld_res_md_rnd7_2c9e0f2() {
+rbld_res_md_rnd7_3fb1d41() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -60,30 +60,25 @@ ${NORMAL}"
     #{{body_fn}}
 
     #! rebuild all in dir
+    local sd=
     local dot_ins_d=${path_dir}/.ins_dr
-    for sd in ; do
-        if [ -f ${dot_ins_d}/${sd}/res.md_ufl9 ]; then
-            _source_w1_isf ${dot_ins_d}/${sd}/res.md_ufl9
-        else
-            ufl_stl0 9 ${dot_ins_d}/${sd}/cnx.d ${dot_ins_d}/${sd}/res.md 2
+    for sd in $(_dd2e ${dot_ins_d}); do
+        if [ -d ${dot_ins_d}/${sd}/cnx.d ] && [ -f ${dot_ins_d}/${sd}/res.md ]; then
+            echo | ufl_stl0 9 ${dot_ins_d}/${sd}/cnx.d ${dot_ins_d}/${sd}/res.md 2
         fi
     done
 
-    if [ -f $path_dir/cntx.res.md_ufl9 ]; then
-        _source_w1_isf $path_dir/cntx.res.md_ufl9
-    else
-        ufl_stl0 9 $path_dir/cntx.ins.d $path_dir/cntx.res.md 2
+    if [ -d $path_dir/cntx.ins.d ] && [ -f $path_dir/cntx.res.md ]; then
+        echo | ufl_stl0 9 $path_dir/cntx.ins.d $path_dir/cntx.res.md 2
     fi
 
     _edit $path_dir/cntx.res.md
 
-
-
     #! END BODY FN ---------------------------------------
-    
+
     cd $PPWD
     return 0
 
 }
 
-rbld_res_md_rnd7_2c9e0f2 "$@"
+rbld_res_md_rnd7_3fb1d41 "$@"
