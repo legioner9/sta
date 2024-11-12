@@ -143,15 +143,15 @@ echo | ufl_stl0 1 $PPWD/rbld_res_md.sh
 echo -e "
     #! rebuild all in dir
     local sd=
-    local dot_ins_d=${path_dir}/.ins_dr
-    for sd in $(_dd2e ${dot_ins_d}); do
-        if [ -d ${dot_ins_d}/${sd}/cnx.d ] && [ -f ${dot_ins_d}/${sd}/res.md ]; then
-            echo | ufl_stl0 9 ${dot_ins_d}/${sd}/cnx.d ${dot_ins_d}/${sd}/res.md 2
+    local dot_ins_d=\${path_dir}/.ins_dr
+    for sd in \$(_dd2e \${dot_ins_d}); do
+        if [ -d \${dot_ins_d}/\${sd}/cnx.d ] && [ -f \${dot_ins_d}/\${sd}/res.md ]; then
+            echo | ufl_stl0 9 \${dot_ins_d}/\${sd}/cnx.d \${dot_ins_d}/\${sd}/res.md 2
         fi
     done
 
-    if [ -d $path_dir/cntx.ins.d ] && [ -f $path_dir/cntx.res.md ]; then
-        echo | ufl_stl0 9 $path_dir/cntx.ins.d $path_dir/cntx.res.md 2
+    if [ -d \$path_dir/cntx.ins.d ] && [ -f \$path_dir/cntx.res.md ]; then
+        echo | ufl_stl0 9 \$path_dir/cntx.ins.d \$path_dir/cntx.res.md 2
     fi
 
     _edit \$path_dir/cntx.res.md
@@ -169,5 +169,7 @@ path2nom_stl0 $PPWD/rbld_res_md.sh
 # _st_pause "_s2d '{{PPWD}}' file://$PPWD  file://$PPWD/cntx.ins.d"
 _s2d '{{PPWD}}' "$PPWD"  $PPWD
 _s2d  "$HOME/" '/' $PPWD
+
+_source_w1_isf $PPWD/rbld_res_md.sh
 
 return 0

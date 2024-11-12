@@ -77,7 +77,7 @@ ${NORMAL}"
 
     ufl_stl0 11
 
-    _source_w1_isf rbld_res_md.sh
+    # _source_w1_isf rbld_res_md.sh
 
     #! END BODY FN ---------------------------------------
 

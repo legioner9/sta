@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_res_md_rnd7_3fb1d41() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- rbld_res_md_rnd7_a2fe8ae() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
 
-rbld_res_md_rnd7_3fb1d41() {
+rbld_res_md_rnd7_a2fe8ae() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -74,11 +74,13 @@ ${NORMAL}"
 
     _edit $path_dir/cntx.res.md
 
-    #! END BODY FN ---------------------------------------
 
+
+    #! END BODY FN ---------------------------------------
+    
     cd $PPWD
     return 0
 
 }
 
-rbld_res_md_rnd7_3fb1d41 "$@"
+rbld_res_md_rnd7_a2fe8ae "$@"
