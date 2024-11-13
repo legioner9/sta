@@ -41,6 +41,26 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/show_m
 _arr_name+=("push lib : st_rc_d + stl0")
 _arr_res+=("nm_opi_ 1 8 3; nm_opi_ 1 17 3 ")
 
+
+_arr_name+=("see opus NBash")
+_arr_res+=("_edit ${REPO_PATH}/NBash/.d/.opus/cntx.res.md")
+
+_arr_name+=("rbld opus NBash")
+_arr_res+=(". ${REPO_PATH}/NBash/.d/.opus/rbld_res_md.sh")
+
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
 # _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
