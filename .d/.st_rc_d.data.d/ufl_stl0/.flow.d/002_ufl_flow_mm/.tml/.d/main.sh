@@ -44,6 +44,7 @@ _lnv2e ${dir_cntx}/main.cntx
 MAIN: 
 TAGS: @
 ARGS: \$1=?
+GLAR: 
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ../{{dir_res}}

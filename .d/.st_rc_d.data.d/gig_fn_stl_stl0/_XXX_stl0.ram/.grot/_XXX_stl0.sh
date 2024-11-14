@@ -36,10 +36,10 @@ _XXX_stl0() {
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: ${FNN} :: 
 TAGS:
-ARGS: 
-\$1
-[, \$N  _i]
-    
+ARGS: [\$1] 
+[, \$N last arg DEBAG CNTL]
+    if '_i' debag action, use: [ \$di -eq 1 ] && {debag action} ]
+GLAR: ${FNN}_glar_[name_glar]    
 CNTL: 
     _go         : _edit body        : _edit file://${d_name}/${FNN}.sh
     _tst        : . exec.tst        : . file://${d_name}/_tst/exec.tst

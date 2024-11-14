@@ -44,7 +44,6 @@ _lnv2e ${dir_cntx}/main.cntx
 MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. , .anc. ) \$2 recusive insert to file_md \$3, [\$4 {num = 1 or not define: without recurse} depth of recurse]
 TAGS: @
 ARGS: \$1=9
-GLAR: ufl_stl0_9_glar_force=-force disable checking NO_ACTION_REQUIRED : [ \${dir_with_cntt_files} -ot \${file_md} ]
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
@@ -189,15 +188,12 @@ _isn_od ${max_deep} && {
 
 if [ -f ${file_md} ]; then
     _st_info "${file_md} IS_FILE"
-    if ! [ ${ufl_stl0_9_arg_force:-0} == "-force" ]; then
-        if ! _is_dNTf ${dir_with_cntt_files} ${file_md} ; then
-            _st_info "_is_dNTf ${dir_with_cntt_files} ${file_md} :: NO_ACTION_REQUIRED :: ufl_stl0 9 $* :: return 0"
-            return 0
-        fi
-        else 
-        _st_info "ufl_stl0_9_arg_force=-force : NO_ACTION_REQUIRED ANYWOAY :: ufl_stl0 9 $*"
-    fi
-    : >${file_md}
+    # _is_yes "rewright file://${file_md} : ${hint} : ?" || {
+    #     _st_info "reject rewright file://${file_md} : return 0"
+    #     cd $PPWD
+    #     return 0
+    # }
+    rm ${file_md}
 fi
 
 # ufl_stl0_9_infn_1()
@@ -238,7 +234,7 @@ fi
     return 1
 }
 
-ufl_stl0_9_do_item() { # $1=path_item_file
+ufl_stl0_9_do_item() { # $1=path_item_file 
     local FNN=${FUNCNAME[0]}
     echo -e "${CYAN}--- $FNN() $* in file://$file_main ---${NORMAL}" #started functions
 
