@@ -125,6 +125,11 @@ local main_cntx_0=0
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
+[ "${PPWD}" == "${HOME}" ] && {
+    _st_err "FORBIDDEN_OPERATYON_1 :: (rm -r ~/) :: '\${PPWD} == \${HOME}' return 1"
+    return 1
+}
+
 _is_yes "create fs for 'ufl_stl0 9' in file://$PPWD" || {
     _st_info "in fs= file://$file_main , line=${LINENO}, ${FNN}() :REJECT_OPERATION : return 0"
     return 0
