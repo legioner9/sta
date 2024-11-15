@@ -19,19 +19,46 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731407531_12112024173211
+DATE: 1731687406_15112024231646
 
-DATX: 1731407532
+DATX: 1731687406
 -->
 
 
-[001.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/cntx.ins.d/001.txt.md)
+[001.002.opus_in.txt.md](cntx.ins.d/001.002.opus_in.txt.md)
+
+
+
+## in_dr
+### [001.rcm.d](.ins_dr/001.rcm.d/res.md)
+
+
+[001.003.opus_sd.txt.md](cntx.ins.d/001.003.opus_sd.txt.md)
+
+
+
+
+
+[001.004.opus_arb.txt.md](cntx.ins.d/001.004.opus_arb.txt.md)
+
+
+
+
+
+[001.txt.md](cntx.ins.d/001.txt.md)
 
 
 
 # first head
 
-## [001.rcm.d](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md)
+## [see examp](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md)
+
+## Синтаксис
+
+
+
+## Опции
+    
 
 
 

@@ -5,7 +5,7 @@ echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 _parr3e _ARGS_
 
 # echo -e "${GREEN}\$dir_set = file://$dir_set${NORMAL}"       #print variable
-# echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_ins = file://$dir_ins${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_prc = file://$dir_prc${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_tml = file://$dir_tml${NORMAL}"       #print variable
 # echo -e "${GREEN}\$dir_vlu = file://$dir_vlu${NORMAL}"       #print variable
@@ -140,26 +140,10 @@ cp -r $dir_tml/. "$PPWD"
 
 echo | ufl_stl0 1 $PPWD/rbld_res_md.sh
 
-echo -e "
-    #! rebuild all in dir
-    local sd=
-    local dot_ins_d=\${path_dir}/.ins_dr
-    for sd in \$(_dd2e \${dot_ins_d}); do
-        if [ -d \${dot_ins_d}/\${sd}/cnx.d ] && [ -f \${dot_ins_d}/\${sd}/res.md ]; then
-            echo | ufl_stl0 9 \${dot_ins_d}/\${sd}/cnx.d \${dot_ins_d}/\${sd}/res.md 2
-        fi
-    done
-
-    if [ -d \$path_dir/cntx.ins.d ] && [ -f \$path_dir/cntx.res.md ]; then
-        echo | ufl_stl0 9 \$path_dir/cntx.ins.d \$path_dir/cntx.res.md 2
-    fi
-
-    _edit \$path_dir/cntx.res.md
-
-" >$PPWD/rbld_res_md.sh.tmp
+# _f2f {{body_fn}} $PPWD/rbld_res_md.sh.tmp
 
 echo -e "${HLIGHT}--- _f2f file://$PPWD/rbld_res_md.sh.tmp {{body_fn}} file://$PPWD/rbld_res_md.sh ---${NORMAL}" #start files
-_f2f $PPWD/rbld_res_md.sh.tmp {{body_fn}} $PPWD/rbld_res_md.sh
+_f2f "${dir_ins}"/rbld.sh.ins '{{body_fn}}' "$PPWD/"rbld_res_md.sh
 
 rm $PPWD/rbld_res_md.sh.tmp
 
