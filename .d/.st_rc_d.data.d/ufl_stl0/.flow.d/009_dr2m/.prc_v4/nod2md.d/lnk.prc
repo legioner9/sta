@@ -64,12 +64,11 @@ ${NORMAL}"
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
-    # local short_item=$(_s2se ${HOME} @ ${_item_})
-    local relpath=$(_ee2rpth ${file_md} ${_item_})
+    local short_item=$(_s2se ${HOME} @ ${_item_})
 
     echo -e "
-# LNK ${relpath}
-[${name_ext}](${relpath})
+# LNK ${short_item}
+[${name_ext}](${short_item})
 " >>${file_md}
 
     # local lnk_dir=$(_f2e ${_item_})
@@ -89,7 +88,7 @@ ${NORMAL}"
             _edit ${_item_}
             _st_pause "in fs= file://${dir_prc}/nod2md.d/lnk.prc , line=${LINENO}, EXEC: lnc.prc : NOT_DIR (\${lnk_dir}) : 'file://${lnk_dir}' : ${hint}"
             echo -e "
-- err link [${name_ext}](${relpath})
+- err link [${name_ext}](${short_item})
 " >>${file_md}
             not_ufn=1
         }

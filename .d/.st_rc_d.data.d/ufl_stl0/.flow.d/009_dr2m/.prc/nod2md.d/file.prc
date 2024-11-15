@@ -62,10 +62,11 @@ ${NORMAL}"
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
-    local short_item=$(_s2se ${HOME} @ ${_item_})
+    # local short_item=$(_s2se ${HOME} @ ${_item_})
+    local relpath=$(_ee2rpth ${file_md} ${_item_})
 
     echo -e "
-[${name_ext}](${short_item})
+[${name_ext}](${relpath})
 " >>${file_md}
 
     #{{body_fn}}

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- txt_rnd7_e8dfe70() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc ---${NORMAL}" #started functions
+echo -e "${CYAN}--- lcu_rnd7_ea9b981() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lcu.prc ---${NORMAL}" #started functions
 
-txt_rnd7_e8dfe70() {
+lcu_rnd7_ea9b981() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ txt_rnd7_e8dfe70() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/lcu.prc"
     local path_dir="$(dirname "$path_file")"
 
     local _item_=${ARGS[0]}
@@ -58,23 +58,23 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    echo "in txt.prc"
+    echo "in lcu.prc"
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
-    # local short_item=$(_s2se ${HOME} @ ${_item_})
-    local relpath=$(_ee2rpth ${file_md} ${_item_})
+    local short_item=$(_s2se ${HOME} @ ${_item_})
+
     echo -e "
-[${name_ext}](${relpath})
+[${name_ext}](${short_item})
 " >>${file_md}
 
     echo -e "
-{{txt}}
+{{lcu}}
 " >>${file_md}
 
-    _f2f ${_item_} "{{txt}}" ${file_md}
+    _f2f ${_item_} "{{lcu}}" ${file_md}
 
-    _s2f "{{txt}}" @ ${file_md}
+    _s2f "{{lcu}}" @ ${file_md}
 
     #{{body_fn}}
 
@@ -84,4 +84,4 @@ ${NORMAL}"
 
 }
 
-txt_rnd7_e8dfe70 "$@"
+lcu_rnd7_ea9b981 "$@"

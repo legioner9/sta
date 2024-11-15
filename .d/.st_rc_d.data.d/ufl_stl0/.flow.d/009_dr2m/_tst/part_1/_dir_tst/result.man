@@ -8,27 +8,20 @@ Start Contents Menu
 
 <!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
 
-    - [this intro file](#this-intro-file)
-        - [grtgertg rthgertghr](#grtgertg-rthgertghr)
-- [LNK /REPOBARE/\_repo/sta/.d/.st\_rc\_d.data.d/ufl\_stl0/.flow.d/009\_dr2m/\_tst/part\_1/\_dir\_tst/ins.tst1.d/004.with\_lnk.d/001.lnk.lst](#lnk-repobare_repostadst_rc_ddatadufl_stl0flowd009_dr2m_tstpart_1_dir_tstinstst1d004with_lnkd001lnklst)
-- [ANC /REPOBARE/\_repo/sta/.d/.st\_rc\_d.data.d/ufl\_stl0/.flow.d/009\_dr2m/\_tst/part\_1/\_dir\_tst/ins.tst1.d/004.with\_lnk.d/004.anc.lst](#anc-repobare_repostadst_rc_ddatadufl_stl0flowd009_dr2m_tstpart_1_dir_tstinstst1d004with_lnkd004anclst)
-  - [this intro file](#this-intro-file-1)
-    - [grtgertg rthgertghr](#grtgertg-rthgertghr-1)
-
 <!-- /TOC -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 4 ins.tst1.d result.man
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/result.man 2
 
-PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst
+PPWD: /home/st
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1727603340_29092024164900
+DATE: 1731638351_15112024093911
 
-DATX: 1727603340
+DATX: 1731638351
 -->
 
 
@@ -56,6 +49,7 @@ ccasdcvf gvfwsergwe rtgetgertgertg
 hrehrher
 
 END intro file 
+ 
 
 [002_add.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/001.d/002_add.pic.jpg)
 
@@ -101,7 +95,7 @@ END intro file
 		|	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт КАК РекЗапрГрупПродукт,
 		|	СУММА(ДокПотребТабчДокПотреб.РекТабчДокПотребКоличество) КАК РекЗапрГрупКоличество
 		|ИЗ
-		|	Документ.ДокПотреб.ТабчДо~~~~кПотреб КАК ДокПотребТабчДокПотреб
+		|	Документ.ДокПотреб.ТабчДокПотреб КАК ДокПотребТабчДокПотреб
 		|
 		|СГРУППИРОВАТЬ ПО
 		|	ДокПотребТабчДокПотреб.РекТабчДокПотребПродукт";
@@ -300,26 +294,7 @@ unset filename
 
 
 # ANC /REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst
+
+
 [004.anc.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/004.with_lnk.d/004.anc.lst)
-
-
-[003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_003.d/003.requ_1.pic.jpg)
-
-![003.requ_1.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_003.d/003.requ_1.pic.jpg)
-
-
-[001_intro.txt.md](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_1/_dir_tst/ins.tst1.d/_001.d/001_intro.txt.md)
-
-
-
-## this intro file 
-
-ccasdcvf gvfwsergwe rtgetgertgertg
-### grtgertg rthgertghr
-
-hrehrher
-
-END intro file 
-
-
 

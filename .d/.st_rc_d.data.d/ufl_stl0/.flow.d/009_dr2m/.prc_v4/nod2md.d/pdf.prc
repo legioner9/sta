@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- txt_rnd7_e8dfe70() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc ---${NORMAL}" #started functions
+echo -e "${CYAN}--- pdf_rnd7_7c561d8() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/pdf.prc ---${NORMAL}" #started functions
 
-txt_rnd7_e8dfe70() {
+pdf_rnd7_7c561d8() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ txt_rnd7_e8dfe70() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/txt.prc"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/pdf.prc"
     local path_dir="$(dirname "$path_file")"
 
     local _item_=${ARGS[0]}
@@ -58,23 +58,32 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    echo "in txt.prc"
+    echo "in pdf.prc"
 
     # _lnv2e ${dir_cntx}/nod2md.d.cntx
 
-    # local short_item=$(_s2se ${HOME} @ ${_item_})
-    local relpath=$(_ee2rpth ${file_md} ${_item_})
-    echo -e "
-[${name_ext}](${relpath})
-" >>${file_md}
+    local short_item=$(_s2se ${HOME} @ ${_item_})
 
-    echo -e "
-{{txt}}
-" >>${file_md}
+    local dir_item=$(_prs_f -d ${_item_})
 
-    _f2f ${_item_} "{{txt}}" ${file_md}
+    local name2=$(_prs_f -n2 ${_item_})
+    local ext1=$(_prs_f -e ${_item_})
+    local ext2=$(_prs_f -e2 ${_item_})
 
-    _s2f "{{txt}}" @ ${file_md}
+    pdftoppm -jpeg "${_item_}" ${dir_item}/res.pdftoppm
+    local res_jpg=${dir_item}/${name2}.pic.jpg
+
+    mv ${dir_item}/res.pdftoppm-1.jpg ${res_jpg}
+
+    mv ${_item_} ${dir_item}/${name2}.${ext1}
+
+    # echo -e "
+    # <!-- file://${res_jpg} -->
+
+    # [${name2}.pic.jpg](${short_item})
+
+    # ![${name2}.pic.jpg](${short_item})
+    # " >> ${file_md}
 
     #{{body_fn}}
 
@@ -84,4 +93,4 @@ ${NORMAL}"
 
 }
 
-txt_rnd7_e8dfe70 "$@"
+pdf_rnd7_7c561d8 "$@"

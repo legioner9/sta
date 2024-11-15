@@ -1,13 +1,13 @@
 <!--
-CMND: ufl_stl0 4 ins.tst1.d result.man
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst/ins.tst1.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst/result.man 2
 
-PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst
+PPWD: /home/st
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1730467760_01112024202920
+DATE: 1731639235_15112024095355
 
-DATX: 1730467760
+DATX: 1731639235
 -->
 
 
@@ -17,10 +17,16 @@ DATX: 1730467760
 [001.anc.lst](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst/ins.tst1.d/001.anc.d/001.anc.lst)
 
 
-[001.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst/ins.tst1.d/001.anc.d/001.pic.jpg)
+[001.pic.jpg](ins.tst1.d/001.anc.d/001.pic.jpg)
 
-![001.pic.jpg](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_2/_dir_tst/ins.tst1.d/001.anc.d/001.pic.jpg)
+![001.pic.jpg](ins.tst1.d/001.anc.d/001.pic.jpg)
 
+
+[002.txt.md](ins.tst1.d/001.anc.d/002.txt.md)
+
+
+
+# simple  
 
 
 
