@@ -328,7 +328,7 @@ toc2f_stl0 ${file_md}
 
 # read -p "enter"
 
-sed -i '1,38d' ${file_ufl}
+sed -i '1,35d' ${file_ufl}
 
 _edit ${file_md}
 
