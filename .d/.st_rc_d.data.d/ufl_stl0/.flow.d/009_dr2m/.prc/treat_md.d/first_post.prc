@@ -51,19 +51,19 @@ DATX: $(date +%s)
 " >> ${file_md}
 
 
-
-ufl_stl0 1 ${file_md}_ufl9
+local file_md_ufl9=$(dirname ${file_md})/_$(basename ${file_md})_ufl9
+ufl_stl0 1 ${file_md_ufl9}
 
 echo -e "
 echo | ufl_stl0 9 ${dir_with_cntt_files} ${file_md} ${max_deep}
 " > ${file_md}_ufl9.tmp
 
-echo -e "${HLIGHT}--- _f2f file://${file_md}_ufl9.tmp {{body_fn}} file://${file_md}_ufl9 ---${NORMAL}" #start files
-_f2f ${file_md}_ufl9.tmp {{body_fn}} ${file_md}_ufl9
+echo -e "${HLIGHT}--- _f2f file://${file_md}_ufl9.tmp {{body_fn}} file://${file_md_ufl9} ---${NORMAL}" #start files
+_f2f ${file_md}_ufl9.tmp {{body_fn}} ${file_md_ufl9}
 
 # path2nom_stl0 ${file_md}.ufl4
 
 rm ${file_md}_ufl9.tmp
 
-path2nom_stl0 ${file_md}_ufl9
+path2nom_stl0 ${file_md_ufl9}
 

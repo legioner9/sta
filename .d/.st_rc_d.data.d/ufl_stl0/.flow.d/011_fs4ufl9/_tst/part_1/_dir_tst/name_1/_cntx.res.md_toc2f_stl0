@@ -28,9 +28,6 @@
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
- - <a href=#e4f6584b1cce422a8fbbcd52c340770f> First Head</a>
-   - <a href=#d0970defdd1941ef8093b1667d5b1499> in_dr</a>
-     - <a href=#1f7adb54c7bd4691bd22b671803e0e00> [001.rcm.d]</a>
 
 <!-- /TOC toc2f_stl0 -->
 
@@ -53,7 +50,6 @@ DATX: 1731868161
 
 
 
- <a id="e4f6584b1cce422a8fbbcd52c340770f"></a>
 # First Head
 
 
@@ -63,9 +59,7 @@ DATX: 1731868161
 
 
 
- <a id="d0970defdd1941ef8093b1667d5b1499"></a>
 ## in_dr
- <a id="1f7adb54c7bd4691bd22b671803e0e00"></a>
 ### [001.rcm.d](.ins_dr/001.rcm.d/res.md)
 
 

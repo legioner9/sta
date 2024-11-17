@@ -28,13 +28,13 @@
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
- - <a href=#712c2df2611b4e8fbe85af7fa326f0ba> Chapt</a>
- - <a href=#164b7b4c7bb34196978dc2a1e24b795c> Рекомендации RCM</a>
-   - <a href=#565c18776ad74614b23a06e46e39cb34> RCM_1 (изменения в оригинал)</a>
-   - <a href=#5d20aa424f994e1fb4505dbf905d234f> RCM_2 (служебные файлы)</a>
-   - <a href=#6c58fd36b99f4cf8aa881f6ed617fe2a> RCM_3 (cокращения)</a>
-   - <a href=#4d722f9a978b4182a42edc793161ef35> RCM_4 (notmast_butlast)</a>
-   - <a href=#48c7a002e6804b2bac52455325d87d38> RCM_5 (mast_def_args)</a>
+ - <a href=#54245b4b532f4cf7bc847784850ab809> Chapt</a>
+ - <a href=#275b0e184a9c4b919f18b8f80a0c965b> Рекомендации RCM</a>
+   - <a href=#64517f8ccb314b088618ff76b67e3240> RCM_1 (изменения в оригинал)</a>
+   - <a href=#5958a791e91844e69fb91091c96c4d72> RCM_2 (служебные файлы)</a>
+   - <a href=#288df714aad941b38ea1e8e92e792fe5> RCM_3 (cокращения)</a>
+   - <a href=#83bddbd11f484ddc9a5fbfc5a9b7feb3> RCM_4 (notmast_butlast)</a>
+   - <a href=#64b10178d63d40c283b4a223c4c94961> RCM_5 (mast_def_args)</a>
 
 <!-- /TOC toc2f_stl0 -->
 
@@ -47,9 +47,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731832535_17112024153535
+DATE: 1731868157_18112024012917
 
-DATX: 1731832535
+DATX: 1731868157
 -->
 
 
@@ -57,7 +57,7 @@ DATX: 1731832535
 
 
 
- <a id="712c2df2611b4e8fbe85af7fa326f0ba"></a>
+ <a id="54245b4b532f4cf7bc847784850ab809"></a>
 # Chapt
     
 
@@ -65,7 +65,7 @@ DATX: 1731832535
 
 
 
- <a id="164b7b4c7bb34196978dc2a1e24b795c"></a>
+ <a id="275b0e184a9c4b919f18b8f80a0c965b"></a>
 # Рекомендации RCM
 
     
@@ -74,7 +74,7 @@ DATX: 1731832535
 
 
 
- <a id="565c18776ad74614b23a06e46e39cb34"></a>
+ <a id="64517f8ccb314b088618ff76b67e3240"></a>
 ## RCM_1 (изменения в оригинал)
 
 в оригинал вносим изменения - копия для истории изменений
@@ -84,7 +84,7 @@ DATX: 1731832535
 
 
 
- <a id="5d20aa424f994e1fb4505dbf905d234f"></a>
+ <a id="5958a791e91844e69fb91091c96c4d72"></a>
 ## RCM_2 (служебные файлы)
 
 при работе утилиты формировать следующие файлы рядом с результатами работы
@@ -100,7 +100,7 @@ DATX: 1731832535
 
 
 
- <a id="6c58fd36b99f4cf8aa881f6ed617fe2a"></a>
+ <a id="288df714aad941b38ea1e8e92e792fe5"></a>
 ## RCM_3 (cокращения)
 
     dr - dir
@@ -125,7 +125,7 @@ DATX: 1731832535
 
 
 
- <a id="4d722f9a978b4182a42edc793161ef35"></a>
+ <a id="83bddbd11f484ddc9a5fbfc5a9b7feb3"></a>
 ## RCM_4 (notmast_butlast)
 
 - наличие последнего аргумента для отладки функции 
@@ -135,7 +135,7 @@ DATX: 1731832535
 
 
 
- <a id="48c7a002e6804b2bac52455325d87d38"></a>
+ <a id="64b10178d63d40c283b4a223c4c94961"></a>
 ## RCM_5 (mast_def_args)
 
 - используемые аргументы в функции не могут быть пустыми при вызове

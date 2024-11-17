@@ -144,23 +144,23 @@ _is_yes "DO?: DAGER_OPERATION : rm -r file://$PPWD /* ? " && {
 
 cp -r $dir_tml/. "$PPWD"
 
-echo | ufl_stl0 1 $PPWD/rbld_res_md.sh
+echo | ufl_stl0 1 $PPWD/_rbld_res_md.sh
 
 # _f2f {{body_fn}} $PPWD/rbld_res_md.sh.tmp
 
-echo -e "${HLIGHT}--- _f2f file://$PPWD/rbld_res_md.sh.tmp {{body_fn}} file://$PPWD/rbld_res_md.sh ---${NORMAL}" #start files
-_f2f "${dir_ins}"/rbld.sh.ins '{{body_fn}}' "$PPWD/"rbld_res_md.sh
+echo -e "${HLIGHT}--- _f2f file://$PPWD/rbld_res_md.sh.tmp {{body_fn}} file://$PPWD/_rbld_res_md.sh ---${NORMAL}" #start files
+_f2f "${dir_ins}"/rbld.sh.ins '{{body_fn}}' "$PPWD/_"rbld_res_md.sh
 
 rm $PPWD/rbld_res_md.sh.tmp
 
-path2nom_stl0 $PPWD/rbld_res_md.sh
+path2nom_stl0 $PPWD/_rbld_res_md.sh
 
 # _lnv2e ${dir_cntx}/main.cntx
 # _st_pause "_s2d '{{PPWD}}' file://$PPWD  file://$PPWD/cntx.ins.d"
 _s2d '{{PPWD}}' "$PPWD"  $PPWD
 # _s2d  "$HOME/" '/' $PPWD
 
-_source_w1_isf $PPWD/rbld_res_md.sh
+_source_w1_isf $PPWD/_rbld_res_md.sh
 
 
 return 0

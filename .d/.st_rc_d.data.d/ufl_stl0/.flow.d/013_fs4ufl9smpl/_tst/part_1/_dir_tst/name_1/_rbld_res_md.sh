@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_res_md_rnd7_a88e373() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _rbld_res_md_rnd7_3b65b78() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/_rbld_res_md.sh ---${NORMAL}" #started functions
 
-rbld_res_md_rnd7_a88e373() {
+_rbld_res_md_rnd7_3b65b78() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ rbld_res_md_rnd7_a88e373() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/_rbld_res_md.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -82,4 +82,4 @@ ${NORMAL}"
 
 }
 
-rbld_res_md_rnd7_a88e373 "$@"
+_rbld_res_md_rnd7_3b65b78 "$@"

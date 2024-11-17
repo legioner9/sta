@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_res_md_rnd7_e390257() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _rbld_res_md_rnd7_d6473b3() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/_rbld_res_md.sh ---${NORMAL}" #started functions
 
-rbld_res_md_rnd7_e390257() {
+_rbld_res_md_rnd7_d6473b3() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ rbld_res_md_rnd7_e390257() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/rbld_res_md.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/_rbld_res_md.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -172,8 +172,8 @@ ${NORMAL}"
                     md_ufl9=${opus_d}/${sd_opus_d}/cntx.res.md_ufl9
                     md_ufl9_dirname=${opus_d}/${sd_opus_d}
 
-                    if [ -f ${md_ufl9_dirname}/rbld_res_md.sh ]; then
-                        _source_w1_isf ${md_ufl9_dirname}/rbld_res_md.sh
+                    if [ -f ${md_ufl9_dirname}/_rbld_res_md.sh ]; then
+                        _source_w1_isf ${md_ufl9_dirname}/_rbld_res_md.sh
                     fi
 
                 done
@@ -202,4 +202,4 @@ ${NORMAL}"
 
 }
 
-rbld_res_md_rnd7_e390257 "$@"
+_rbld_res_md_rnd7_d6473b3 "$@"

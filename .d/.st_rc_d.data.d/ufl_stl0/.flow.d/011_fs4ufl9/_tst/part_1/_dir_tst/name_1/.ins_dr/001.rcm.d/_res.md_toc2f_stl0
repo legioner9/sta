@@ -1,4 +1,18 @@
 
+<!-- [[__TOC_]] -->
+
+<a name="top"></a>
+<a class=top-link hide href="#top">↑</a>
+
+<style type="text/css">
+   .top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    color: #000000;
+
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -26,9 +40,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731832535_17112024153535
+DATE: 1731868157_18112024012917
 
-DATX: 1731832535
+DATX: 1731868157
 -->
 
 
