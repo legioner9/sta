@@ -19,11 +19,20 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731687406_15112024231646
+DATE: 1731820007_17112024120647
 
-DATX: 1731687406
+DATX: 1731820007
 -->
 
+
+[001.001.first_head.txt.md](cntx.ins.d/001.001.first_head.txt.md)
+
+
+
+# First Head
+
+
+    
 
 [001.002.opus_in.txt.md](cntx.ins.d/001.002.opus_in.txt.md)
 
@@ -44,21 +53,6 @@ DATX: 1731687406
 
 
 
-
-[001.txt.md](cntx.ins.d/001.txt.md)
-
-
-
-# first head
-
-## [see examp](/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl9/_tst/part_1/_dir_tst/name_1/.ins_dr/001.rcm.d/res.md)
-
-## Синтаксис
-
-
-
-## Опции
-    
 
 
 

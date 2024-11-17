@@ -1,0 +1,22 @@
+# HIE _XXX_stl0 
+
+## CAUSA:
+ПРИЧИНА создания:
+
+Нужно создание fs для работы 'ufl_stl0 9' + rbld копий итогового файла в списке \<pth_to_opus>/.d/.lst/cntx.res.copy.lst
+
+fs без подгрузки внешних источников только cntx.ins.d
+
+
+## FORMULA:
+СХЕМА решения:
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+
+### TST
+
+### FLOW_1
+
+ufl_stl0 13 _tst_1 

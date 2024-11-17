@@ -3,8 +3,20 @@
 ## CAUSA:
 ПРИЧИНА создания:
 
-необходимо готовить fs под работу 'ufl_stl0 9' с правильными путями в файлах
+необходимо готовить fs под работу 'ufl_stl0 9' с правильными путями в файлах и с подгрузкой внешних 
+источноиков перечисленых в 
 
+\<opus_pth>/.d/.lst/out_opus_lst_arb.lst - opus в arb структурах
+\<opus_pth>/.d/.lst/out_opus_lst_sd.lst - opus в поддиректориях корневой папки
+
+и встроенного источника в поддиректориях директории \<opus_pth>/.ins_dr
+
+создаются служебные файлы со всеми ввылками на внешние источники (<opus_pth>/cntx.res.md):
+- `001.002.opus_in.txt.md` opus in .ins_dr
+- `001.003.opus_sd.txt.md` opus in \<opus_pth>/.d/.lst/out_opus_lst_sd.lst
+- `001.004.opus_arb.txt.md` opus in \<opus_pth>/.d/.lst/out_opus_lst_arb.lst
+
+далее пререрасчитываются (rbld) все opus путем вызова `. <opus_pth>/rbld_res_md.sh` внутри каждого opus
 
 ## FORMULA:
 СХЕМА решения:
@@ -16,3 +28,7 @@
 ### TST
 
 ### FLOW_1
+
+ufl_stl0 11 _tst_1 
+
+

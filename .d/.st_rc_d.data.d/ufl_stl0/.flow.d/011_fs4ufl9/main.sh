@@ -41,7 +41,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: no arg in pwd dir create fs for 'ufl_stl0 9'
+MAIN: no arg in pwd dir create full_1 with external dr and arb fs for 'ufl_stl0 9'
 TAGS: @
 ARGS: \$1=?
 EXAM: 
