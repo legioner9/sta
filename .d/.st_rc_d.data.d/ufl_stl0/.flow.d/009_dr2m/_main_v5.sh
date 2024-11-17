@@ -189,13 +189,13 @@ _isn_od ${max_deep} && {
 
 if [ -f ${file_md} ]; then
     _st_info "${file_md} IS_FILE"
-    if ! [ ${ufl_stl0_9_glar_force:-0} == "-force" ]; then
+    if ! [ ${ufl_stl0_9_arg_force:-0} == "-force" ]; then
         if ! _is_dNTf ${dir_with_cntt_files} ${file_md} ; then
             _st_info "_is_dNTf ${dir_with_cntt_files} ${file_md} :: NO_ACTION_REQUIRED :: ufl_stl0 9 $* :: return 0"
             return 0
         fi
         else 
-        _st_info "ufl_stl0_9_glar_force=-force : NO_ACTION_REQUIRED ANYWOAY :: ufl_stl0 9 $*"
+        _st_info "ufl_stl0_9_arg_force=-force : NO_ACTION_REQUIRED ANYWOAY :: ufl_stl0 9 $*"
     fi
     : >${file_md}
 fi
@@ -324,11 +324,7 @@ local file_ufl=$(_prs_f -d ${file_md})/000.$(_prs_f -n ${file_md}).txt.man
 
 cp -f ${file_md} ${file_ufl}
 
-toc2f_stl0 ${file_md}
-
-# read -p "enter"
-
-sed -i '1,38d' ${file_ufl}
+sed -i '1,14d' ${file_ufl}
 
 _edit ${file_md}
 

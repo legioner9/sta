@@ -1,4 +1,18 @@
 
+<!-- [[__TOC_]] -->
+
+<a name="top"></a>
+<a class=top-link hide href="#top">↑</a>
+
+<style type="text/css">
+   .top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    color: #000000;
+
     cursor: pointer;
     align-items: center;
     justify-content: center;
