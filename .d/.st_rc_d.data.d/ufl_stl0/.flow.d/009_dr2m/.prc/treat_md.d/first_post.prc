@@ -5,14 +5,14 @@ _lnv2e ${dir_cntx}/nod2md.d.cntx
 echo -e "
 <!-- [[__TOC_]] -->
 
-<a name="top"></a>
-<a class="top-link hide" href="#top">↑</a>
+<a name=\"top\"></a>
+<a class="top-link hide" href=\"#top\">↑</a>
 
 Start Contents Menu
 
-<!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
+<!-- TOC toc2f_stl0 --> 
 
-<!-- /TOC -->
+<!-- /TOC toc2f_stl0 -->
 
 End Contents Menu
 

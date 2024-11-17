@@ -7,7 +7,7 @@
 источноиков перечисленых в 
 
 \<opus_pth>/.d/.lst/out_opus_lst_arb.lst - opus в arb структурах
-\<opus_pth>/.d/.lst/out_opus_lst_sd.lst - opus в поддиректориях корневой папки
+\<opus_pth>/.d/.lst/out_opus_lst_sd.lst - opus в поддиректориях+/.grot/exam.man корневой папки
 
 и встроенного источника в поддиректориях директории \<opus_pth>/.ins_dr
 

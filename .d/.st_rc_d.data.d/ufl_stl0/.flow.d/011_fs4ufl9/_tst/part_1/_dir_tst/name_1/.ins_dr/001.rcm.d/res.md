@@ -6,10 +6,6 @@
 
 Start Contents Menu
 
-<!-- TOC tocDepth:1..6 chapterDepth:1..6 -->
-
-<!-- /TOC -->
-
 End Contents Menu
 
 <!--
