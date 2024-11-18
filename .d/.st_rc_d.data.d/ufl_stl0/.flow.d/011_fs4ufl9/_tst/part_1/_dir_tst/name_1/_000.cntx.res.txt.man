@@ -5,9 +5,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/011_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731868161_18112024012921
+DATE: 1731928851_18112024182051
 
-DATX: 1731868161
+DATX: 1731928851
 -->
 
 
@@ -32,12 +32,26 @@ DATX: 1731868161
 
 
 
+## info.ax
+### [expansion](../../../../../../../../../../NBash/.arb/info.ax/expansion.ram/.grot/exam.man)
+### [pipe_input](../../../../../../../../../../NBash/.arb/info.ax/pipe_input.ram/.grot/exam.man)
+### [stream](../../../../../../../../../../NBash/.arb/info.ax/stream.ram/.grot/exam.man)
+### [substr](../../../../../../../../../../NBash/.arb/info.ax/substr.ram/.grot/exam.man)
+### [symbol_class](../../../../../../../../../../NBash/.arb/info.ax/symbol_class.ram/.grot/exam.man)
+### [variable](../../../../../../../../../../NBash/.arb/info.ax/variable.ram/.grot/exam.man)
 
 
 [001.004.opus_arb.txt.md](cntx.ins.d/001.004.opus_arb.txt.md)
 
 
 
+## util.ax
+### [exec](../../../../../../../../../../NBash/.arb/util.ax/exec.ram/.grot/opus.d/one.d/cntx.res.md)
+### [find](../../../../../../../../../../NBash/.arb/util.ax/find.ram/.grot/opus.d/one.d/cntx.res.md)
+### [sed](../../../../../../../../../../NBash/.arb/util.ax/sed.ram/.grot/opus.d/one.d/cntx.res.md)
+### [tr](../../../../../../../../../../NBash/.arb/util.ax/tr.ram/.grot/opus.d/one.d/cntx.res.md)
+## tech.ax
+### [regexp](../../../../../../../../../../NBash/.arb/tech.ax/regexp.ram/.grot/opus.d/one.d/cntx.res.md)
 
 
 
