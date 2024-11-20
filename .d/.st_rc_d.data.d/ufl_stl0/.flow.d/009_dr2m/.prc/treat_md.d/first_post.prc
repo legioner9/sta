@@ -27,6 +27,39 @@ echo -e "
     height: 1em;
     background-color: #F8F8F8;
 }
+
+h1{
+    color: rgb(155, 0, 218);
+    font-weight: normal;
+    font-style: italic;
+    font-weight:bold;
+
+}
+h2{
+    color: rgb(155, 40, 238);
+    font-style: italic;
+    font-weight:bold;
+}
+h3{
+    color: rgb(155, 80, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h4{
+    color: rgb(155, 120, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h5{
+    color: rgb(155, 160, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h6 {
+    color: rgb(155, 200, 230);
+    font-style: italic;
+    font-weight:bold;
+}
 </style>
 
 Start Contents Menu
