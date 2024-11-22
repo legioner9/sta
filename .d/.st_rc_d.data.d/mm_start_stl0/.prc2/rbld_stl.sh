@@ -56,10 +56,17 @@ ${NORMAL}"
     echo "START BODY FN : ${FNN}() $*"
 
     ufl_stl0_9_glar_force="-force"
-    
-    . ${REPO_PATH}/stl/.d/.opus/readme.opus/_rbld_res_md.sh
+    #! rbld in ~/.stl.d
     . ${HOME}/.stl.d/data.d/opus.d/boot.opus/_rbld_res_md.sh
-
+    #! force cp ~/.stl.d ~/.stl.d.copy
+    nm_opi_ 1 19 3
+    #! rgig 001.from_dot_stl.file.md
+    . ${REPO_PATH}/stl/.d/.opus/readme.opus/cntx.ins.d/099.from_dot_stl.d.ax/_001.from_dot_stl.file.md_ufl9
+    #! rbld stl readme.opus
+    . ${REPO_PATH}/stl/.d/.opus/readme.opus/_rbld_res_md.sh
+    #! up to repo
+    nm_opi_ 1 17 3
+    
     ufl_stl0_9_glar_force=
 
     #{{body_fn}}
