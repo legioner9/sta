@@ -23,6 +23,39 @@
     height: 1em;
     background-color: #F8F8F8;
 }
+
+h1{
+    color: rgb(155, 0, 218);
+    font-weight: normal;
+    font-style: italic;
+    font-weight:bold;
+
+}
+h2{
+    color: rgb(155, 40, 238);
+    font-style: italic;
+    font-weight:bold;
+}
+h3{
+    color: rgb(155, 80, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h4{
+    color: rgb(155, 120, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h5{
+    color: rgb(155, 160, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h6 {
+    color: rgb(155, 200, 230);
+    font-style: italic;
+    font-weight:bold;
+}
 </style>
 
 Start Contents Menu
@@ -40,9 +73,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731867114_18112024011154
+DATE: 1732345561_23112024140601
 
-DATX: 1731867114
+DATX: 1732345561
 -->
 
 
@@ -51,9 +84,18 @@ DATX: 1731867114
 
 
 # First Head
- 
+
 
     
+
+[001.L1.txt.md](cntx.ins.d/099.in_this.d/001.L1.txt.md)
+
+
+
+## Second Head (002.file_cntx_opus.file.md)
+
+[002.file_cntx_opus.file.md](cntx.ins.d/099.in_this.d/002.file_cntx_opus.file.md)
+
 
 
 

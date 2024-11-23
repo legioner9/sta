@@ -50,8 +50,10 @@ _arr_res+=(". ${REPO_PATH}/NBash/.d/.opus/rbld_res_md.sh")
 
 _arr_name+=("rbld ~/.stl.d + stl repo readme + up to repo")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/rbld_stl.sh")
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
+
+_arr_name+=("see stl repo readme")
+_arr_res+=("_edit ${REPO_PATH}/stl/README.md")
+ 
 # _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
 # _arr_name+=("nnnnnn")

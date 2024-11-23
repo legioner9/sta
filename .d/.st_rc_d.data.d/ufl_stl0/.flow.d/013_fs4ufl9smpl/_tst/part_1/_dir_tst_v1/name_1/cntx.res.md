@@ -23,11 +23,46 @@
     height: 1em;
     background-color: #F8F8F8;
 }
+
+h1{
+    color: rgb(155, 0, 218);
+    font-weight: normal;
+    font-style: italic;
+    font-weight:bold;
+
+}
+h2{
+    color: rgb(155, 40, 238);
+    font-style: italic;
+    font-weight:bold;
+}
+h3{
+    color: rgb(155, 80, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h4{
+    color: rgb(155, 120, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h5{
+    color: rgb(155, 160, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h6 {
+    color: rgb(155, 200, 230);
+    font-style: italic;
+    font-weight:bold;
+}
 </style>
 
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
+ - <a href=#7eff95c3c2e449f09f399ff170ac3f02> First Head</a>
+   - <a href=#7e9fb07d4e944aa0b5ccb0548318b5b1> Second Head (file 002.file_cntx_opus.file.md)</a>
 
 <!-- /TOC toc2f_stl0 -->
 
@@ -40,9 +75,9 @@ PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1731867652_18112024012052
+DATE: 1732341206_23112024125326
 
-DATX: 1731867652
+DATX: 1732341206
 -->
 
 
@@ -50,10 +85,21 @@ DATX: 1731867652
 
 
 
+ <a id="7eff95c3c2e449f09f399ff170ac3f02"></a>
 # First Head
- 
- 
+
+
     
+
+[001.L1.txt.md](cntx.ins.d/099.in_this.d/001.L1.txt.md)
+
+
+
+ <a id="7e9fb07d4e944aa0b5ccb0548318b5b1"></a>
+## Second Head (file 002.file_cntx_opus.file.md)
+
+[002.file_cntx_opus.file.md](cntx.ins.d/099.in_this.d/002.file_cntx_opus.file.md)
+
 
 
 

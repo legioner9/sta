@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _cntx.res_rnd7_7ea8309() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/_cntx.res.md_ufl9 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _rbld_to_here_rnd7_3af4d36() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/cntx.ins.d/099.in_this.d/_rbld_to_here.sh ---${NORMAL}" #started functions
 
-_cntx.res_rnd7_7ea8309() {
+_rbld_to_here_rnd7_3af4d36() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _cntx.res_rnd7_7ea8309() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/_cntx.res.md_ufl9"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/cntx.ins.d/099.in_this.d/_rbld_to_here.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -57,16 +57,15 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    echo | ufl_stl0 9 .opus/cntx.d 002.file_cntx_opus.file.md 2
+
     #{{body_fn}}
 
-echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/cntx.ins.d ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_dir_tst/name_1/cntx.res.md 2
-
-
     #! END BODY FN ---------------------------------------
-    
+
     cd $PPWD
     return 0
 
 }
 
-_cntx.res_rnd7_7ea8309 "$@"
+_rbld_to_here_rnd7_3af4d36 "$@"
