@@ -45,6 +45,7 @@ MAIN: dir_with_cntt_files (.code. , .file. , .pic. , .txt. , .lnk. , .anc. ) \$2
 TAGS: @
 ARGS: \$1=9
 GLAR: ufl_stl0_9_glar_force=-force disable checking NO_ACTION_REQUIRED : [ \${dir_with_cntt_files} -ot \${file_md} ]
+      ufl_stl0_9_glar_edit=-edit enable [_edit res.md] 
 EXAM: 
 EXEC: 
 \$1 0 or num_menu dir_ptv from ../${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
@@ -330,6 +331,6 @@ toc2f_stl0 ${file_md}
 
 # sed -i '1,76d' ${file_ufl}
 
-_edit ${file_md}
+[[ "-edit" == "${ufl_stl0_9_glar_edit}" ]] && _edit ${file_md}
 
 return 0
