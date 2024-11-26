@@ -66,27 +66,32 @@ ${NORMAL}"
     # _lnv2e ${dir_cntx}/main.cntx
     cd _dir_tst || _st_err "_dir_tst not dir"
 
-    mkdir ${path_dir}/_dir_tst/ins_dr
-    cd ${path_dir}/_dir_tst/ins_dr || {
-        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/ins_dr ' :: return 1" >&2
+    mkdir ${path_dir}/_dir_tst/sup.opus
+    cd ${path_dir}/_dir_tst/sup.opus || {
+        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/sup.opus ' :: return 1" >&2
     }
+    ufl_stl0_9_glar_force=-force
 
     ufl_stl0 13
 
-    ufl_stl0_9_glar_force=-force
     . ${path_dir}/_dir_tst/ins_dr/_rbld_res_md.sh
-    ufl_stl0_9_glar_force=
 
-    mkdir ${path_dir}/_dir_tst/rcv_dr
-    cd ${path_dir}/_dir_tst/rcv_dr || {
-        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/rcv_dr ' :: return 1" >&2
+    mkdir ${path_dir}/_dir_tst/main.opus
+    cd ${path_dir}/_dir_tst/main.opus || {
+        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/main.opus ' :: return 1" >&2
     }
 
     ufl_stl0 13
 
-    ufl_stl0_9_glar_force=-force
-    . ${path_dir}/_dir_tst/rcv_dr/_rbld_res_md.sh
     ufl_stl0_9_glar_force=
+
+    echo '## Sup Opus (&darr;clickfile&darr;)' >${path_dir}/_dir_tst/main.opus/_cntx.ins.d/002.name.d/001.01.L1.txt.md
+    echo '## 099 Sub Opus (&darr;clickfile&darr;)' >${path_dir}/_dir_tst/main.opus/_cntx.ins.d/002.name.d/002.01.L1.txt.md
+
+    : >${path_dir}/_dir_tst/sup.opus/.d/.lst/cpy_into.lst2
+
+    local dir_subopus=${path_dir}/_dir_tst/main.opus/_cntx.ins.d/002.name.d/_099.sub.opus
+    ufl_stl0 9 ${dir_subopus}/_cntx.d ${dir_subopus}/_res.ante.d 2
 
     # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
     # echo ${ARGS[0]}

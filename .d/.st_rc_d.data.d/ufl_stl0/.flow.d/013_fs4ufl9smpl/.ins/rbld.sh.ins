@@ -23,4 +23,22 @@
 
     done
 
+    local cpy_into_str=
+    local str_arr=()
+    # cat ${path_dir}/.d/.lst/cpy_into.lst2
+    for cpy_into_str in $(cat ${path_dir}/.d/.lst/cpy_into.lst2); do
+        echo -e "${GREEN}\$cpy_into_str = '$cpy_into_str'${NORMAL}"
+        str_arr=(${cpy_into_str//<>/ })
+
+        # parr3e_ str_arr
+        # read -p 1
+
+        eval "echo | ufl_stl0 9 ${str_arr[0]} ${str_arr[1]} 2"
+        
+    done
+
+    if [ -d $path_dir/_cntx.ins.d ] && [ -f $path_dir/_cntx.res.md ]; then
+        echo | ufl_stl0 9 $path_dir/_cntx.ins.d $path_dir/_cntx.res.md 2
+    fi
+
     [[ "-edit" == "${ufl_stl0_9_glar_edit}" ]] && _edit $path_dir/_cntx.res.md
