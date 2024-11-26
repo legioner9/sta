@@ -53,6 +53,7 @@ CNTL:
     _go             : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/main.sh
     _go_dir_flow    : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl
     _tst_1          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_tst_this_1.sh
+    _tst_2          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
     ${FNN} 
@@ -67,6 +68,17 @@ ${NORMAL}"
         _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_tst_this_1.sh" && {
             echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_tst_this_1.sh ---${NORMAL}" #start files
             . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_1/_tst_this_1.sh
+        }
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_tst_2" ] && {
+
+        _is_yes "ufl_stl0 ${ARGS[0]} _tst_1 :: . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh" && {
+            echo -e "${HLIGHT}--- . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh ---${NORMAL}" #start files
+            . ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh
         }
 
         return 0
@@ -140,7 +152,10 @@ echo -e "${GREEN}\$dir_tml = '$dir_tml'${NORMAL}"
 
 _is_yes "DO?: DAGER_OPERATION : rm -rf file://$PPWD ? " && {
     echo -e "${HLIGHT}--- rm -r ${PPWD}/ ---${NORMAL}"
-    cd .. ; rm -rf -- "${PPWD}" ; mkdir "${PPWD}" ; cd "${PPWD}"
+    cd ..
+    rm -rf -- "${PPWD}"
+    mkdir "${PPWD}"
+    cd "${PPWD}"
 }
 
 cp -r $dir_tml/. "$PPWD"

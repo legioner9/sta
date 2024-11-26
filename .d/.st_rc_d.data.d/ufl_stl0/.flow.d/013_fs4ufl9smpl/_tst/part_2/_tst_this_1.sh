@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_this_1_rnd7_a2d14bb() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_5218088() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_tst_this_1.sh ---${NORMAL}" #started functions
 
-_tst_this_1_rnd7_a2d14bb() {
+_tst_this_1_rnd7_5218088() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -51,15 +51,34 @@ ${NORMAL}"
     # local _ARGS_=("$@")
     # _parr3e _ARGS_
 
-    #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #{{ptr_path}}
+
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
+    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
+    # echo ${ARGS[0]}
+    # echo ${ARGS[1]}
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+    # _lnv2e ${dir_cntx}/main.cntx
+    cd _dir_tst || _st_err "_dir_tst not dir"
+
+    mkdir ${path_dir}/_dir_tst/ins_dr
+    cd ${path_dir}/_dir_tst/ins_dr || {
+        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/ins_dr ' :: return 1" >&2
+    }
+
+    ufl_stl0 13
+
+    mkdir ${path_dir}/_dir_tst/rcv_dr
+    cd ${path_dir}/_dir_tst/rcv_dr || {
+        echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/rcv_dr ' :: return 1" >&2
+    }
+
+    ufl_stl0 13
 
     # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
     # echo ${ARGS[0]}
@@ -70,10 +89,10 @@ ${NORMAL}"
     # cd _dir_tst || _st_err "_dir_tst not dir"
 
     #! END BODY FN ---------------------------------------
-    
+
     cd $PPWD
     return 0
 
 }
 
-_tst_this_1_rnd7_a2d14bb "$@"
+_tst_this_1_rnd7_5218088 "$@"

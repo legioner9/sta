@@ -39,7 +39,7 @@ TAGS:
 ARGS: [\$1] 
 [, \$N last arg DEBAG CNTL]
     if '_i' debag action, use: [ \$di -eq 1 ] && {debag action} ]
-GLAR: ${FNN}_glar_[name_glar]    
+GLAR: ${FNN}_glar_[name_glar]=[val_glar]    
 CNTL: 
     _go         : _edit body        : _edit file://${d_name}/${FNN}.sh
     _tst        : . exec.tst        : . file://${d_name}/_tst/exec.tst

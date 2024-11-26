@@ -32,6 +32,7 @@ fi
 MAIN: cr name_file=\$2 (with .sh) with fn_name=\$2_rnd_postfix
 TAGS: @sh @fn @file @rnd
 ARGS: \$1=1
+GLAR: ufl_stl0_1_glar_edit=-edit enable [_edit ${file_res}] 
 EXAM: ufl_stl0 1 file.sh
 EXEC: . REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_tst.sh.v2
 \$1 0 or num_menu dir_ptv from ${STA_PATH}/.d/.st_rc_d.data.d/ufl_stl0
@@ -100,4 +101,4 @@ _s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
 path2nom_stl0 ${file_res}
 arb2f_stl0 ${file_res} 0
 
-_edit ${file_res}
+[[ "-edit" == "${ufl_stl0_1_glar_edit}" ]] && _edit ${file_res}
