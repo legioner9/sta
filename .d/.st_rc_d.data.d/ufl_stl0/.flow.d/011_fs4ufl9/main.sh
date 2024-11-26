@@ -137,9 +137,12 @@ _is_yes "create fs for 'ufl_stl0 9' in file://$PPWD" || {
 
 echo -e "${GREEN}\$dir_tml = '$dir_tml'${NORMAL}"
 
-_is_yes "DO?: DAGER_OPERATION : rm -r file://$PPWD /* ? " && {
-    rm -r "{$PPWD:?}"/*
+_is_yes "DO?: DAGER_OPERATION : rm -rf file://$PPWD ? " && {
+    echo -e "${HLIGHT}--- rm -r ${PPWD}/ ---${NORMAL}"
+    cd .. ; rm -rf -- "${PPWD}" ; mkdir "${PPWD}" ; cd "${PPWD}"
 }
+
+read -p 1
 
 cp -r $dir_tml/. "$PPWD"
 
