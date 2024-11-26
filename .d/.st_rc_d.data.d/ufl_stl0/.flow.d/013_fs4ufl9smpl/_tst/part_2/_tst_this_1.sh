@@ -73,12 +73,20 @@ ${NORMAL}"
 
     ufl_stl0 13
 
+    ufl_stl0_9_glar_force=-force
+    . ${path_dir}/_dir_tst/ins_dr/_rbld_res_md.sh
+    ufl_stl0_9_glar_force=
+
     mkdir ${path_dir}/_dir_tst/rcv_dr
     cd ${path_dir}/_dir_tst/rcv_dr || {
         echo "EXEC_FAIL 'cd file://${path_dir}/_dir_tst/rcv_dr ' :: return 1" >&2
     }
 
     ufl_stl0 13
+
+    ufl_stl0_9_glar_force=-force
+    . ${path_dir}/_dir_tst/rcv_dr/_rbld_res_md.sh
+    ufl_stl0_9_glar_force=
 
     # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
     # echo ${ARGS[0]}
