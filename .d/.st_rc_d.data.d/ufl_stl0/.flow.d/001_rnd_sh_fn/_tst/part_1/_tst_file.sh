@@ -2,7 +2,7 @@
 
 echo -e "${CYAN}--- _tst_file_rnd7_fd2a359() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_file.sh---${NORMAL}" #started functions
 
-_tst_file_rnd7_fd2a359() {
+_tst.file_rnd7_fd2a359() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -63,4 +63,4 @@ ${NORMAL}"
 
 }
 
-_tst_file_rnd7_fd2a359 "$@"
+_tst.file_rnd7_fd2a359 "$@"

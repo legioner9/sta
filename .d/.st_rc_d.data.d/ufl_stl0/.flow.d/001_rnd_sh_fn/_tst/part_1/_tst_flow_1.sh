@@ -59,7 +59,7 @@ ${NORMAL}"
 
     cd /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1
 
-    ufl_stl0 1 _tst_file.sh
+    echo | ufl_stl0 1 _tst_file.sh
 
     #{{body_fn}}
 

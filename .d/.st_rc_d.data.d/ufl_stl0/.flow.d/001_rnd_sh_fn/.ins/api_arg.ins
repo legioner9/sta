@@ -1,0 +1,7 @@
+# [[api_arg]]
+local api_dr={{api_dir}}
+local api_fl=
+for api_fl in $(_d2f ${api_dr});do
+    echo -e "${GREEN}\$api_fl = 'file://$api_fl'${NORMAL}"
+
+done

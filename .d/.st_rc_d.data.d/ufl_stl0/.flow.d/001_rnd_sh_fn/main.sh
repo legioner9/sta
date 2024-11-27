@@ -102,3 +102,5 @@ path2nom_stl0 ${file_res}
 arb2f_stl0 ${file_res} 0
 
 [[ "-edit" == "${ufl_stl0_1_glar_edit}" ]] && _edit ${file_res}
+
+return 0

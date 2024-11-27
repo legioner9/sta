@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{file_name}} ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _tst_this_1_rnd7_8d7ce2a() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/015_corn_sh/_tst/part_2/_tst_this_1.sh ---${NORMAL}" #started functions
 
-{{fn_name}}_{{rnd_val}}() {
+_tst_this_1_rnd7_8d7ce2a() {
 
-    # gig from file://{{fn_sh_file}}
+    # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="{{file_name}}"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/015_corn_sh/_tst/part_2/_tst_this_1.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -76,6 +76,14 @@ ${NORMAL}"
 
     #{{body_fn}}
 
+    # insert from file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/002_ufl_flow_mm/.ins/rnd_in_tst.ins
+    # echo ${ARGS[0]}
+    # echo ${ARGS[1]}
+    # local _ARGS_=("$@")
+    # _parr3e _ARGS_
+    # _lnv2e ${dir_cntx}/main.cntx
+    # cd _dir_tst || _st_err "_dir_tst not dir"
+
     #! END BODY FN ---------------------------------------
 
     cd $PPWD
@@ -83,4 +91,4 @@ ${NORMAL}"
 
 }
 
-{{fn_name}}_{{rnd_val}} "$@"
+_tst_this_1_rnd7_8d7ce2a "$@"
