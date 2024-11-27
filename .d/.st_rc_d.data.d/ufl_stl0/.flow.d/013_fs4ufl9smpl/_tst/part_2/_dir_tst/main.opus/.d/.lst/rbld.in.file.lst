@@ -1,8 +1,6 @@
 # 1. in first rbld cnx=[cntx.ins.d] if you need
 # 2. use cnx : rbld readme.opus/cntx.ins.d/name.d/_001.name.file.md_ufl9 <- [cntx.ins.d]
 
-# rbld notebook.opus -> notebook.opus/cntx.ins.d
-# ${REPO_PATH}/stl/.d/.opus/notebook.opus/_rbld_res_md.sh
+${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/main.opus/_cntx.ins.d/002.name.d/_099.sub.opus/__res.ante.md_ufl9
 
-# rbld _002.from_notebook.file.md_ufl9 <- notebook.opus/cntx.ins.d
-# ${REPO_PATH}/stl/.d/.opus/readme.opus/cntx.ins.d/100.notebook.d/_002.from_notebook.file.md_ufl9
+${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/sup.opus/_rbld_res_md.sh

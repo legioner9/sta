@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _rbld_res_md_rnd7_630a269() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/main.opus/_rbld_res_md.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _rbld_res_md_rnd7_6525085() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/main.opus/_rbld_res_md.sh ---${NORMAL}" #started functions
 
-_rbld_res_md_rnd7_630a269() {
+_rbld_res_md_rnd7_6525085() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -86,14 +86,14 @@ ${NORMAL}"
     local cpy_into_str=
     local str_arr=()
     # cat ${path_dir}/.d/.lst/cpy_into.lst2
-    for cpy_into_str in $(cat ${path_dir}/.d/.lst/cpy_into.lst2); do
+    for cpy_into_str in $(_f2e ${path_dir}/.d/.lst/cpy_into.lst2); do
         echo -e "${GREEN}\$cpy_into_str = '$cpy_into_str'${NORMAL}"
         str_arr=(${cpy_into_str//<>/ })
 
         # parr3e_ str_arr
         # read -p 1
 
-        eval "echo | ufl_stl0 9 ${str_arr[0]} ${str_arr[1]} 2"
+        echo | ufl_stl0 9 ${str_arr[0]} ${str_arr[1]} 2
         
     done
 
@@ -109,4 +109,4 @@ ${NORMAL}"
 
 }
 
-_rbld_res_md_rnd7_630a269 "$@"
+_rbld_res_md_rnd7_6525085 "$@"

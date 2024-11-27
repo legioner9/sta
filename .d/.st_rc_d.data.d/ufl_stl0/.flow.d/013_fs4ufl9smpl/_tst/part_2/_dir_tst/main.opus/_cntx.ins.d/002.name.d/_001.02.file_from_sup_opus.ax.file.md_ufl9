@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _001.02.file_from_sup_opus.ax.file_rnd7_e33f923() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/main.opus/_cntx.ins.d/002.name.d/_001.02.file_from_sup_opus.ax.file.md_ufl9 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _001.02.file_from_sup_opus.ax.file_rnd7_ea01896() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_fs4ufl9smpl/_tst/part_2/_dir_tst/main.opus/_cntx.ins.d/002.name.d/_001.02.file_from_sup_opus.ax.file.md_ufl9 ---${NORMAL}" #started functions
 
-_001.02.file_from_sup_opus.ax.file_rnd7_e33f923() {
+_001.02.file_from_sup_opus.ax.file_rnd7_ea01896() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -69,4 +69,4 @@ echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/013_f
 
 }
 
-_001.02.file_from_sup_opus.ax.file_rnd7_e33f923 "$@"
+_001.02.file_from_sup_opus.ax.file_rnd7_ea01896 "$@"

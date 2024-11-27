@@ -68,7 +68,9 @@ ${NORMAL}"
     cd _dir_tst || _st_err "_dir_tst not dir"
 
     # ufl_stl0 9 ins.tst1.d result.man
+    ufl_stl0_9_glar_force=-force
     ufl_stl0 9 ins.tst1.d result.man 2
+    ufl_stl0_9_glar_force=
 
     #! END BODY FN ---------------------------------------
 

@@ -143,14 +143,14 @@ local main_cntx_0=0
     return 1
 }
 
-_is_yes "create fs for 'ufl_stl0 9' in file://$PPWD" || {
+_is_yes "create fs for 'ufl_stl0 9' in file://$PPWD : with main.opus and sup.opus" || {
     _st_info "in fs= file://$file_main , line=${LINENO}, ${FNN}() :REJECT_OPERATION : return 0"
     return 0
 }
 
 echo -e "${GREEN}\$dir_tml = '$dir_tml'${NORMAL}"
 
-_is_yes "DO?: DAGER_OPERATION : rm -rf file://$PPWD ? " && {
+_is_yes "DO?: DANGER_OPERATION : rm -rf file://$PPWD ? " && {
     echo -e "${HLIGHT}--- rm -r ${PPWD}/ ---${NORMAL}"
     cd ..
     rm -rf -- "${PPWD}"
@@ -170,22 +170,7 @@ _f2f "${dir_ins}"/rbld.sh.ins '{{body_fn}}' "$PPWD"/_rbld_res_md.sh
 
 path2nom_stl0 $PPWD/_rbld_res_md.sh
 
-#! gig cntx.ins.d/099.in_this.d/_rbld_to_here.sh
-local rbld_to_here=$PPWD/cntx.ins.d/099.in_this.d/_rbld_to_here.sh
-
-echo | ufl_stl0 1 "${rbld_to_here}"
-
-echo -e "${HLIGHT}--- _f2f file://${dir_ins}/rbld_to_here.sh.ins {{body_fn}} file://$PPWD/${rbld_to_here} ---${NORMAL}" #start files
-_f2f ${dir_ins}/rbld_to_here.sh.ins '{{body_fn}}' ${rbld_to_here}
-
-path2nom_stl0 $rbld_to_here
-
-# _lnv2e ${dir_cntx}/main.cntx
-# _st_pause "_s2d '{{PPWD}}' file://$PPWD  file://$PPWD/cntx.ins.d"
 _s2d '{{PPWD}}' "$PPWD" $PPWD
-# _s2d  "$HOME/" '/' $PPWD
-
-_source_w1_isf ${rbld_to_here}
 
 _source_w1_isf $PPWD/_rbld_res_md.sh
 
