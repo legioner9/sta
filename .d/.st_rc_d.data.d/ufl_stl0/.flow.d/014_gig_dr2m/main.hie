@@ -2,15 +2,18 @@
 
 ## CAUSA:
 ПРИЧИНА создания:
+файл генератор `dr_ins.ufl_stl0_15` проекции `dr_ins` в файл `fl_rcv`(.md by defaut)
 
 
 ## FORMULA:
 СХЕМА решения:
+- `dr_org.ufl_stl0_15 1` делает все что определено в подчиненных файлах 
+- `dr_org.ufl_stl0_15 2 fl_img` rbld (rebuild) `dr_org` and bld (build) `fl_img`
 
 
 ## DOGMA:
 РЕШЕНИЕ задачи:
 
-### TST
+### TST  
 
 ### FLOW_1
