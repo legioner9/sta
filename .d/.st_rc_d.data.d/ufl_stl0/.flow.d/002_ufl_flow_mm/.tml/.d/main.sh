@@ -42,7 +42,7 @@ _lnv2e ${dir_cntx}/main.cntx
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
-TAGS: @
+TAGS: 
 ARGS: \$1=?
 GLAR: ${FNN}_glar_[name_glar]=[val_glar]  
 EXAM: 
@@ -80,7 +80,7 @@ ${NORMAL}"
         return 0
 
     }
-
+ 
     [ "${ARGS[1]}" == "_go_dir_flow" ] && {
 
         _edit {{dir_res}}
@@ -125,7 +125,7 @@ local main_cntx_0=0
 # else
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
-
+ 
 _lnv2e ${dir_cntx}/main.cntx
 
 return 0

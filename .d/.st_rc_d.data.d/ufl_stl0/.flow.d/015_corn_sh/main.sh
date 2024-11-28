@@ -41,7 +41,7 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: ufl_stl0 1 \$2 + [_f2f api_arg.ins] + [_s2f \$3=[api_dir]}]
+MAIN: [ufl_stl0 1 \$2] + [_f2f api_arg.ins] + [_s2f \$3=[api_dir]}]
 TAGS: @
 ARGS: \$1=15 
 GLAR: ${FNN}_glar_[name_glar]=[val_glar]  
