@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- 001_recurce_util_rnd7_a95c651() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/001_recurce_util.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- usr.dfl_rnd7_ed8a27c() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc ---${NORMAL}" #started functions
 
-001_recurce_util_rnd7_a95c651() {
+usr.dfl_rnd7_ed8a27c() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ echo -e "${CYAN}--- 001_recurce_util_rnd7_a95c651() $* in file://${ST_RC_D_DATA_
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/001_recurce_util.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -74,26 +74,8 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    #! chec parent clousure
-
-    echo -e "${GREEN}\$sh_fl = ' file://$sh_fl '${NORMAL}"
-    echo -e "${GREEN}\$sh_dr = ' file://$sh_dr '${NORMAL}"
-    echo -e "${GREEN}\$org_dr = ' file://$org_dr '${NORMAL}"
-
-    #! rebuild all in .d/.lst/cntx.res.copy.lst
-    local cpy_img_pth=
-    for cpy_img_pth in $(_f2e ${cpy_lst_fl}); do
-        echo -e "${GREEN}\$cpy_img_pth = ' file://$cpy_img_pth '${NORMAL}"
-
-        # if [ -d $org_dr ] && [ -f $cpy_img_pth ]; then
-        if [ -d $org_dr ]; then
-            echo | ufl_stl0 9 $org_dr $cpy_img_pth 2
-        fi
-
-    done
-
     #{{body_fn}}
-
+inner usr.dfl.prc.ins
     #! END BODY FN ---------------------------------------
 
     cd $PPWD
@@ -101,4 +83,4 @@ ${NORMAL}"
 
 }
 
-001_recurce_util_rnd7_a95c651 "$@"
+usr.dfl_rnd7_ed8a27c "$@"

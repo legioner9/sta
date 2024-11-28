@@ -41,7 +41,10 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: in dr=\$2 gig .sh \$3 name with api_d2md mapping \$4 cntx.dr to \$5 res.dr
+MAIN: in [root_dr] cr [root_dr]/\$1 {as like _org.d}, [root_dr]/\$1.ufl_stl0_14.d
+   - sd: [root_dr]/\$1 {as like _org.d} :: orig_dr
+   - sd: [root_dr]/\$1.ufl_stl0_14.d :: cntl_dr for orig_dr
+
 TAGS: @
 ARGS: \$1=14
 GLAR: ${FNN}_glar_[name_glar]=[val_glar]  
@@ -90,11 +93,11 @@ ${NORMAL}"
     }
 }
 
-# [ -z ${ARGS[1]} ] && {
-#     hint="\$1: name result file "
-#     _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
-#     return 1
-# }
+[ -z "${ARGS[1]}" ] && {
+    hint="\$1: name result file "
+    _st_exit "in fs= file://$file_main , line=${LINENO}, ${FNN}() : NOT_DEFINE : '\${ARGS[1]}' : ${hint} : return 1"
+    return 1
+}
 
 # _is_yes "cr ${ARGS[1]} file in $PPWD" || {
 #     _st_info "that not 'y' return 1"
@@ -126,6 +129,39 @@ local main_cntx_0=0
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
-_lnv2e ${dir_cntx}/main.cntx
+_sdd2d _XXX "${ARGS[1]}" "${dir_tml}"/org_d/_XXX "${PPWD}"
+_sdd2d _XXX "${ARGS[1]}" "${dir_tml}"/cntl_d/_XXX.ufl_stl0_14.d "${PPWD}"
+
+local org_d="${PPWD}"/"${ARGS[1]}"
+local cntl_d="${PPWD}"/"${ARGS[1]}".ufl_stl0_14.d
+
+local img_fl=${org_d}.img.md
+local lst_cpy_fl=${cntl_d}/.d/.lst/cpy.lst
+local cntl_sh=${cntl_d}/"${ARGS[1]}".ufl_stl0_14
+
+local org_prc_dr=${cntl_d}/.d/.prc
+
+eval "echo -e \"# usually img at root 
+${img_fl}
+# add usr cpy in place
+\"" >"${lst_cpy_fl}"
+
+path2nom_stl0 ${lst_cpy_fl}
+
+cd ${cntl_d} || return 1
+
+echo | ufl_stl0 1 "${cntl_sh}"
+
+_f2f "${dir_ins}"/body_cntl_fl.ins '{{body_fn}}' "${cntl_sh}"
+
+echo | ufl_stl0 1 "${org_prc_dr}"/usr.dfl.prc
+
+_f2f "${dir_ins}"/usr.dfl.prc.ins '{{body_fn}}' "${org_prc_dr}"/usr.dfl.prc
+
+# _is_yes "DO? :: _sdd2d _XXX ${ARGS[1]} ${dir_tml}/org_d/_XXX.d ${PPWD} " && {
+#     :
+# }
+
+# _lnv2e ${dir_cntx}/main.cntx
 
 return 0

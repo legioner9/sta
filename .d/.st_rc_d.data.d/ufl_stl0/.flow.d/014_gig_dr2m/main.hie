@@ -7,6 +7,10 @@
 
 ## FORMULA:
 СХЕМА решения:
+- `dr_org.ufl_stl0 15 [org_sd]` 
+    - создает в рут sd :`[org_sd]` 
+    - управляющую директорию 
+
 - `dr_org.ufl_stl0_15 1` делает все что определено в подчиненных файлах 
 - `dr_org.ufl_stl0_15 2 fl_img` rbld (rebuild) `dr_org` and bld (build) `fl_img`
 

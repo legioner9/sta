@@ -69,6 +69,14 @@ ${NORMAL}"
     # _lnv2e ${dir_cntx}/main.cntx
     # cd _dir_tst || _st_err "_dir_tst not dir"
 
+    rm -r ${path_dir}/_dir_tst
+    mkdir ${path_dir}/_dir_tst
+    cd ${path_dir}/_dir_tst
+
+    ufl_stl0 14 _org.tst.d
+
+    . ${path_dir}/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 1
+
     #! END BODY FN ---------------------------------------
     
     cd $PPWD
