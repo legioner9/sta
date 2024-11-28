@@ -74,6 +74,24 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    #! chec parent clousure
+
+    echo -e "${GREEN}\$sh_fl = ' file://$sh_fl '${NORMAL}"
+    echo -e "${GREEN}\$sh_dr = ' file://$sh_dr '${NORMAL}"
+    echo -e "${GREEN}\$org_dr = ' file://$org_dr '${NORMAL}"
+
+    #! rebuild all in .d/.lst/cntx.res.copy.lst
+    local cpy_img_pth=
+    for cpy_img_pth in $(_f2e ${sh_dr}/.d/.lst/cpy.lst); do
+        echo -e "${GREEN}\$cpy_img_pth = ' file://$cpy_img_pth '${NORMAL}"
+
+        # if [ -d $org_dr ] && [ -f $cpy_img_pth ]; then
+        if [ -d $org_dr ]; then
+            echo | ufl_stl0 9 $org_dr $cpy_img_pth 2
+        fi
+
+    done
+
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
