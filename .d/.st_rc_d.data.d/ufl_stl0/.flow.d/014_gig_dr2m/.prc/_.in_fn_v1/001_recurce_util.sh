@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_file_1_rnd7_2a0399a() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d/_tst_file_1.sh ---${NORMAL}" #started functions
+echo -e "${CYAN}--- 001_recurce_util_rnd7_a95c651() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/001_recurce_util.sh ---${NORMAL}" #started functions
 
-_tst_file_1_rnd7_2a0399a() {
+001_recurce_util_rnd7_a95c651() {
 
-    # HST :: gig command :: [ufl_stl0 1 1 _tst_file_1.sh in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d
+    # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d/_tst_file_1.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/001_recurce_util.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -74,6 +74,24 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    #! chec parent clousure
+
+    echo -e "${GREEN}\$sh_fl = ' file://$sh_fl '${NORMAL}"
+    echo -e "${GREEN}\$sh_dr = ' file://$sh_dr '${NORMAL}"
+    echo -e "${GREEN}\$org_dr = ' file://$org_dr '${NORMAL}"
+
+    #! rebuild all in .d/.lst/cntx.res.copy.lst
+    local cpy_img_pth=
+    for cpy_img_pth in $(_f2e ${cpy_lst_fl}); do
+        echo -e "${GREEN}\$cpy_img_pth = ' file://$cpy_img_pth '${NORMAL}"
+
+        # if [ -d $org_dr ] && [ -f $cpy_img_pth ]; then
+        if [ -d $org_dr ]; then
+            echo | ufl_stl0 9 $org_dr $cpy_img_pth 2
+        fi
+
+    done
+
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
@@ -83,4 +101,4 @@ ${NORMAL}"
 
 }
 
-_tst_file_1_rnd7_2a0399a "$@"
+001_recurce_util_rnd7_a95c651 "$@"
