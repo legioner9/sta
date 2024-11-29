@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- usr.dfl_rnd7_ed8a27c() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc ---${NORMAL}" #started functions
+echo -e "${CYAN}--- 1_rnd7_3b4b236() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/1 ---${NORMAL}" #started functions
 
-usr.dfl_rnd7_ed8a27c() {
+1_rnd7_3b4b236() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ usr.dfl_rnd7_ed8a27c() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/1"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -75,7 +75,9 @@ ${NORMAL}"
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
-    inner usr.dfl.prc.ins
+
+    
+     
     #! END BODY FN ---------------------------------------
 
     cd $PPWD
@@ -83,4 +85,4 @@ ${NORMAL}"
 
 }
 
-usr.dfl_rnd7_ed8a27c "$@"
+1_rnd7_3b4b236 "$@"

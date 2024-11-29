@@ -71,7 +71,7 @@ ${NORMAL}"
 
     rm -r ${path_dir}/_dir_tst
     mkdir ${path_dir}/_dir_tst
-    cd ${path_dir}/_dir_tst
+    cd ${path_dir}/_dir_tst || return 1
 
     ufl_stl0 14 _org.tst.d
 

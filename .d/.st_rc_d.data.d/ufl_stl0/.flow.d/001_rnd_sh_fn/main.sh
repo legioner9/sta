@@ -98,15 +98,17 @@ _d2mm ${tml_dr} tml_fl ${num_tml}
 
 echo -e "${GREEN}\$tml_fl = '$tml_fl'${NORMAL}"
 
-file $tml_fl
+# file $tml_fl
 
-read -p 1
+# read -p 1
 #! ptr_path
 local ptr_path="${ARGS[2]}"
 ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
 
 local file_res=${ptr_path}
 # local file_res=$PPWD/${ARGS[1]}
+
+echo -e "${GREEN}\$file_res = ' file://$file_res '${NORMAL}"
 
 if [ -f ${file_res} ]; then
 
@@ -120,22 +122,21 @@ else
     cp ${tml_fl} ${file_res}
 fi
 
-_s2f "{{rnd_val}}" $rnd_val ${file_res}
+#! arr files
+local arr_prc=()
+mapfile -t arr_prc < <(_df2e "$dir_prc")
 
-#! ptr_path
-local ptr_path="${ARGS[1]}"
-ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+_parr3e arr_prc
 
-local file_name=${ptr_path}
-local fn_name=$(_prs_f -n ${ARGS[1]})
+#! exec ${num_tml - 1}(array nums) prc accoding ${num_tml}(mm nums) tml
+num_tml=$((num_tml - 1))
 
-_s2f "{{fn_name}}" $fn_name ${file_res}
-_s2f "{{file_name}}" $file_name ${file_res}
-_s2f "{{PPWD}}" $PPWD ${file_res}
-_s2f "{{fn_sh_file}}" $fn_sh_file ${file_res}
-
-path2nom_stl0 ${file_res}
-arb2f_stl0 ${file_res} 0
+echo -e "${HLIGHT}--- _source_w1_isf $dir_prc/${arr_prc[${num_tml}]} ---${NORMAL}"
+_source_w1_isf $dir_prc/${arr_prc[${num_tml}]} || {
+    _st_exit "in fs= file://$file_main , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$dir_prc/${arr_prc[${num_tml}]} ' : ${hint} : return 1"
+    cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 1" >&2
+    return 1
+}
 
 [[ "-edit" == "${ufl_stl0_1_glar_edit}" ]] && _edit ${file_res}
 

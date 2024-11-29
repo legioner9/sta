@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _org.tst.d_rnd7_4b1416d() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- 1_rnd7_eb51507() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/1 ---${NORMAL}" #started functions
 
-_org.tst.d_rnd7_4b1416d() {
+1_rnd7_eb51507() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _org.tst.d_rnd7_4b1416d() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/1"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -91,15 +91,25 @@ ${NORMAL}"
     local cpy_lst_fl=${sh_dr}/.d/.lst/cpy.lst
     local org_prc_dr=${sh_dr}/.d/.prc
 
+    #! define ORG_PRC_DR as clousure const = org_prc_dr for child processes
+    local ORG_PRC_DR=${org_prc_dr}
+
     _source_w1_isf $res_mm || {
-        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : 'EXEC_EXPERSION' : ${hint} : return 1"
+        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$res_mm ' : ${hint} : return 1"
         cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
         return 1
     }
 
+    #! exec all prc from ${org_prc_dr}
     local org_prc_fl=
     for org_prc_fl in $(_df2e ${org_prc_dr}); do
         echo -e "${GREEN}\$org_prc_fl = '$org_prc_fl'${NORMAL}"
+        _source_w1_isf ${org_prc_dr}/${org_prc_fl} || {
+            _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://${org_prc_dr}/${org_prc_fl} ' : ${hint} : return 1"
+            cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+            return 1
+        }
+
     done
     #! END BODY FN ---------------------------------------
 
@@ -108,4 +118,4 @@ ${NORMAL}"
 
 }
 
-_org.tst.d_rnd7_4b1416d "$@"
+1_rnd7_eb51507 "$@"

@@ -62,6 +62,7 @@ ${NORMAL}"
     cd "${tst_flow_d}" || return 1
 
     echo | ufl_stl0 1 1 _tst_file_1.sh
+    . _tst_file_1.sh
     # echo | ufl_stl0 1 2 _tst_file_2.sh
 
     #{{body_fn}}

@@ -4,7 +4,7 @@ echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{file_name}} ---${NO
 
 {{fn_name}}_{{rnd_val}}() {
 
-    # gig from file://{{fn_sh_file}}
+    # HST :: gig command :: [{{gig_command}}] in file://{{PPWD}}
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
