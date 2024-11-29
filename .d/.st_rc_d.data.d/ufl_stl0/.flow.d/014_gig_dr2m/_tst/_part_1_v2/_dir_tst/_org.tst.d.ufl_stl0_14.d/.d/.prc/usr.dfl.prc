@@ -1,18 +1,17 @@
 #!/bin/bash
 
-#! tml for ufl_stl0 14 .d/.prc/usr.dfl.prc
-#! define ENV_1 as clousure const = org_prc_dr from parent processes
-echo -e "${CYAN}--- usr.dfl_rnd7_4b3f360() $* in file://${ENV_1}/usr.dfl.prc ---${NORMAL}" #started functions
+#! define ENV_1 as clousure const = org_prc_dr for child processes
+echo -e "${CYAN}--- usr.dfl_rnd7_f4b90bb() $* in file://${ENV_1}/usr.dfl.prc ---${NORMAL}" #started functions
 
-usr.dfl_rnd7_4b3f360() {
+usr.dfl_rnd7_f4b90bb() {
 
-    # HST :: gig command :: [ufl_stl0 1 2 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d
+    # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/.d/.prc/usr.dfl.prc in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    #! define ENV_1 as clousure const = org_prc_dr from parent processes
+    #! define ENV_1 as clousure const = org_prc_dr for child processes
     local path_file="${ENV_1}/usr.dfl.prc"
     local path_dir="$(dirname "$path_file")"
 
@@ -78,7 +77,7 @@ ${NORMAL}"
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
-    echo "from usr.dfl.prc.ins" 
+    echo "from usr.dfl.prc.ins"
     #! END BODY FN ---------------------------------------
 
     cd $PPWD
@@ -86,4 +85,4 @@ ${NORMAL}"
 
 }
 
-usr.dfl_rnd7_4b3f360 "$@"
+usr.dfl_rnd7_f4b90bb "$@"

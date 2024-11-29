@@ -75,11 +75,7 @@ ${NORMAL}"
 
     ufl_stl0 14 _org.tst.d
 
-    #! treat util
     . ${path_dir}/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 1
-
-    #! query cpy __for_cpy/_org.tst.d.img.2.md
-    . ${path_dir}/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 2 ${path_dir}/__for_cpy/_org.tst.d.img.2.md
 
     #! END BODY FN ---------------------------------------
     

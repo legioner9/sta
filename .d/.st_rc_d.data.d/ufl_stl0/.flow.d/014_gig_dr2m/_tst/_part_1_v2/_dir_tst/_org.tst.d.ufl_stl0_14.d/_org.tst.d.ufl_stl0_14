@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _org.tst.d_rnd7_21cb431() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- _org.tst.d_rnd7_6fe3c59() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 ---${NORMAL}" #started functions
 
-_org.tst.d_rnd7_21cb431() {
+_org.tst.d_rnd7_6fe3c59() {
 
     # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.ufl_stl0_14.d
 
@@ -79,10 +79,7 @@ ${NORMAL}"
 
     local res_mm=
 
-    local arg_1="$1"
-    local arg_2="$2"
-
-    _d2mm ${prc_in_fn_dr} res_mm "$arg_1"
+    _d2mm ${prc_in_fn_dr} res_mm "$1"
 
     echo -e "${GREEN}\$res_mm = ' file://$res_mm '${NORMAL}"
 
@@ -97,7 +94,11 @@ ${NORMAL}"
     #! define ENV_1 as clousure const = org_prc_dr for child processes
     local ENV_1=${org_prc_dr}
 
-
+    _source_w1_isf $res_mm || {
+        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$res_mm ' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+    }
 
     #! exec all prc from ${org_prc_dr}
     local org_prc_fl=
@@ -110,14 +111,6 @@ ${NORMAL}"
         }
 
     done
-
-    #! exec .in_fn prc accoding $arg_1 [num_flow]
-    _source_w1_isf $res_mm || {
-        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$res_mm ' : ${hint} : return 1"
-        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-        return 1
-    }
-    
     #! END BODY FN ---------------------------------------
 
     cd $PPWD
@@ -125,4 +118,4 @@ ${NORMAL}"
 
 }
 
-_org.tst.d_rnd7_21cb431 "$@"
+_org.tst.d_rnd7_6fe3c59 "$@"

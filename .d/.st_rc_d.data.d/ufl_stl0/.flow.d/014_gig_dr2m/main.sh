@@ -45,8 +45,12 @@ MAIN: in [root_dr] cr [root_dr]/\$1 {as like _org.d}, [root_dr]/\$1.ufl_stl0_14.
    - sd: [root_dr]/\$1 {as like _org.d} :: orig_dr
    - sd: [root_dr]/\$1.ufl_stl0_14.d :: cntl_dr for orig_dr
 
-TAGS: @
-ARGS: \$1=14
+TAGS: 
+ARGS: 
+    \$1=14
+    \$2 if 1 :: recurse util - treat cpy.lst and exec all file.prc in /.d/.prc/
+        if 2 :: ${FNN} 14 2 \$3 - make \$3 file.img from org.d
+
 GLAR: ${FNN}_glar_[name_glar]=[val_glar]  
 EXAM: 
 EXEC: 
@@ -154,7 +158,7 @@ echo | ufl_stl0 1 1 "${cntl_sh}"
 
 _f2f "${dir_ins}"/body_cntl_fl.ins '{{body_fn}}' "${cntl_sh}"
 
-echo | ufl_stl0 1 1 "${org_prc_dr}"/usr.dfl.prc
+echo | ufl_stl0 1 2 "${org_prc_dr}"/usr.dfl.prc
 
 _f2f "${dir_ins}"/usr.dfl.prc.ins '{{body_fn}}' "${org_prc_dr}"/usr.dfl.prc
 

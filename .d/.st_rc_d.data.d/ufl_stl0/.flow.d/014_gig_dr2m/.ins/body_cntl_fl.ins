@@ -2,7 +2,10 @@
 
     local res_mm=
 
-    _d2mm ${prc_in_fn_dr} res_mm "$1"
+    local arg_1="$1"
+    local arg_2="$2"
+
+    _d2mm ${prc_in_fn_dr} res_mm "$arg_1"
 
     echo -e "${GREEN}\$res_mm = ' file://$res_mm '${NORMAL}"
 
@@ -14,14 +17,10 @@
     local cpy_lst_fl=${sh_dr}/.d/.lst/cpy.lst
     local org_prc_dr=${sh_dr}/.d/.prc
 
-    #! define ORG_PRC_DR as clousure const = org_prc_dr for child processes
-    local ORG_PRC_DR=${org_prc_dr}
+    #! define ENV_1 as clousure const = org_prc_dr for child processes
+    local ENV_1=${org_prc_dr}
 
-    _source_w1_isf $res_mm || {
-        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$res_mm ' : ${hint} : return 1"
-        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
-        return 1
-    }
+
 
     #! exec all prc from ${org_prc_dr}
     local org_prc_fl=
@@ -34,3 +33,11 @@
         }
 
     done
+
+    #! exec .in_fn prc accoding $arg_1 [num_flow]
+    _source_w1_isf $res_mm || {
+        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : : EXEC_FAIL : '_source_w1_isf file://$res_mm ' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+    }
+    

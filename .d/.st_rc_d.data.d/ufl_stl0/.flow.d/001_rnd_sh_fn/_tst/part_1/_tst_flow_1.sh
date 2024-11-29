@@ -63,8 +63,8 @@ ${NORMAL}"
 
     echo | ufl_stl0 1 1 _tst_file_1.sh
     . _tst_file_1.sh
-    # echo | ufl_stl0 1 2 _tst_file_2.sh
-
+    echo | ufl_stl0 1 2 _tst_file_2.sh
+    _edit _tst_file_1.sh
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
