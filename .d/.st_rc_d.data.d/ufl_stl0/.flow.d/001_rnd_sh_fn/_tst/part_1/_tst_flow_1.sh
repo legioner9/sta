@@ -57,9 +57,12 @@ ${NORMAL}"
 
     # _lnv2e /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.lst/cntx_name_value.lst
 
-    cd /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1
+    local tst_flow_d=${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d
 
-    echo | ufl_stl0 1 _tst_file.sh
+    cd "${tst_flow_d}" || return 1
+
+    echo | ufl_stl0 1 1 _tst_file_1.sh
+    # echo | ufl_stl0 1 2 _tst_file_2.sh
 
     #{{body_fn}}
 

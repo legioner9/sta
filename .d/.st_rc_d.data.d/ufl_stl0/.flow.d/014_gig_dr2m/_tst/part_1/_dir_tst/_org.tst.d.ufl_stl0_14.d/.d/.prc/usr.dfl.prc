@@ -75,7 +75,7 @@ ${NORMAL}"
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
-inner usr.dfl.prc.ins
+    inner usr.dfl.prc.ins
     #! END BODY FN ---------------------------------------
 
     cd $PPWD

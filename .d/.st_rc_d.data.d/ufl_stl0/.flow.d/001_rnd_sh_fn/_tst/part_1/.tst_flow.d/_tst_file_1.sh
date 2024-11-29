@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- _tst_file_rnd7_fd2a359() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_file.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- 1_rnd7_fb1ab58() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d/1 ---${NORMAL}" #started functions
 
-_tst.file_rnd7_fd2a359() {
+1_rnd7_fb1ab58() {
 
     # gig from file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh
 
@@ -10,7 +10,7 @@ _tst.file_rnd7_fd2a359() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/_tst_file.sh"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/001_rnd_sh_fn/_tst/part_1/.tst_flow.d/1"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -38,18 +38,37 @@ ${NORMAL}"
 
     if [[ "_go" == "$1" ]]; then
         _edit "${path_file}"
+
+        cd $PPWD
         return 0
     fi
 
+    # local api_dr=
+    #{{api_arg}}
+
+    #* check _isn_from
     # hint="\$1: \$2: "
-    # if _isn_from ${NARGS} less more "in fs= file://${path_file} , line=${LINENO}, ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    # if _isn_from ${NARGS} LESS LESS+1 "in fs= file://${path_file}, line=${LINENO}, ${FNN}() : DEMAND 'LESS LESS+1' ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+    #     cd $PPWD
     #     return 1
     # fi
 
-    # local _ARGS_=("$@")
-    # _parr3e _ARGS_
+    #* path -> u@path
+    #! ptr_path
+    # local ptr_path_1="$1"
+    # ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
-    #{{ptr_path}}
+    #* check arg from arg_arr
+    # [[ "${arg_arr[*]}" == *$arg* ]]
+
+    #* errno
+    # cmd arg
+    # errno=$?
+    # return ${errno}
+
+    #* rename args
+
+    #* define local variables
 
     #! START BODY FN ---------------------------------------
 
@@ -59,8 +78,9 @@ ${NORMAL}"
 
     #! END BODY FN ---------------------------------------
 
+    cd $PPWD
     return 0
 
 }
 
-_tst.file_rnd7_fd2a359 "$@"
+1_rnd7_fb1ab58 "$@"
