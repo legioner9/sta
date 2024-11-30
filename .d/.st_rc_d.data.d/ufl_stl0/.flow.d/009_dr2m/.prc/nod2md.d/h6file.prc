@@ -79,6 +79,7 @@ ${NORMAL}"
 
     local name_n="$(_prs_f -n2 ${name_ext})"
     name_n=${name_n/#*./}
+    name_n=${name_n//_/ }
 
     echo -e "
 ###### [${name_n}](${relpath})
