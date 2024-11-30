@@ -1,10 +1,14 @@
+echo "in first_post.prc"
 
+_lnv2e ${dir_cntx}/nod2md.d.cntx
+
+echo -e "
 <!-- [[__TOC_]] -->
 
-<a name="top"></a>
-<a class=top-link hide href="#top">↑</a>
+<a name=\"top\"></a>
+<a class="top-link hide" href=\"#top\">↑</a>
 
-<style type="text/css">
+<style type=\"text/css\">
    .top-link {
     transition: all .25s ease-in-out;
     position: fixed;
@@ -67,23 +71,32 @@ Start Contents Menu
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.img.md 2
+CMND: ufl_stl0 9 ${dir_with_cntt_files} ${file_md} ${max_deep}
 
-PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
+PPWD: ${PPWD}
 
-FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
+FLOW: ${dir_set}
 
-DATE: 1732989762_01122024010242
+DATE: $(_date)
 
-DATX: 1732989762
+DATX: $(date +%s)
 -->
+" >> ${file_md}
 
 
-[001.L1.txt.md](_org.tst.d/001.L1.txt.md)
+local file_md_ufl9=$(dirname ${file_md})/_$(basename ${file_md})_ufl9
+ufl_stl0 1 1 ${file_md_ufl9}
 
+echo -e "
+echo | ufl_stl0 9 ${dir_with_cntt_files} ${file_md} ${max_deep}
+" > ${file_md}_ufl9.tmp
 
+echo -e "${HLIGHT}--- _f2f file://${file_md}_ufl9.tmp {{body_fn}} file://${file_md_ufl9} ---${NORMAL}" #start files
+_f2f ${file_md}_ufl9.tmp {{body_fn}} ${file_md_ufl9}
 
-# First Chapter in _org.tst.d
+# path2nom_stl0 ${file_md}.ufl4
 
+rm ${file_md}_ufl9.tmp
 
+path2nom_stl0 ${file_md_ufl9}
 

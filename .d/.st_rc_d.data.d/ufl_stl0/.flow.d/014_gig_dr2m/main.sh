@@ -187,9 +187,19 @@ echo | ufl_stl0 1 1 "${cntl_sh}"
 
 _f2f "${dir_ins}"/body_cntl_fl.ins '{{body_fn}}' "${cntl_sh}"
 
-echo | ufl_stl0 1 2 "${org_prc_dr}"/usr.dfl.prc
+local file_res_ins=
 
-_f2f "${dir_ins}"/usr.dfl.prc.ins '{{body_fn}}' "${org_prc_dr}"/usr.dfl.prc
+echo | ufl_stl0 1 2 "${org_prc_dr}"/aft.d/usr.dfl_aft.prc
+
+file_res_ins='${ENV_1}/aft.d/usr.dfl_aft.prc'
+_s2f "{{file_name}}" "$file_res_ins" "${org_prc_dr}"/aft.d/usr.dfl_aft.prc
+_f2f "${dir_ins}"/usr.dfl_aft.prc.ins '{{body_fn}}' "${org_prc_dr}"/aft.d/usr.dfl_aft.prc
+
+echo | ufl_stl0 1 2 "${org_prc_dr}"/bfr.d/usr.dfl_bfr.prc
+
+file_res_ins='${ENV_1}/aft.d/usr.dfl_bfr.prc'
+_s2f "{{file_name}}" "$file_res_ins" "${org_prc_dr}"/aft.d/usr.dfl_bfr.prc
+_f2f "${dir_ins}"/usr.dfl_bfr.prc.ins '{{body_fn}}' "${org_prc_dr}"/bfr.d/usr.dfl_bfr.prc
 
 # _is_yes "DO? :: _sdd2d _XXX ${ARGS[1]} ${dir_tml}/org_d/_XXX.d ${PPWD} " && {
 #     :

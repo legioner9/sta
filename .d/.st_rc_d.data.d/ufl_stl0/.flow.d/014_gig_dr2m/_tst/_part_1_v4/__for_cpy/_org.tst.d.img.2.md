@@ -61,28 +61,30 @@ h6 {
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
+ - <a href=#5db76003300246b5841b16cf014a6e23> First Chapter in _org.tst.d</a>
 
 <!-- /TOC toc2f_stl0 -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d.img.md 2
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/_org.tst.d.img.2.md 2
 
 PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1732989762_01122024010242
+DATE: 1732977927_30112024214527
 
-DATX: 1732989762
+DATX: 1732977927
 -->
 
 
-[001.L1.txt.md](_org.tst.d/001.L1.txt.md)
+[001.L1.txt.md](../_dir_tst/_org.tst.d/001.L1.txt.md)
 
 
 
+ <a id="5db76003300246b5841b16cf014a6e23"></a>
 # First Chapter in _org.tst.d
 
 

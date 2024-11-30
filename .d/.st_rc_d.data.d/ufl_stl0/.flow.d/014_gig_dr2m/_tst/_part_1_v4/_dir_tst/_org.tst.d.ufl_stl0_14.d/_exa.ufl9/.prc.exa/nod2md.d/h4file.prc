@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- __org.tst.d.img.2_rnd7_9be014f() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- h4file_rnd7_09e18ee() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/h4file.prc ---${NORMAL}" #started functions
 
-__org.tst.d.img.2_rnd7_9be014f() {
+h4file_rnd7_09e18ee() {
 
-    # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9 in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
+    # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/h4file.prc in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/_tst/part_3/_dir_tst
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m/.prc/nod2md.d/h4file.prc"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -74,10 +74,18 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    local relpath=$(_ee2rpth ${file_md} ${_item_})
+    # ${str/#sbstr/rplc} Замещает самое короткое с начала вхождение sbstr строкой rplc.
+
+    local name_n="$(_prs_f -n2 ${name_ext})"
+    name_n=${name_n/#*./}
+    name_n=${name_n//_/ }
+
+    echo -e "
+#### [${name_n}](${relpath})
+" >>${file_md}
+
     #{{body_fn}}
-
-echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/_org.tst.d.img.2.md 2
-
 
     #! END BODY FN ---------------------------------------
 
@@ -86,4 +94,4 @@ echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_g
 
 }
 
-__org.tst.d.img.2_rnd7_9be014f "$@"
+h4file_rnd7_09e18ee "$@"
