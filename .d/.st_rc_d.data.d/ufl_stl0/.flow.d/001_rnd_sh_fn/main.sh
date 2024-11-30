@@ -77,7 +77,7 @@ rnd_val=rnd7_${rnd_val:0:7}
 
 echo -e "${GREEN}\$rnd_val = $rnd_val${NORMAL}" #print variable
 
-_st_pause "cr ${ARGS[2]} file in $PPWD" || {
+_st_pause "cr ${ARGS[2]} file?" || {
     _st_info "that not 'y' return 1"
     return 1
 }

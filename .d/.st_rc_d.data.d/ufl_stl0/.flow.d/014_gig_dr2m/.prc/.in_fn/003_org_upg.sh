@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- __org.tst.d.img.2_rnd7_416539f() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9 ---${NORMAL}" #started functions
+echo -e "${CYAN}--- 003_org_upg_rnd7_e79d171() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/003_org_upg.sh ---${NORMAL}" #started functions
 
-__org.tst.d.img.2_rnd7_416539f() {
+003_org_upg_rnd7_e79d171() {
 
-    # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9 in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
+    # HST :: gig command :: [ufl_stl0 1 1 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/003_org_upg.sh in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${HOME}
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/__org.tst.d.img.2.md_ufl9"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn/003_org_upg.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -72,12 +72,22 @@ ${NORMAL}"
 
     #! START BODY FN ---------------------------------------
 
+    echo -e "${GREEN}\$sh_fl = ' file://$sh_fl '${NORMAL}"
+    echo -e "${GREEN}\$sh_dr = ' file://$sh_dr '${NORMAL}"
+    echo -e "${GREEN}\$org_dr = ' file://$org_dr '${NORMAL}"
+
+    local ufl_fl_arr=()
+    local str_ufl=
+
+    #! _dfr2aewd - num | revers sort : dipper first
+    for ufl_fl in $(_dfr2aewd $org_dr ufl_stl0_14 | sort -t : -r -k2 | awk -v FS=':' '{print $1}'); do
+        echo -e "${GREEN}\$ufl_fl = '$ufl_fl'${NORMAL}"
+        _source_w1_isf "$ufl_fl" 1
+    done
+
     echo "START BODY FN : ${FNN}() $*"
 
     #{{body_fn}}
-
-echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/_org.tst.d.img.2.md 2
-
 
     #! END BODY FN ---------------------------------------
 
@@ -86,4 +96,4 @@ echo | ufl_stl0 9 ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_g
 
 }
 
-__org.tst.d.img.2_rnd7_416539f "$@"
+003_org_upg_rnd7_e79d171 "$@"
