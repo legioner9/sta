@@ -61,31 +61,32 @@ h6 {
 Start Contents Menu
 
 <!-- TOC toc2f_stl0 --> 
- - <a href=#7520f4ae0c6e4278b922794c574deac0> First Chapter in _org.tst.d</a>
+ - <a href=#2a68d0cc711d4ca5ba46383463617042> First Chapter in _org.tst.d </a>
 
 <!-- /TOC toc2f_stl0 -->
 
 End Contents Menu
 
 <!--
-CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/__for_cpy/_org.tst.d.img.2.md 2
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_dir_tst/_org.tst.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/_part_1_v3/__for_cpy/_org.tst.d.img.2.md 2
 
 PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
 
 FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
 
-DATE: 1732904042_30112024011402
+DATE: 1732955131_30112024152531
 
-DATX: 1732904042
+DATX: 1732955131
 -->
 
 
-[001.L1.txt.md](../_dir_tst/_org.tst.d/001.L1.txt.md)
+[001.L1.txt.md](../../part_1/_dir_tst/_org.tst.d/001.L1.txt.md)
 
 
 
- <a id="7520f4ae0c6e4278b922794c574deac0"></a>
-# First Chapter in _org.tst.d
+ <a id="2a68d0cc711d4ca5ba46383463617042"></a>
+# First Chapter in _org.tst.d 
+2
 
 
 

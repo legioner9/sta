@@ -41,15 +41,21 @@ _lnv2e ${dir_cntx}/main.cntx
 
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: in [root_dr] cr [root_dr]/\$1 {as like _org.d}, [root_dr]/\$1.ufl_stl0_14.d
-   - sd: [root_dr]/\$1 {as like _org.d} :: orig_dr
-   - sd: [root_dr]/\$1.ufl_stl0_14.d :: cntl_dr for orig_dr
-
+MAIN: \$2=org_dr(upath_org.d) {as like _org.d}, org_cntl_dr=\$2.ufl_stl0_14.d 
+\$1=14
+    - dr: \$2=upath_org.d
+    - dr: org_cntl_dr=\$2.ufl_stl0_14.d
+        - org_cntl_dr/\$(basename \$org_dr).ufl_stl0_14.d = org_fl.sh
+        - org_cntl_dr/.d/.lst/cpy.lst - lst default imgs of org
+        - org_cntl_dr/.d/.prc/usr.dfl.prc - lst usr prc 
+        - $dir_prc/.in_fn/ dr for num menu :
+            - [. org_fl.sh 1] - exec $dir_prc/.in_fn/001_util.sh :: util - treat cpy.lst and usr.dfl.prc
+            - [. org_fl.sh 2 upth_img_fl] - exec $dir_prc/.in_fn/002_gig_cpy.sh :: make upth_img_fl from org_dr
+            - [. org_fl.sh 3] - recurce [. *.ufl_stl0_14 1] in upath_org.d
 TAGS: 
 ARGS: 
     \$1=14
-    \$2 if 1 :: recurse util - treat cpy.lst and exec all file.prc in /.d/.prc/
-        if 2 :: ${FNN} 14 2 \$3 - make \$3 file.img from org.d
+    \$2=org_dr(upath_org.d) {as like _org.d}, org_cntl_dr=\$2.ufl_stl0_14.d 
 
 GLAR: ${FNN}_glar_[name_glar]=[val_glar]  
 EXAM: 
@@ -59,6 +65,8 @@ EXEC:
 CNTL: 
     _go             : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/main.sh
     _go_dir_flow    : _edit file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m
+    _go_infn        : _edit file://$dir_prc/.in_fn
+    _go_tml         : _edit file://$dir_tml
     _tst_1          : . file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_tst/part_1/_tst_this_1.sh
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( return 1 | ... )
@@ -95,6 +103,22 @@ ${NORMAL}"
         return 0
 
     }
+
+    [ "${ARGS[1]}" == "_go_infn" ] && {
+
+        _edit $dir_prc/.in_fn
+
+        return 0
+
+    }
+
+    [ "${ARGS[1]}" == "_go_tml" ] && {
+
+        _edit $dir_tml
+
+        return 0
+
+    }
 }
 
 [ -z "${ARGS[1]}" ] && {
@@ -112,8 +136,8 @@ local main_cntx_0=0
 
 #[[ptr_path]]
 # ! ptr_path_1
-# local ptr_path_1="${ARGS[1]}"
-# ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
+local ptr_path_1="${ARGS[1]}"
+ptr_path_1="$(_abs_path "${PPWD}" "ptr_path_1")"
 
 # local file_res=$PPWD/${ARGS[1]}
 
@@ -133,15 +157,20 @@ local main_cntx_0=0
 #     cp ${dir_tml}/1.tml ${file_res}
 # fi
 
-_sdd2d _XXX "${ARGS[1]}" "${dir_tml}"/org_d/_XXX "${PPWD}"
-_sdd2d _XXX "${ARGS[1]}" "${dir_tml}"/cntl_d/_XXX.ufl_stl0_14.d "${PPWD}"
+local org_d="${ptr_path_1}"
 
-local org_d="${PPWD}"/"${ARGS[1]}"
-local cntl_d="${PPWD}"/"${ARGS[1]}".ufl_stl0_14.d
+local org_nm=$(basename ${org_d})
+local org_dirname=$(dirname ${org_d})
+
+local cntl_d="${org_d}".ufl_stl0_14.d
+
+_sdd2d _XXX "${org_nm}" "${dir_tml}"/org_d/_XXX "${org_dirname}"
+_sdd2d _XXX "${org_nm}" "${dir_tml}"/cntl_d/_XXX.ufl_stl0_14.d "${org_dirname}"
 
 local img_fl=${org_d}.img.md
 local lst_cpy_fl=${cntl_d}/.d/.lst/cpy.lst
-local cntl_sh=${cntl_d}/"${ARGS[1]}".ufl_stl0_14
+
+local cntl_sh=${cntl_d}/$org_nm.ufl_stl0_14
 
 local org_prc_dr=${cntl_d}/.d/.prc
 

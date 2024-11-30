@@ -79,6 +79,9 @@ ${NORMAL}"
     echo -e "${GREEN}\$org_dr = ' file://$org_dr '${NORMAL}"
 
     ufl_stl0_9_glar_force=-force
+    echo -e "${HLIGHT}--- ufl_stl0 9 file://$org_dr file://$arg_2 2 ---${NORMAL}"
+    echo -e "${HLIGHT}--- ufl_stl0 9 $org_dr $arg_2 2 ---${NORMAL}"
+    read -p 1
     ufl_stl0 9 $org_dr $arg_2 2
     ufl_stl0_9_glar_force=
 
