@@ -1,0 +1,161 @@
+
+<!-- [[__TOC_]] -->
+
+<a name="top"></a>
+<a class=top-link hide href="#top">↑</a>
+
+<style type="text/css">
+   .top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    color: #000000;
+
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em 2em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 1em;
+    height: 1em;
+    background-color: #F8F8F8;
+}
+
+h1{
+    color: rgb(155, 0, 218);
+    font-weight: normal;
+    font-style: italic;
+    font-weight:bold;
+
+}
+h2{
+    color: rgb(155, 40, 238);
+    font-style: italic;
+    font-weight:bold;
+}
+h3{
+    color: rgb(155, 80, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h4{
+    color: rgb(155, 120, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h5{
+    color: rgb(155, 160, 218);
+    font-style: italic;
+    font-weight:bold;
+}
+h6 {
+    color: rgb(155, 200, 230);
+    font-style: italic;
+    font-weight:bold;
+}
+</style>
+
+Start Contents Menu
+
+<!-- TOC toc2f_stl0 --> 
+
+<!-- /TOC toc2f_stl0 -->
+
+End Contents Menu
+
+<!--
+CMND: ufl_stl0 9 /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_exa/midle.exa/_chapt_1.org.d /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_exa/midle.exa/_book.org.d/001.001.chapt_1.h1file.md 2
+
+PPWD: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/_exa/midle.exa/_book.org.d.ufl_stl0_14.d/.d/.prc
+
+FLOW: /home/st/REPOBARE/_repo/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/009_dr2m
+
+DATE: 1732984433_30112024233353
+
+DATX: 1732984433
+-->
+
+
+[001.pref.txt.md](../_chapt_1.org.d/005.bibliotheca_lapidum_usu.d/001.pref.txt.md)
+
+
+
+# Библиотека камней - Практика
+
+Bibliotheca Lapidum - Usu (лат.)
+
+
+
+[001.pref.txt.md](../_chapt_1.org.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/001.pref.txt.md)
+
+
+
+## Понижение абстракций
+
+Deminutio abstractionis (лат.)
+
+
+    
+
+[001.pref.txt.md](../_chapt_1.org.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/002.basic_principiis.txt.d/001.pref.txt.md)
+
+
+
+### Базовые принципы 
+
+Basic principiis (лат.)
+
+- stlu : описание поведения и интерфейсов:
+  - при возникновении ошибки генерируется stack error который должен содержать:
+    - описание восхождения ошибки от системного вызова до пользовательского файла его вызвавшего в виде списка
+    - файл в котором сгенерирована ошибка
+    - номер строки где произошла ошибка
+    - возвращаемый код ошибки
+    - краткое описание ошибки 
+
+- fn_stlu : описание поведения и интерфейсов:
+  - все файлы с функциями хранятся в однотипных поддиректориях одной директории
+  - содержит только одну функцию с именем совпадающем с именем файла без расширений  
+  - содержит только логику состоящую в использовании fn_elem, fn_stl и запуска процедур хрнящихся в файлах
+    - если логика состоит в обработке вариантов использования однотипных процедур или наборов данных - все процедуры или наборы данных для выбора следует хранить в отдельных директориях    
+  - содержит следующие однострочные описательные данные себя самой для текстового поиска начинающиеся с:
+    - MAIN:
+      - краткое описание работы функции состоящее в упоминании аргументов и действий с их участием
+    - TAGS:
+      - слова начинающиеся с @ через пробел и фиксирующие ключевые определения 
+  - содержит следующие пояснения себя самой начинающиеся с:
+    - ARGS: 
+      - перечисление всех возможных вариантов наборов аргументов и их значения в функции при стандартном вызове
+    - CNTL:
+      - перечисление всех возможных специальных аргументов определяющих специальное поведение:
+        - [-h] возвращает текст - описывает общее поведение и внутреннее устройство
+        - [_go or _e] вызывает в редактор кода тело функции
+        - [_tst or _t] вызывает функцию в стандартном тестовом контексте и тестовыми параметрами, возвращает:
+          - return 1 : if test NOT PASS
+          - return 0 : if test IS PASS
+        - [_flow_1] (demo run) вызывает функцию в произвольном пользовательском контексте и произвольными параметрами 
+    - EXAM:
+      - пример вызова функции
+  - аргументы функции
+    - если аргумент обязателен и необходимо передать пустое значение - следует указать '@'
+
+
+
+[001.pref.txt.md](../_chapt_1.org.d/005.bibliotheca_lapidum_usu.d/002.deminutio_abstractionis.d/003.basic_technologiae.txt.d/001.pref.txt.md)
+
+
+
+### Базовые технологии
+
+Basic technologiae (лат.)
+
+- os    - altlinux  (ALT operating systems Russian software company)
+- os_cl - gcc       (the GNU Compiler)
+- os_sl - bash      (the GNU Project's shell—the Bourne Again SHell)
+    
+
+
+

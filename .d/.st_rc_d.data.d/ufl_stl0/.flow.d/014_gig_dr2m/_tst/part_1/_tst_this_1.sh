@@ -52,9 +52,9 @@ ${NORMAL}"
     # _parr3e _ARGS_
 
     #[[ptr_path]]
-#! ptr_path
-# local ptr_path="$1"
-# ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
+    #! ptr_path
+    # local ptr_path="$1"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #! START BODY FN ---------------------------------------
 
     echo "START BODY FN : ${FNN}() $*"
@@ -81,8 +81,11 @@ ${NORMAL}"
     #! query cpy __for_cpy/_org.tst.d.img.2.md
     . ${path_dir}/_dir_tst/_org.tst.d.ufl_stl0_14.d/_org.tst.d.ufl_stl0_14 2 ${path_dir}/__for_cpy/_org.tst.d.img.2.md
 
+    _edit ${path_dir}/_dir_tst/_org.tst.d.img.md
+    _edit ${path_dir}/__for_cpy/_org.tst.d.img.2.md
+
     #! END BODY FN ---------------------------------------
-    
+
     cd $PPWD
     return 0
 
