@@ -201,6 +201,11 @@ file_res_ins='${ENV_1}/aft.d/usr.dfl_bfr.prc'
 _s2f "{{file_name}}" "$file_res_ins" "${org_prc_dr}"/aft.d/usr.dfl_bfr.prc
 _f2f "${dir_ins}"/usr.dfl_bfr.prc.ins '{{body_fn}}' "${org_prc_dr}"/bfr.d/usr.dfl_bfr.prc
 
+#! do flow 1 for ${org_d}
+ufl_stl0_9_glar_force=-force
+. ${cntl_sh} 1
+ufl_stl0_9_glar_force=
+
 # _is_yes "DO? :: _sdd2d _XXX ${ARGS[1]} ${dir_tml}/org_d/_XXX.d ${PPWD} " && {
 #     :
 # }

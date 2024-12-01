@@ -1,10 +1,20 @@
+echo "START BODY FN : ${FNN}() $*"
+
+    #{{body_fn}}
     local prc_in_fn_dr=${REPO_PATH}/sta/.d/.st_rc_d.data.d/ufl_stl0/.flow.d/014_gig_dr2m/.prc/.in_fn
 
     local res_mm=
 
+    [ -n "$1" ] || {
+        _st_exit "in fs= file://${path_file} , line=${LINENO}, EXEC: ${FNN} $* : NOT_DEFINE (\$1) [expect (1|2|3)] :: '$1' : ${hint} : return 1"
+        cd "$PPWD" || echo "EXEC_FAIL : 'cd $PPWD' :: return 0|1" >&2
+        return 1
+    }
+
     local arg_1="$1"
     local arg_2="$2"
 
+    echo -e "${HLIGHT}--- _d2mm ${prc_in_fn_dr} res_mm "$arg_1" ---${NORMAL}"
     _d2mm ${prc_in_fn_dr} res_mm "$arg_1"
 
     echo -e "${GREEN}\$res_mm = ' file://$res_mm '${NORMAL}"
@@ -31,6 +41,31 @@
         }
 
     done
+
+    local arb_lst=${sh_dr}/.d/.lst/arb.lst
+    local arb_lst_pth=
+    echo -e "${GREEN}\$arb_lst = ' file://$arb_lst '${NORMAL}"
+    #! pth_to_arb STANDART :: name.arb/sed.ram/.grot/opus.d/*.ufl_stl0_14.d/*.ufl_stl0_14
+    #! find /var/docs -type f -name *.db
+    for arb_lst_pth in $(_f2e ${arb_lst}); do
+        echo -e "${GREEN}\$arb_lst_pth = ' file://$arb_lst_pth '${NORMAL}"
+
+        rm -r ${org_dr}/001.002.arb_lst.d
+
+        for ufl_stl0_14_fl in $(find ${arb_lst_pth} -type f -name *.ufl_stl0_14); do
+            echo -e "${GREEN}\$ufl_stl0_14_fl = '$ufl_stl0_14_fl'${NORMAL}"
+            ram_nm=$(_prs_f -n $(basename $(dirname $(dirname $(dirname $(dirname $ufl_stl0_14_fl))))))
+            echo -e "${GREEN}\$ram_nm = '$ram_nm'${NORMAL}"
+
+            read -p 0
+
+            mkdir ${org_dr}/001.003.arb_lst.d
+            . ${ufl_stl0_14_fl} 2 ${org_dr}/001.003.arb_lst.d/0.0.$ram_nm.h2file.md
+
+        done
+    done
+
+    # read -p 1
 
     #! exec .in_fn prc accoding $arg_1 [num_flow]
     _source_w1_isf $res_mm || {
