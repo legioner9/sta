@@ -83,8 +83,8 @@ ${NORMAL}"
     # ${str/#sbstr/rplc} Замещает самое короткое с начала вхождение sbstr строкой rplc.
 
     local name_n="$(_prs_f -n2 ${name_ext})"
-    name_n=${name_n/#*./}
-    name_n=${name_n/#*./}
+    name_n=$(_prs_f -ax ${name_n})
+    name_n=$(_prs_f -ax ${name_n})
     name_n=${name_n//_/ }
 
     echo -e "
