@@ -78,10 +78,10 @@ ${NORMAL}"
     # /home/st/YA/Up/ifo/b.html
 
     _is_yes "DO? COPY file://${HOME}/.config/google-chrome/Default/Bookmarks to file://${HOME}/YA/Up/ifo/b.html " && {
-        echo -e "${HLIGHT}--- mv file://${HOME}/YA/Up/ifo/b.html file://${HOME}/YA/Up/ifo/b.html~ ---${NORMAL}"
+        echo -e "${HLIGHT}--- mv file://${HOME}/YA/Up/ifo/bx file://${HOME}/YA/Up/ifo/bx~ ---${NORMAL}"
         mv ${HOME}/YA/Up/ifo/b.html ${HOME}/YA/Up/ifo/b.html~
-        echo -e "${HLIGHT}--- cp file://${HOME}/.config/google-chrome/Default/Bookmarks file://${HOME}/YA/Up/ifo/b.html ---${NORMAL}"
-        cp ${HOME}/.config/google-chrome/Default/Bookmarks ${HOME}/YA/Up/ifo/b.html
+        echo -e "${HLIGHT}--- cp file://${HOME}/.config/google-chrome/Default/Bookmarks file://${HOME}/YA/Up/ifo/bx ---${NORMAL}"
+        cp ${HOME}/.config/google-chrome/Default/Bookmarks ${HOME}/YA/Up/ifo/bx
     }
 
     #{{body_fn}}

@@ -41,7 +41,6 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/show_m
 _arr_name+=("push lib : st_rc_d + stl0")
 _arr_res+=("nm_opi_ 1 8 3; nm_opi_ 1 17 3 ")
 
-
 _arr_name+=("see opus NBash")
 _arr_res+=("_edit ${REPO_PATH}/NBash/.d/.opus/cntx.res.md")
 
@@ -53,15 +52,18 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/rbld_s
 
 _arr_name+=("see stl repo readme")
 _arr_res+=("_edit ${REPO_PATH}/stl/README.md")
- 
+
+_arr_name+=("yandex-disk start -d ~/YA/")
+_arr_res+=("yandex-disk start -d ~/YA/")
+
 _arr_name+=("path to chromium-gost bookmarks")
-_arr_res+=("echo ${HOME}/.config/chromium-gost/Default/Bookmarks")
+_arr_res+=("echo file://${HOME}/.config/chromium-gost/Default/Bookmarks")
 
 _arr_name+=("path to chromium bookmarks")
-_arr_res+=("echo ${HOME}/.config/chromium/Default/Bookmarks")
+_arr_res+=("echo file://${HOME}/.config/chromium/Default/Bookmarks")
 
 _arr_name+=("path to google-chrome bookmarks")
-_arr_res+=("echo ${HOME}/.config/google-chrome/Default/Bookmarks")
+_arr_res+=("echo file://${HOME}/.config/google-chrome/Default/Bookmarks")
 
 _arr_name+=("cpy bookmarks from google-chrome to chromium-gost")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_google_to_gost.sh")
@@ -81,12 +83,17 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_bo
 _arr_name+=("cpy lrp_brow from ya_disk to lex")
 _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_lrp_brow_from_ya_disk_to_lex.sh")
 
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
+_arr_name+=("cpy from ya_disk lrp_brow to lex && bookmarks to lex && to chromium-gost")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_from_ya_disk_lrp_brow_to_lex_and_book_to_lex_and_gost.sh")
 
+_arr_name+=("mate-disk-usage-analyzer")
+_arr_res+=("mate-disk-usage-analyzer")
+
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
+# _arr_name+=("nnnnnn")
+# _arr_res+=("rrrrr")
