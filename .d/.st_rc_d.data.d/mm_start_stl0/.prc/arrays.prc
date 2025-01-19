@@ -54,10 +54,33 @@ _arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/rbld_s
 _arr_name+=("see stl repo readme")
 _arr_res+=("_edit ${REPO_PATH}/stl/README.md")
  
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
-# _arr_name+=("nnnnnn")
-# _arr_res+=("rrrrr")
+_arr_name+=("path to chromium-gost bookmarks")
+_arr_res+=("echo ${HOME}/.config/chromium-gost/Default/Bookmarks")
+
+_arr_name+=("path to chromium bookmarks")
+_arr_res+=("echo ${HOME}/.config/chromium/Default/Bookmarks")
+
+_arr_name+=("path to google-chrome bookmarks")
+_arr_res+=("echo ${HOME}/.config/google-chrome/Default/Bookmarks")
+
+_arr_name+=("cpy bookmarks from google-chrome to chromium-gost")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_google_to_gost.sh")
+
+_arr_name+=("cpy bookmarks from google-chrome to ya_disk")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_google_to_ya_disk.sh")
+
+_arr_name+=("cpy bookmarks from lex to chromium-gost")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_lex_to_gost.sh")
+
+_arr_name+=("cpy bookmarks from ya_disk to chromium-gost")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_ya_disk_to_gost.sh")
+
+_arr_name+=("cpy bookmarks from ya_disk to lex")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_ya_disk_to_lex.sh")
+
+_arr_name+=("cpy lrp_brow from ya_disk to lex")
+_arr_res+=(". ${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_lrp_brow_from_ya_disk_to_lex.sh")
+
 # _arr_name+=("nnnnnn")
 # _arr_res+=("rrrrr")
 # _arr_name+=("nnnnnn")

@@ -1,17 +1,17 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- {{fn_name}}_{{rnd_val}}() $* in file://{{file_name}} ---${NORMAL}" #started functions
+echo -e "${CYAN}--- cpy_book_from_ya_disk_to_gost_rnd7_c7aee70() $* in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_ya_disk_to_gost.sh ---${NORMAL}" #started functions
 
-{{fn_name}}_{{rnd_val}}() {
+cpy_book_from_ya_disk_to_gost_rnd7_c7aee70() {
 
-    # HST :: gig command :: [{{gig_command}}] in file://{{PPWD}}
+    # HST :: gig command :: [ufl_stl0 1 1 cpy_book_from_ya_disk_to_gost.sh in file://${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/ufl_stl0.sh] in file://${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2
 
     local FNN=${FUNCNAME[0]}
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
 
-    local path_file="{{file_name}}"
+    local path_file="${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/mm_start_stl0/.prc2/cpy_book_from_ya_disk_to_gost.sh"
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -75,6 +75,13 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
+    _is_yes "DO? COPY file://${HOME}/YA/Up/ifo/b.html to file://${HOME}/.config/chromium-gost/Default/Bookmarks " && {
+        echo -e "${HLIGHT}--- mv file://${HOME}/.config/chromium-gost/Default/Bookmarks file://${HOME}/.config/chromium-gost/Default/Bookmarks~ ---${NORMAL}"
+        mv ${HOME}/.config/chromium-gost/Default/Bookmarks ${HOME}/.config/chromium-gost/Default/Bookmarks~
+        echo -e "${HLIGHT}--- cp file://${HOME}/YA/Up/ifo/b.html file://${HOME}/.config/chromium-gost/Default/Bookmarks ---${NORMAL}"
+        cp ${HOME}/YA/Up/ifo/b.html ${HOME}/.config/chromium-gost/Default/Bookmarks
+    }
+
     #{{body_fn}}
 
     #! END BODY FN ---------------------------------------
@@ -84,4 +91,4 @@ ${NORMAL}"
 
 }
 
-{{fn_name}}_{{rnd_val}} "$@"
+cpy_book_from_ya_disk_to_gost_rnd7_c7aee70 "$@"

@@ -28,6 +28,7 @@ hint="\$1=1, cr use tml \$2 [ num menu from : [_d2mm \$dir_tml] ] nm_fl=\$3 (wit
     [ ${ARGS[1]} == "-h" ] && {
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: cr use tml \$2 [ num menu from : [_d2mm \$dir_tml] ] nm_fl=\$3 (with .sh) with fn_nm=\$3_rnd_pfx
+    \$dir_tml = file://$dir_tml
 TAGS: @sh @fn @file @rnd
 ARGS: \$1=1
 GLAR: ufl_stl0_1_glar_edit=-edit enable [_edit ${file_res}] 
